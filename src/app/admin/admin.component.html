@@ -1,0 +1,108 @@
+<!-- Overlay For Sidebars -->
+<div class="overlay"></div>
+
+<!-- Search  -->
+<div class="search-bar">
+    <div class="search-icon"> <i class="material-icons">search</i> </div>
+    <input type="text" placeholder="START TYPING...">
+    <div class="close-search"> <i class="material-icons">close</i> </div>
+</div>
+
+<!-- Top Bar -->
+<nav class="navbar">
+    <div class="container-fluid">
+        <div class="navbar-header"> <a href="javascript:void(0);" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false"></a> <a href="javascript:void(0);" class="bars"></a> <a class="navbar-brand" href="index.html">Varón</a> </div>
+        <div class="collapse navbar-collapse" id="navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="sign-in.html" class="mega-menu" data-close="true"><i class="zmdi zmdi-power"></i></a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Left & Right bar menu -->
+<section> 
+    <!-- Left Sidebar -->
+    <aside id="leftsidebar" class="sidebar"> 
+        <!-- User Info -->
+        <div class="user-info">
+            <div class="image"> <img src="assets/images/random-avatar1.jpg" width="48" height="48" alt="User" /> </div>
+            <div class="info-container">
+                <div class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">John Doe</div>
+                <div class="email">john.doe@example.com</div>
+                <div class="btn-group user-helper-dropdown"> <i class="material-icons" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">keyboard_arrow_down</i>
+                    <ul class="dropdown-menu pull-right">
+                        <li><a href="profile.html"><i class="material-icons">person</i>Profile</a></li>
+                        <li role="seperator" class="divider"></li>
+                        <li><a href="javascript:void(0);"><i class="material-icons">group</i>Followers</a></li>
+                        <li><a href="javascript:void(0);"><i class="material-icons">shopping_cart</i>Sales</a></li>
+                        <li><a href="javascript:void(0);"><i class="material-icons">favorite</i>Likes</a></li>
+                        <li role="seperator" class="divider"></li>
+                        <li><a href="sign-in.html"><i class="material-icons">input</i>Sign Out</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- #User Info --> 
+        <!-- Menu -->
+        <div class="menu">
+            <ul class="list">
+                <li> <a [routerLink]="['home']"><i class="material-icons">assessment</i><span>Panel Principal</span> </a> </li>
+                <li> <a [routerLink]="['users']"><i class="material-icons">account_circle</i><span>Usuarios</span> </a> </li>
+                <li> <a href="javascript:void(0);"><i class="material-icons">list</i><span>Vinos</span> </a> </li>
+            </ul>
+        </div>
+        <!-- #Menu --> 
+    </aside>
+    
+    <!-- Right Sidebar -->
+    <aside id="rightsidebar" class="right-sidebar">
+        <ul class="nav nav-tabs tab-nav-right" role="tablist">
+            <li role="presentation" class="active"><a href="#skins" data-toggle="tab">Skins</a></li>
+            <li role="presentation"><a href="#chat" data-toggle="tab">Chat</a></li>
+            <li role="presentation"><a href="#settings" data-toggle="tab">Setting</a></li>
+        </ul>
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane fade in active in active" id="skins">
+                <ul class="demo-choose-skin">
+                    <h6>Flat Color</h6>
+                    <li data-theme="red"  class="active">
+                        <div class="red"></div>
+                        <span>Red</span> </li>
+                    <li data-theme="purple">
+                        <div class="purple"></div>
+                        <span>Purple</span> </li>
+                    <li data-theme="deep-purple">
+                        <div class="deep-purple"></div>
+                        <span>Deep Purple</span> </li>
+                    <li data-theme="blue">
+                        <div class="blue"></div>
+                        <span>Blue</span> </li>
+                    <li data-theme="cyan">
+                        <div class="cyan"></div>
+                        <span>Cyan</span> </li>
+                    <li data-theme="blue-grey">
+                        <div class="blue-grey"></div>
+                        <span>Blue Grey</span> </li>
+                    <li data-theme="black">
+                        <div class="black"></div>
+                        <span>Black</span> </li>
+                    <h6>Gradient Theme</h6>
+                    <li data-theme="green">
+                        <div class="green"></div>
+                        <span>Green</span> </li>
+                    <li data-theme="orange">
+                        <div class="orange"></div>
+                        <span>Orange</span> </li>
+                    <li data-theme="blush">
+                        <div class="blush"></div>
+                        <span>Blush</span> </li>
+                </ul>
+            </div>
+        </div>
+    </aside>
+</section>
+
+<section class="content home">
+	<router-outlet></router-outlet> <!-- Aca se carga el componente asociado a la ruta actual -->
+</section>

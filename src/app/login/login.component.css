@@ -1,0 +1,35 @@
+.container-fluid.custom-background {
+	background-image: url(/assets/images/back.jpg);
+	background-size: cover;
+}
+.btn.btn-raised.waves-effect.bg-red.login-button{
+	background-color: #781535 !important;
+}
+.col-lg-3.col-md-4.col-xs-12.login-panel > .card{
+	background-color: #eee;
+}
+.wrong-login{
+	color: #b7144a;
+	font-size: 13px;
+	outline-color: red;
+    /* also need animation and -moz-animation */
+    -webkit-animation: shake 0.6s linear;
+}
+
+@-webkit-keyframes shake {
+    8%, 41% {
+        -webkit-transform: translateX(-10px);
+    }
+    25%, 58% {
+        -webkit-transform: translateX(10px);
+    }
+    75% {
+        -webkit-transform: translateX(-5px);
+    }
+    92% {
+        -webkit-transform: translateX(5px);
+    }
+    0%, 100% {
+        -webkit-transform: translateX(0);
+    }
+}
