@@ -11,7 +11,8 @@ const adminRoutes: Routes = [
 	component: AdminComponent,
 	children: [
 	{ path: 'home', component: HomeComponent },
-	{ path: 'users', component: UserComponent }
+	{ path: 'users', component: UserComponent },
+	{ path: '', component: HomeComponent }
 	]
 }	
 ];

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 import { User } from '../models/user';
 import { UserService } from '../services/user.service';
@@ -10,7 +10,7 @@ import { UserService } from '../services/user.service';
 	providers: [UserService]
 })
 
-export class LoginComponent{
+export class LoginComponent implements OnInit{
 	public user: User;
 	public identity;
 	public token;
@@ -24,15 +24,22 @@ export class LoginComponent{
 		this.user = new User('','','');
 	}
 
+	ngOnInit(){
+		console.log(this._userService.getToken());
+		console.log(this._userService.getUser());
+	}
+
 	onSubmit(){
 		this.status = 1;
 		this._userService.login(this.user).subscribe(
 			response => {
-				if (response.token) {
-					console.log(response.data.token);
-					this.token = response.data.token;
-				} else {
+				if (response.data.token == undefined) {
 					this.status = 0;
+				} else {
+					console.log(response.data);
+					localStorage.setItem('user', JSON.stringify(response.data.info));
+					localStorage.setItem('token', JSON.stringify(response.data.token));
+					this._router.navigate(['/admin']);
 				}
 			}, error => {
 				console.log(error);
