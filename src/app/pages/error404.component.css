@@ -1,0 +1,10 @@
+#custom-background {
+	background: url(/assets/images/backliso.jpg);
+	background-size: cover;
+}
+.btn.btn-raised.waves-effect.bg-red.login-button{
+	background-color: #781535 !important;
+}
+.col-lg-3.col-md-4.col-xs-12.login-panel > .card{
+	background-color: #eee;
+}

@@ -19,14 +19,7 @@ export class AdminComponent implements OnInit{
 
 	ngOnInit(){
 		this.user = this._userService.getUser();
-		this.token = this._userService.getToken();	
-	}
-
-	logout(){
-		localStorage.clear();
-		this.user = null;
-		this.token = null;
-		this._router.navigate(['/login']);
+		this.token = this._userService.getToken();
 	}
 
 	// comprueba los datos del local storage y ante un csambio, los actualiza

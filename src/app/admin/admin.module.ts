@@ -1,31 +1,35 @@
-import { NgModule } from '@angular/core';
+import { AdminRoutingModule } from './admin-routing.module';
 import { CommonModule } from '@angular/common';
 import { FormsModule }   from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { AdminRoutingModule } from './admin-routing.module';
+import { LayoutModule } from '../layout/layout.module';
+import { NgModule } from '@angular/core';
 
-import { UserComponent } from './user/user.component';
-import { HomeComponent } from './home/home.component';
+import { AddComponent } from './add/add.component';
 import { AdminComponent } from './admin.component';
+import { EditComponent } from './edit/edit.component';
+import { ListComponent } from './list/list.component';
 
 @NgModule({
 	declarations: [
-		UserComponent,
+		AddComponent,
 		AdminComponent,
-		HomeComponent
+		EditComponent,
+		ListComponent
 	],
 	imports: [
 		CommonModule,
 		HttpModule,
 		FormsModule,
+		LayoutModule,
 		AdminRoutingModule
 	],
 	exports: [
-		UserComponent,
+		AddComponent,
 		AdminComponent,
-		HomeComponent
+		EditComponent,
+		ListComponent
 	],
 	providers: []
 })
-
-export class AdminModule{}
+export class AdminModule { }

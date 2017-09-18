@@ -46,4 +46,28 @@ export class UserService{
 
 		return this.user;
 	}
+
+	listUsers(token){
+		let headers = new Headers({
+			'Content-Type': 'application/json',
+			'token': token
+		});
+		return this._http.get(this.url+'user', {headers: headers})
+			.map(res => res.json());
+	}
+
+	// Obtener usuario por id
+	getUserToEdit(token, id){
+		let headers = new Headers({
+			'Content-Type': 'application/json',
+			'token': token
+		});
+
+		return this._http.get(this.url+'user/'+id, {headers: headers})
+			.map(res => res.json());
+	}
+
+	editUser(token, user){
+
+	}
 }
