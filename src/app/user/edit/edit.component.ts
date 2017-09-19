@@ -2,7 +2,9 @@ import { Component, OnInit, DoCheck } from '@angular/core';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 import { GLOBAL } from '../../services/global';
 import { User } from '../../models/user';
+import { Admin } from '../../models/admin';
 import { UserService } from '../../services/user.service';
+import { AdminService } from '../../services/admin.service';
 
 
 @Component({
@@ -12,7 +14,7 @@ import { UserService } from '../../services/user.service';
 })
 export class EditComponent implements OnInit{
 	public title = 'Agregar usuario';
-	public user: User;
+	public admin: Admin;
 	public userToEdit: User;
 	public token;
 	public url;
@@ -21,16 +23,15 @@ export class EditComponent implements OnInit{
 	constructor(
 		private _route: ActivatedRoute,
 		private _router: Router,
-		private _userService: UserService
+		private _userService: UserService,
+		private _adminService: AdminService
 	){
-		this.user = new User('','','','');
+		// this.admin = new User('','','','');
 		this.token = this._userService.getToken();
 		this.url = GLOBAL.url;
 	}
 
 	ngOnInit(){
-		console.log('edit component cargado');
-		console.log(this._route.params);
 		this._route.params.forEach((params: Params) => {
 			this.id = params['id'];
 			console.log(this.id);
