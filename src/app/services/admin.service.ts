@@ -62,7 +62,7 @@ export class AdminService{
 			'Content-Type': 'application/json',
 			'token': token
 		});
-
+		console.log(this.url+'admin/'+id);
 		return this._http.get(this.url+'admin/'+id, {headers: headers})
 			.map(res => res.json());
 	}

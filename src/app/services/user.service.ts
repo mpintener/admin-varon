@@ -30,7 +30,7 @@ export class UserService{
 			'Content-Type': 'application/json',
 			'token': token
 		});
-
+		console.log(this.url+'user/'+id);
 		return this._http.get(this.url+'user/'+id, {headers: headers})
 			.map(res => res.json());
 	}

@@ -31,7 +31,7 @@ export class EditComponent implements OnInit{
 	}
 
 	ngOnInit(){
-		this.token = this._adminService.getAdmin();
+		this.token = this._adminService.getToken();
 		this._route.params.forEach((params: Params) => {
 			this.id = params['id'];
 		});
