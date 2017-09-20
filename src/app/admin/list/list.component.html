@@ -14,7 +14,7 @@
             </div>
             <div class="col-md-4 col-sm-5 col-xs-12">
                 <div class="h-right aos-item" data-aos-duration="400" data-aos-delay="300" data-aos="slide-down">
-                    <a [routerLink]="['add']" class="mfb-component__button--main pull-right bg-light-green"><i class="mfb-component__main-icon--resting zmdi zmdi-plus"></i></a>
+                    <a [routerLink]="['add']" class="mfb-component__button--main pull-right btn-bordeaux"><i class="mfb-component__main-icon--resting zmdi zmdi-plus"></i></a>
                 </div>
             </div>
         </div>
@@ -33,11 +33,18 @@
 							<tr>
 								<th>Usuario</th>
 								<th>Nivel</th>
-								<th>Fecha de Registro</th>
+								<th>Acciones</th>
 							</tr>
 						</thead>
 						<tbody>
-
+							<tr *ngFor="let admin of admins">
+								<td>{{ admin.username }}</td>
+								<td>{{ admin.level }}</td>
+								<td>
+									<a [routerLink]="['edit',admin.id]"><i class="material-icons">mode_edit</i></a>
+									<a [routerLink]="['/edit',admin.id, 'edit']"><i class="material-icons">delete</i></a>
+								</td>
+							</tr>
 						</tbody>
 					</table>
 				</div>
