@@ -1,25 +1,26 @@
 import { Component } from '@angular/core';
-import { UserService } from '../services/user.service';
+import { AdminService } from '../services/admin.service';
 import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
 	selector: 'user',
 	templateUrl: './user.component.html',
 	styleUrls: ['./user.component.css'],
-	providers: [UserService]
+	providers: [AdminService]
 })
 
 export class UserComponent{
 	public title = 'Usuarios';
-	public token
+	public token;
 
 	constructor(
-		private _userService: UserService,
-		private _router: Router,
+		private _adminService: AdminService,
+		private _router: Router
 	){}
 
 	ngOnInit(){
-		this.token = this._userService.getToken();
+		this.token = this._adminService.getToken();
+		console.log(this.token);
 		if (this.token == null) {
 			this._router.navigate(['/login']);
 		}

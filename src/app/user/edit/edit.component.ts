@@ -27,14 +27,13 @@ export class EditComponent implements OnInit{
 		private _adminService: AdminService
 	){
 		// this.admin = new User('','','','');
-		this.token = this._userService.getToken();
 		this.url = GLOBAL.url;
 	}
 
 	ngOnInit(){
+		this.token = this._adminService.getAdmin();
 		this._route.params.forEach((params: Params) => {
 			this.id = params['id'];
-			console.log(this.id);
 		});
 		this._userService.getUserToEdit(this.token, this.id).subscribe(
 			response => {

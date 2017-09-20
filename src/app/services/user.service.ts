@@ -15,38 +15,6 @@ export class UserService{
 		this.url = GLOBAL.url;
 	}
 
-	login(user, token = null){
-		let params = JSON.stringify(user);
-		let headers = new Headers({'Content-Type': 'application/json'});
-
-		return this._http.post(this.url+'admin/login', params, {headers: headers})
-			.map(res => res.json());
-	}
-
-	getToken(){
-		let token = JSON.parse(localStorage.getItem('token'));
-
-		if (token != undefined) {
-			this.token = token;
-		} else {
-			this.token = null;
-		}
-
-		return this.token;
-	}
-
-	getUser(){
-		let user = JSON.parse(localStorage.getItem('user'));
-
-		if (user != undefined) {
-			this.user = user;
-		} else {
-			this.user = null;
-		}
-
-		return this.user;
-	}
-
 	listUsers(token){
 		let headers = new Headers({
 			'Content-Type': 'application/json',

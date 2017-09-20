@@ -19,37 +19,35 @@
         </div>
     </div>
 </section>
-<section class="content">
-	<div>
-		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-			<div class="card">
-				<div class="header">
-					<h2> Lista de Vinos</h2>
-				</div>
-				<div class="body">
-					<table class="table table-bordered table-striped table-hover js-basic-example dataTable">
-						<thead>
-							<tr>
-								<th>Nombre</th>
-								<th>Origen</th>
-								<th>Uva</th>
-								<th>Tipo</th>
-								<th>Año</th>
-								<th>Precio</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr *ngFor="let wine of wines">
-								<td>{{ wine.name }}</td>
-								<td>{{ wine.origin }}</td>
-								<td>{{ wine.grape }}</td>
-								<td>{{ wine.type }}</td>
-								<td>{{ wine.year }}</td>
-								<td>${{ wine.price }}</td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
+<section class="content" style="margin-top:0px;">
+	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+		<div class="card">
+			<div class="header">
+				<h2> Lista de Vinos</h2>
+			</div>
+			<div class="body">
+				<table class="table table-bordered table-striped table-hover js-basic-example dataTable">
+					<thead>
+						<tr>
+							<th>Nombre</th>
+							<th>Origen</th>
+							<th>Uva</th>
+							<th>Tipo</th>
+							<th>Año</th>
+							<th>Precio</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr *ngFor="let wine of wines">
+							<td>{{ wine.name }}</td>
+							<td>{{ wine.origin.name }}</td>
+							<td>{{ wine.grape.name }}</td>
+							<td>{{ wine.type.name }}</td>
+							<td>{{ wine.year }}</td>
+							<td>${{ wine.price }}</td>
+						</tr>
+					</tbody>
+				</table>
 			</div>
 		</div>
 	</div>

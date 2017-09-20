@@ -1,30 +1,30 @@
 import { Component } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
-import { UserService } from '../services/user.service';
+import { AdminService } from '../services/admin.service';
 
 @Component({
 	selector: 'layout',
 	templateUrl: 'layout.component.html',
-	providers: [UserService]
+	providers: [AdminService]
 })
 
 export class LayoutComponent{
-	public user;
+	public admin;
 	public token;
 
 	constructor(
-		private _userService: UserService,
+		private _adminService: AdminService,
 		private _router: Router,
 		){}
 
 	ngOnInit(){
-		this.user = this._userService.getUser();
-		this.token = this._userService.getToken();
+		this.admin = this._adminService.getAdmin();
+		this.token = this._adminService.getToken();
 	}
 
 	logout(){
 		localStorage.clear();
-		this.user = null;
+		this.admin = null;
 		this.token = null;
 		this._router.navigate(['/login']);
 	}

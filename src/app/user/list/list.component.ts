@@ -2,17 +2,18 @@ import { Component, OnInit, DoCheck } from '@angular/core';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 import { GLOBAL } from '../../services/global';
 import { User } from '../../models/user';
+import { Admin } from '../../models/admin';
 import { UserService } from '../../services/user.service';
+import { AdminService } from '../../services/admin.service';
 
 
 @Component({
 	selector: 'list-user',
 	templateUrl: './list.component.html',
-	providers: [UserService]
+	providers: [UserService, AdminService]
 })
 export class ListComponent implements OnInit{
-	public title = 'Agregar usuario';
-	public user: User;
+	public admin: Admin;
 	public users: User[];
 	public token;
 	public url;
@@ -21,15 +22,16 @@ export class ListComponent implements OnInit{
 	constructor(
 		private _route: ActivatedRoute,
 		private _router: Router,
-		private _userService: UserService
+		private _userService: UserService,
+		private _adminService: AdminService
 	){
-		this.user = new User('','','','');
-		this.token = this._userService.getToken();
+		// this.user = new User('','','','');
 		this.url = GLOBAL.url;
 		this.hola = false;
 	}
 
 	ngOnInit(){
+		this.token = this._adminService.getToken();
 		this._userService.listUsers(this.token).subscribe(
 			response => {
 				console.log(response.status === 'success');

@@ -3,3 +3,14 @@ a > img {
 	width: 94px;
 	margin-left: 35px;
 }
+
+a.active {
+	background-color: #eee;
+	border-left-color: #9d1c46;
+}
+.btn-bordeaux{
+	background-color: #9d1c46 !important;
+}
+.btn-bordeaux:hover{
+	color: #eee;
+}

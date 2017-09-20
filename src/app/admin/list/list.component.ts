@@ -1,29 +1,43 @@
 import { Component, OnInit, DoCheck } from '@angular/core';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 import { GLOBAL } from '../../services/global';
-import { User } from '../../models/user';
-import { UserService } from '../../services/user.service';
+import { Admin } from '../../models/admin';
+import { AdminService } from '../../services/admin.service';
 
 
 @Component({
 	selector: 'list-admin',
 	templateUrl: './list.component.html',
-	providers: [UserService]
+	providers: [AdminService]
 })
-export class ListComponent{
-	public user: User;
-	public userToEdit: User;
+export class ListComponent implements OnInit{
+	public admin: Admin;
+	public admins: Admin[];
 	public token;
 	public url;
-	public id;
 
 	constructor(
 		private _route: ActivatedRoute,
 		private _router: Router,
-		private _userService: UserService
+		private _adminService: AdminService
 	){
-		this.user = new User('','','','');
-		this.token = this._userService.getToken();
+		this.admin = this._adminService.getAdmin();
+		this.token = this._adminService.getToken();
 		this.url = GLOBAL.url;
+	}
+
+	ngOnInit(){
+		this._adminService.listAdmins(this.token).subscribe(
+			response => {
+				console.log(response);
+				if (response.status === 'success') {
+					this.admins = response.data;
+				} else {
+					console.log(response);
+				}
+			}, error => {
+				console.log(<any>error);
+			}
+		);
 	}
 }

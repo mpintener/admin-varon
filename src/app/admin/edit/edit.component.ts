@@ -11,19 +11,19 @@ import { UserService } from '../../services/user.service';
 	providers: [UserService]
 })
 export class EditComponent{
-	public user: User;
-	public userToEdit: User;
-	public token;
-	public url;
-	public id;
+	// public user: User;
+	// public userToEdit: User;
+	// public token;
+	// public url;
+	// public id;
 
-	constructor(
-		private _route: ActivatedRoute,
-		private _router: Router,
-		private _userService: UserService
-	){
-		this.user = new User('','','','');
-		this.token = this._userService.getToken();
-		this.url = GLOBAL.url;
-	}
+	// constructor(
+	// 	private _route: ActivatedRoute,
+	// 	private _router: Router,
+	// 	private _userService: UserService
+	// ){
+	// 	this.user = new User('','','','');
+	// 	this.token = this._userService.getToken();
+	// 	this.url = GLOBAL.url;
+	// }
 }

@@ -1,25 +1,25 @@
 import { Component, OnInit, DoCheck } from '@angular/core';
-import { UserService } from '../services/user.service';
+import { AdminService } from '../services/admin.service';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 
 @Component({
 	selector: 'admin',
 	templateUrl: './admin.component.html',
-	providers: [UserService]
+	providers: [AdminService]
 })
 export class AdminComponent implements OnInit{
 	title = 'admin';
-	public user;
+	public admin;
 	public token;
 
 	constructor(
-		private _userService: UserService,
+		private _adminService: AdminService,
 		private _router: Router,
 	){}
 
 	ngOnInit(){
-		this.user = this._userService.getUser();
-		this.token = this._userService.getToken();
+		this.admin = this._adminService.getAdmin();
+		this.token = this._adminService.getToken();
 	}
 
 	// comprueba los datos del local storage y ante un csambio, los actualiza

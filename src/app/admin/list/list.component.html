@@ -1,1 +1,48 @@
 <layout></layout>
+<section class="content home">
+    <div class="block-header">
+        <div class="row">
+            <div class="col-md-8 col-sm-7 col-xs-12">
+                <div class="h-left clearfix aos-item" data-aos-duration="400" data-aos-delay="300" data-aos="slide-down">
+                    <h2>Lista de Usuarios</h2>
+                    <!-- <small class="text-muted">Welcome to CC Application</small> -->
+                    <ol class="breadcrumb breadcrumb-col-pink p-l-0">
+                        <li><a [routerLink]="['/home']">Panel Principal</a></li>
+                        <li class="active"><a [routerLink]="['/user']">Administradores</a></li>
+                    </ol>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-5 col-xs-12">
+                <div class="h-right aos-item" data-aos-duration="400" data-aos-delay="300" data-aos="slide-down">
+                    <a [routerLink]="['add']" class="mfb-component__button--main pull-right bg-light-green"><i class="mfb-component__main-icon--resting zmdi zmdi-plus"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="content" style="margin-top:0px;">
+	<div>
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+			<div class="card">
+				<div class="header">
+					<h2> Lista de Administradores</h2>
+				</div>
+				<div class="body">
+					<table class="table table-bordered table-striped table-hover js-basic-example dataTable">
+						<thead>
+							<tr>
+								<th>Usuario</th>
+								<th>Nivel</th>
+								<th>Fecha de Registro</th>
+							</tr>
+						</thead>
+						<tbody>
+
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<script src="assets/plugins/jquery-datatable/jquery.dataTables.js"></script><layout></layout>
