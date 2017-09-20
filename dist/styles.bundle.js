@@ -35,7 +35,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "/* You can add global styles to this file, and also import other style files */\na > img {\n\twidth: 94px;\n\tmargin-left: 35px;\n}\n\na.active {\n\tbackground-color: #eee;\n\tborder-left-color: #9d1c46;\n}\n.btn-bordeaux{\n\tbackground-color: #9d1c46 !important;\n}\n.btn-bordeaux:hover{\n\tcolor: #eee;\n}", ""]);
+exports.push([module.i, "/* You can add global styles to this file, and also import other style files */\na > img {\n\twidth: 82px;\n\tmargin-left: 55px;\n}\n\na.active {\n\tbackground-color: #eee;\n\tborder-left-color: #9d1c46;\n}\n.btn-bordeaux{\n\tbackground-color: #9d1c46 !important;\n}\n.btn-bordeaux:hover{\n\tcolor: #eee;\n}\n.container-fluid {\n    margin-right: auto;\n    margin-left: auto;\n    padding-left: 15px;\n    padding-right: 15px;\n    background-color: #444;\n}\n.sidebar .user-info {\n    background-color: #444;\n}\n.mega-menu.logout-button {\n\tcolor: white;\n}\n.mega-menu.logout-button:hover {\n\tcolor: white;\n    background-color: #444;\n}", ""]);
 
 // exports
 
