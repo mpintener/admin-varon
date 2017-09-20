@@ -24,3 +24,10 @@ a.active {
 .sidebar .user-info {
     background-color: #9d1c46;
 }
+.mega-menu.logout-button {
+	color: white;
+}
+.mega-menu.logout-button:hover {
+	color: white;
+    background: rgb(167, 33, 78);
+}
