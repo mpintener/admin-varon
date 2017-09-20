@@ -3,6 +3,7 @@ import { Http, Response, Headers } from '@angular/http';
 import 'rxjs/add/operator/map';
 import { Observable } from 'rxjs/Observable';
 import { GLOBAL } from './global';
+import { Admin } from '../models/admin';
 
 
 @Injectable()
@@ -62,12 +63,20 @@ export class AdminService{
 			'Content-Type': 'application/json',
 			'token': token
 		});
-		console.log(this.url+'admin/'+id);
+
 		return this._http.get(this.url+'admin/'+id, {headers: headers})
 			.map(res => res.json());
 	}
 
-	editAdmin(token, admin){
-
+	updateAdmin(token, id, admin: Admin){
+		let params = JSON.stringify(admin);
+		let headers = new Headers({
+			'Content-Type':'application/json',
+			'token': token
+		});
+		console.log(params);
+		console.log(this.url+'admin/'+id);
+		return this._http.put(this.url+'admin/'+id, params, {headers: headers})
+			.map(res => res.json());
 	}
 }

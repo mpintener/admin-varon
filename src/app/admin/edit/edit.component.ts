@@ -25,6 +25,7 @@ export class EditComponent implements OnInit{
 		private _adminService: AdminService
 	){
 		this.url = GLOBAL.url;
+		this.adminToEdit = new Admin('','','');
 	}
 
 	ngOnInit(){
@@ -33,13 +34,24 @@ export class EditComponent implements OnInit{
 		this._route.params.forEach((params: Params) => {
 			this.id = params['id'];
 		});
-		console.log(this.id);
-		console.log(this.token);
+
 		this._adminService.getAdminToEdit(this.token, this.id).subscribe(
 			response => {
-				console.log(response);
 				if (response.status === 'success') {
 					this.adminToEdit = response.data;
+				}
+			}, error => {
+				console.log(<any>error);
+			}
+		);
+	}
+
+	onSubmit(){
+		console.log(this.adminToEdit);
+		this._adminService.updateAdmin(this.token, this.id, this.adminToEdit).subscribe(
+			response => {
+				if (response.status === 'success') {
+					this._router.navigate(['/admin']);
 				}
 			}, error => {
 				console.log(<any>error);

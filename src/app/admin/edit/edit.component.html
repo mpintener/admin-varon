@@ -24,25 +24,25 @@
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="card">
                     <div class="body">
-                        <form #formAddUser="ngForm" (ngSubmit)="onSubmit()">
+                        <form #formEditAdmin="ngForm" (ngSubmit)="onSubmit()">
                             <div class="form-group form-float">
                                 <div class="form-line">
-                                    <input type="text" class="form-control" name="username" value="{{ adminToEdit.username}}" placeholder="Nombre de Usuario">
+                                    <input type="text" class="form-control" name="username" #username="ngModel" [(ngModel)]="adminToEdit.username" value="{{ adminToEdit.username }}" placeholder="Nombre de Usuario">
                                 </div>
                             </div>
                             <div class="form-group form-float">
                                 <div class="form-line">
-                                    <input type="password" class="form-control" name="password" value="{{ adminToEdit.password }}" placeholder="Deje en blanco para mantener la contraseña actual">
+                                    <input type="password" class="form-control" name="password" #password="ngModel" [(ngModel)]="adminToEdit.password" value="{{ adminToEdit.password }}" placeholder="Deje en blanco para mantener la contraseña actual">
                                 </div>
                             </div>
-                            <div class="form-group" *ngIf="admin.level === 'superadmin'">
+                            <!-- <div class="form-group" *ngIf="admin.level === 'superadmin'">
                                 <div class="col-sm-6">
-                                <select class="form-control show-tick">
-                                    <option value="admin">Admin</option>
+                                <select class="form-control show-tick" #level="ngModel" [(ngModel)]="adminToEdit.level">
                                     <option value="superadmin">Superadmin</option>
+                                    <option value="admin">Admin</option>
                                 </select>
-                            </div>
-                            </div>
+                            </div> -->
+                            <!-- </div> -->
                             <button class="btn btn-raised btn-primary waves-effect" type="submit">Guardar</button>
                         </form>
                     </div>

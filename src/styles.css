@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 a > img {
-	width: 94px;
-	margin-left: 35px;
+	width: 82px;
+	margin-left: 55px;
 }
 
 a.active {
@@ -13,4 +13,14 @@ a.active {
 }
 .btn-bordeaux:hover{
 	color: #eee;
+}
+.container-fluid {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: #9d1c46;
+}
+.sidebar .user-info {
+    background-color: #9d1c46;
 }
