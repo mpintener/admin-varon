@@ -16,7 +16,7 @@ webpackEmptyContext.id = "../../../../../src async recursive";
 /***/ "../../../../../src/app/admin/add/add.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<layout></layout>"
+module.exports = "<layout></layout>\n"
 
 /***/ }),
 
@@ -27,8 +27,8 @@ module.exports = "<layout></layout>"
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_global__ = __webpack_require__("../../../../../src/app/services/global.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__models_user__ = __webpack_require__("../../../../../src/app/models/user.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_user_service__ = __webpack_require__("../../../../../src/app/services/user.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__models_admin__ = __webpack_require__("../../../../../src/app/models/admin.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_admin_service__ = __webpack_require__("../../../../../src/app/services/admin.service.ts");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -45,24 +45,26 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 var AddComponent = (function () {
-    function AddComponent(_route, _router, _userService) {
+    function AddComponent(_route, _router, _adminService) {
         this._route = _route;
         this._router = _router;
-        this._userService = _userService;
+        this._adminService = _adminService;
         this.title = 'Agregar Administrador';
-        this.user = new __WEBPACK_IMPORTED_MODULE_3__models_user__["a" /* User */]('', '', '', '');
-        this.token = this._userService.getToken();
+        this.user = new __WEBPACK_IMPORTED_MODULE_3__models_admin__["a" /* Admin */]('', '', '');
+        this.token = this._adminService.getAdmin();
         this.url = __WEBPACK_IMPORTED_MODULE_2__services_global__["a" /* GLOBAL */].url;
     }
+    AddComponent.prototype.onSubmit = function () {
+    };
     return AddComponent;
 }());
 AddComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_11" /* Component */])({
         selector: 'add-admin',
         template: __webpack_require__("../../../../../src/app/admin/add/add.component.html"),
-        providers: [__WEBPACK_IMPORTED_MODULE_4__services_user_service__["a" /* UserService */]]
+        providers: [__WEBPACK_IMPORTED_MODULE_4__services_admin_service__["a" /* AdminService */]]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_4__services_user_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__services_user_service__["a" /* UserService */]) === "function" && _c || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_4__services_admin_service__["a" /* AdminService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__services_admin_service__["a" /* AdminService */]) === "function" && _c || Object])
 ], AddComponent);
 
 var _a, _b, _c;
@@ -136,7 +138,7 @@ module.exports = "<router-outlet></router-outlet>"
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_user_service__ = __webpack_require__("../../../../../src/app/services/user.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_admin_service__ = __webpack_require__("../../../../../src/app/services/admin.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AdminComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -152,14 +154,14 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 var AdminComponent = (function () {
-    function AdminComponent(_userService, _router) {
-        this._userService = _userService;
+    function AdminComponent(_adminService, _router) {
+        this._adminService = _adminService;
         this._router = _router;
         this.title = 'admin';
     }
     AdminComponent.prototype.ngOnInit = function () {
-        this.user = this._userService.getUser();
-        this.token = this._userService.getToken();
+        this.admin = this._adminService.getAdmin();
+        this.token = this._adminService.getToken();
     };
     return AdminComponent;
 }());
@@ -167,9 +169,9 @@ AdminComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_11" /* Component */])({
         selector: 'admin',
         template: __webpack_require__("../../../../../src/app/admin/admin.component.html"),
-        providers: [__WEBPACK_IMPORTED_MODULE_1__services_user_service__["a" /* UserService */]]
+        providers: [__WEBPACK_IMPORTED_MODULE_1__services_admin_service__["a" /* AdminService */]]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_user_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_user_service__["a" /* UserService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */]) === "function" && _b || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_admin_service__["a" /* AdminService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_admin_service__["a" /* AdminService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */]) === "function" && _b || Object])
 ], AdminComponent);
 
 var _a, _b;
@@ -245,7 +247,7 @@ AdminModule = __decorate([
 /***/ "../../../../../src/app/admin/edit/edit.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<layout></layout>\n"
+module.exports = "<layout></layout>\n<layout></layout>\n<section class=\"content home\">\n    <div class=\"block-header\">\n        <div class=\"row\">\n            <div class=\"col-md-8 col-sm-7 col-xs-12\">\n                <div class=\"h-left clearfix aos-item\" data-aos-duration=\"400\" data-aos-delay=\"300\" data-aos=\"slide-down\">\n                    <h2>Editar Administrador</h2>\n                    <!-- <small class=\"text-muted\">Welcome to CC Application</small> -->\n                    <ol class=\"breadcrumb breadcrumb-col-pink p-l-0\">\n                        <li><a [routerLink]=\"['home']\">Panel Principal</a></li>\n                        <!-- <li><a [routerLink]=\"['admin']\">Administradores</a></li> -->\n                        <li class=\"active\">Editar Administrador</li>\n                    </ol>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>\n<section class=\"content\" style=\"margin-top:0px;\">\n    <div>\n        <!-- Basic Validation -->\n        <div class=\"row clearfix\">\n            <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\n                <div class=\"card\">\n                    <div class=\"body\">\n                        <form #formAddUser=\"ngForm\" (ngSubmit)=\"onSubmit()\">\n                            <div class=\"form-group form-float\">\n                                <div class=\"form-line\">\n                                    <input type=\"text\" class=\"form-control\" name=\"username\" value=\"{{ adminToEdit.username}}\" placeholder=\"Nombre de Usuario\">\n                                </div>\n                            </div>\n                            <div class=\"form-group form-float\">\n                                <div class=\"form-line\">\n                                    <input type=\"password\" class=\"form-control\" name=\"password\" value=\"{{ adminToEdit.password }}\" placeholder=\"Deje en blanco para mantener la contraseña actual\">\n                                </div>\n                            </div>\n                            <div class=\"form-group\" *ngIf=\"admin.level === 'superadmin'\">\n                                <div class=\"col-sm-6\">\n                                <select class=\"form-control show-tick\">\n                                    <option value=\"admin\">Admin</option>\n                                    <option value=\"superadmin\">Superadmin</option>\n                                </select>\n                            </div>\n                            </div>\n                            <button class=\"btn btn-raised btn-primary waves-effect\" type=\"submit\">Guardar</button>\n                        </form>\n                    </div>\n                </div>\n            </div>\n        </div>\n        <!-- #END# Basic Validation -->\n    </div>\n</section>\n"
 
 /***/ }),
 
@@ -256,8 +258,8 @@ module.exports = "<layout></layout>\n"
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_global__ = __webpack_require__("../../../../../src/app/services/global.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__models_user__ = __webpack_require__("../../../../../src/app/models/user.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_user_service__ = __webpack_require__("../../../../../src/app/services/user.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_user_service__ = __webpack_require__("../../../../../src/app/services/user.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_admin_service__ = __webpack_require__("../../../../../src/app/services/admin.service.ts");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EditComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -274,26 +276,43 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 var EditComponent = (function () {
-    function EditComponent(_route, _router, _userService) {
+    function EditComponent(_route, _router, _userService, _adminService) {
         this._route = _route;
         this._router = _router;
         this._userService = _userService;
-        this.user = new __WEBPACK_IMPORTED_MODULE_3__models_user__["a" /* User */]('', '', '', '');
-        this.token = this._userService.getToken();
+        this._adminService = _adminService;
         this.url = __WEBPACK_IMPORTED_MODULE_2__services_global__["a" /* GLOBAL */].url;
     }
+    EditComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.admin = this._adminService.getAdmin();
+        this.token = this._adminService.getToken();
+        this._route.params.forEach(function (params) {
+            _this.id = params['id'];
+        });
+        console.log(this.id);
+        console.log(this.token);
+        this._adminService.getAdminToEdit(this.token, this.id).subscribe(function (response) {
+            console.log(response);
+            if (response.status === 'success') {
+                _this.adminToEdit = response.data;
+            }
+        }, function (error) {
+            console.log(error);
+        });
+    };
     return EditComponent;
 }());
 EditComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_11" /* Component */])({
         selector: 'edit-admin',
         template: __webpack_require__("../../../../../src/app/admin/edit/edit.component.html"),
-        providers: [__WEBPACK_IMPORTED_MODULE_4__services_user_service__["a" /* UserService */]]
+        providers: [__WEBPACK_IMPORTED_MODULE_3__services_user_service__["a" /* UserService */]]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_4__services_user_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__services_user_service__["a" /* UserService */]) === "function" && _c || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__services_user_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__services_user_service__["a" /* UserService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4__services_admin_service__["a" /* AdminService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__services_admin_service__["a" /* AdminService */]) === "function" && _d || Object])
 ], EditComponent);
 
-var _a, _b, _c;
+var _a, _b, _c, _d;
 //# sourceMappingURL=edit.component.js.map
 
 /***/ }),
@@ -301,7 +320,7 @@ var _a, _b, _c;
 /***/ "../../../../../src/app/admin/list/list.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<layout></layout>\n"
+module.exports = "<layout></layout>\n<section class=\"content home\">\n    <div class=\"block-header\">\n        <div class=\"row\">\n            <div class=\"col-md-8 col-sm-7 col-xs-12\">\n                <div class=\"h-left clearfix aos-item\" data-aos-duration=\"400\" data-aos-delay=\"300\" data-aos=\"slide-down\">\n                    <h2>Lista de Usuarios</h2>\n                    <!-- <small class=\"text-muted\">Welcome to CC Application</small> -->\n                    <ol class=\"breadcrumb breadcrumb-col-pink p-l-0\">\n                        <li><a [routerLink]=\"['/home']\">Panel Principal</a></li>\n                        <li class=\"active\"><a [routerLink]=\"['/user']\">Administradores</a></li>\n                    </ol>\n                </div>\n            </div>\n            <div class=\"col-md-4 col-sm-5 col-xs-12\">\n                <div class=\"h-right aos-item\" data-aos-duration=\"400\" data-aos-delay=\"300\" data-aos=\"slide-down\">\n                    <a [routerLink]=\"['add']\" class=\"mfb-component__button--main pull-right btn-bordeaux\"><i class=\"mfb-component__main-icon--resting zmdi zmdi-plus\"></i></a>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>\n<section class=\"content\" style=\"margin-top:0px;\">\n\t<div>\n\t\t<div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\n\t\t\t<div class=\"card\">\n\t\t\t\t<div class=\"header\">\n\t\t\t\t\t<h2> Lista de Administradores</h2>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"body\">\n\t\t\t\t\t<table class=\"table table-bordered table-striped table-hover js-basic-example dataTable\">\n\t\t\t\t\t\t<thead>\n\t\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t\t<th>Usuario</th>\n\t\t\t\t\t\t\t\t<th>Nivel</th>\n\t\t\t\t\t\t\t\t<th>Acciones</th>\n\t\t\t\t\t\t\t</tr>\n\t\t\t\t\t\t</thead>\n\t\t\t\t\t\t<tbody>\n\t\t\t\t\t\t\t<tr *ngFor=\"let admin of admins\">\n\t\t\t\t\t\t\t\t<td>{{ admin.username }}</td>\n\t\t\t\t\t\t\t\t<td>{{ admin.level }}</td>\n\t\t\t\t\t\t\t\t<td>\n\t\t\t\t\t\t\t\t\t<a [routerLink]=\"['edit',admin.id]\"><i class=\"material-icons\">mode_edit</i></a>\n\t\t\t\t\t\t\t\t\t<a [routerLink]=\"['/edit',admin.id, 'edit']\"><i class=\"material-icons\">delete</i></a>\n\t\t\t\t\t\t\t\t</td>\n\t\t\t\t\t\t\t</tr>\n\t\t\t\t\t\t</tbody>\n\t\t\t\t\t</table>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>\n<script src=\"assets/plugins/jquery-datatable/jquery.dataTables.js\"></script><layout></layout>\n"
 
 /***/ }),
 
@@ -312,8 +331,7 @@ module.exports = "<layout></layout>\n"
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_global__ = __webpack_require__("../../../../../src/app/services/global.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__models_user__ = __webpack_require__("../../../../../src/app/models/user.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_user_service__ = __webpack_require__("../../../../../src/app/services/user.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_admin_service__ = __webpack_require__("../../../../../src/app/services/admin.service.ts");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ListComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -328,25 +346,38 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
 var ListComponent = (function () {
-    function ListComponent(_route, _router, _userService) {
+    function ListComponent(_route, _router, _adminService) {
         this._route = _route;
         this._router = _router;
-        this._userService = _userService;
-        this.user = new __WEBPACK_IMPORTED_MODULE_3__models_user__["a" /* User */]('', '', '', '');
-        this.token = this._userService.getToken();
+        this._adminService = _adminService;
+        this.admin = this._adminService.getAdmin();
+        this.token = this._adminService.getToken();
         this.url = __WEBPACK_IMPORTED_MODULE_2__services_global__["a" /* GLOBAL */].url;
     }
+    ListComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this._adminService.listAdmins(this.token).subscribe(function (response) {
+            console.log(response);
+            if (response.status === 'success') {
+                _this.admins = response.data;
+            }
+            else {
+                console.log(response);
+            }
+        }, function (error) {
+            console.log(error);
+        });
+    };
     return ListComponent;
 }());
 ListComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_11" /* Component */])({
         selector: 'list-admin',
         template: __webpack_require__("../../../../../src/app/admin/list/list.component.html"),
-        providers: [__WEBPACK_IMPORTED_MODULE_4__services_user_service__["a" /* UserService */]]
+        providers: [__WEBPACK_IMPORTED_MODULE_3__services_admin_service__["a" /* AdminService */]]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_4__services_user_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__services_user_service__["a" /* UserService */]) === "function" && _c || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__services_admin_service__["a" /* AdminService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__services_admin_service__["a" /* AdminService */]) === "function" && _c || Object])
 ], ListComponent);
 
 var _a, _b, _c;
@@ -545,7 +576,7 @@ module.exports = "<layout></layout>\n<section class=\"content home\">\n    <div 
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_user_service__ = __webpack_require__("../../../../../src/app/services/user.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_admin_service__ = __webpack_require__("../../../../../src/app/services/admin.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomeComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -561,21 +592,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 var HomeComponent = (function () {
-    function HomeComponent(_userService, _router) {
-        this._userService = _userService;
+    function HomeComponent(_adminService, _router) {
+        this._adminService = _adminService;
         this._router = _router;
         this.title = 'Panel Principal';
     }
     HomeComponent.prototype.ngOnInit = function () {
-        this.user = this._userService.getUser();
-        this.token = this._userService.getToken();
+        this.admin = this._adminService.getAdmin();
+        this.token = this._adminService.getToken();
         if (this.token == null) {
             this._router.navigate(['/login']);
         }
     };
     HomeComponent.prototype.logout = function () {
         localStorage.clear();
-        this.user = null;
+        this.admin = null;
         this.token = null;
         this._router.navigate(['/login']);
     };
@@ -585,9 +616,9 @@ HomeComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_11" /* Component */])({
         selector: 'home',
         template: __webpack_require__("../../../../../src/app/home/home.component.html"),
-        providers: [__WEBPACK_IMPORTED_MODULE_1__services_user_service__["a" /* UserService */]]
+        providers: [__WEBPACK_IMPORTED_MODULE_1__services_admin_service__["a" /* AdminService */]]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_user_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_user_service__["a" /* UserService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */]) === "function" && _b || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_admin_service__["a" /* AdminService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_admin_service__["a" /* AdminService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */]) === "function" && _b || Object])
 ], HomeComponent);
 
 var _a, _b;
@@ -598,7 +629,7 @@ var _a, _b;
 /***/ "../../../../../src/app/layout/layout.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<!-- Overlay For Sidebars -->\n<div class=\"overlay\"></div>\n\n<!-- Search  -->\n<div class=\"search-bar\">\n    <div class=\"search-icon\"> <i class=\"material-icons\">search</i> </div>\n    <input type=\"text\" placeholder=\"START TYPING...\">\n    <div class=\"close-search\"> <i class=\"material-icons\">close</i> </div>\n</div>\n\n<!-- Top Bar -->\n<nav class=\"navbar\">\n    <div class=\"container-fluid\">\n        <div class=\"navbar-header\"> <a href=\"javascript:void(0);\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#navbar-collapse\" aria-expanded=\"false\"></a> <a href=\"javascript:void(0);\" class=\"bars\"></a> <a class=\"navbar-brand\" href=\"index.html\"><img src=\"/assets/images/logo-white.png\"></a> </div>\n        <div class=\"collapse navbar-collapse\" id=\"navbar-collapse\">\n            <ul class=\"nav navbar-nav navbar-right\">\n                <li><a (click)=\"logout()\" class=\"mega-menu\" data-close=\"true\"><i class=\"zmdi zmdi-power\"></i></a></li>\n            </ul>\n        </div>\n    </div>\n</nav>\n\n<!-- Left & Right bar menu -->\n<section>\n    <!-- Left Sidebar -->\n    <aside id=\"leftsidebar\" class=\"sidebar\">\n        <!-- User Info -->\n        <div class=\"user-info\">\n            <div class=\"image\"> <img src=\"assets/images/defaultuser.jpg\" width=\"48\" height=\"48\" alt=\"User\" /> </div>\n            <div class=\"info-container\">\n                <div class=\"name\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">{{ user.username }}</div>\n                <div class=\"email\">{{ user.level }}</div>\n                <div class=\"btn-group user-helper-dropdown\"> <i class=\"material-icons\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"true\">keyboard_arrow_down</i>\n                    <ul class=\"dropdown-menu pull-right\">\n                        <li><a href=\"profile.html\"><i class=\"material-icons\">person</i>Profile</a></li>\n                        <li role=\"seperator\" class=\"divider\"></li>\n                        <li><a href=\"javascript:void(0);\"><i class=\"material-icons\">group</i>Followers</a></li>\n                        <li><a href=\"javascript:void(0);\"><i class=\"material-icons\">shopping_cart</i>Sales</a></li>\n                        <li><a href=\"javascript:void(0);\"><i class=\"material-icons\">favorite</i>Likes</a></li>\n                        <li role=\"seperator\" class=\"divider\"></li>\n                        <li><a href=\"sign-in.html\"><i class=\"material-icons\">input</i>Sign Out</a></li>\n                    </ul>\n                </div>\n            </div>\n        </div>\n        <!-- #User Info -->\n        <!-- Menu -->\n        <div class=\"menu\">\n            <ul class=\"list\">\n                <li> <a [routerLink]=\"['/home']\" [routerLinkActive]=\"active\"><i class=\"material-icons\">assessment</i><span>Panel Principal</span> </a> </li>\n                <li> <a [routerLink]=\"['/user']\"><i class=\"material-icons\">account_circle</i><span>Usuarios</span> </a> </li>\n                <li> <a [routerLink]=\"['/wine']\"><i class=\"material-icons\">list</i><span>Vinos</span> </a> </li>\n            </ul>\n        </div>\n        <!-- #Menu -->\n    </aside>\n\n    <!-- Right Sidebar -->\n    <aside id=\"rightsidebar\" class=\"right-sidebar\">\n        <ul class=\"nav nav-tabs tab-nav-right\" role=\"tablist\">\n            <li role=\"presentation\" class=\"active\"><a href=\"#skins\" data-toggle=\"tab\">Skins</a></li>\n            <li role=\"presentation\"><a href=\"#chat\" data-toggle=\"tab\">Chat</a></li>\n            <li role=\"presentation\"><a href=\"#settings\" data-toggle=\"tab\">Setting</a></li>\n        </ul>\n        <div class=\"tab-content\">\n            <div role=\"tabpanel\" class=\"tab-pane fade in active in active\" id=\"skins\">\n                <ul class=\"demo-choose-skin\">\n                    <h6>Flat Color</h6>\n                    <li data-theme=\"red\"  class=\"active\">\n                        <div class=\"red\"></div>\n                        <span>Red</span> </li>\n                    <li data-theme=\"purple\">\n                        <div class=\"purple\"></div>\n                        <span>Purple</span> </li>\n                    <li data-theme=\"deep-purple\">\n                        <div class=\"deep-purple\"></div>\n                        <span>Deep Purple</span> </li>\n                    <li data-theme=\"blue\">\n                        <div class=\"blue\"></div>\n                        <span>Blue</span> </li>\n                    <li data-theme=\"cyan\">\n                        <div class=\"cyan\"></div>\n                        <span>Cyan</span> </li>\n                    <li data-theme=\"blue-grey\">\n                        <div class=\"blue-grey\"></div>\n                        <span>Blue Grey</span> </li>\n                    <li data-theme=\"black\">\n                        <div class=\"black\"></div>\n                        <span>Black</span> </li>\n                    <h6>Gradient Theme</h6>\n                    <li data-theme=\"green\">\n                        <div class=\"green\"></div>\n                        <span>Green</span> </li>\n                    <li data-theme=\"orange\">\n                        <div class=\"orange\"></div>\n                        <span>Orange</span> </li>\n                    <li data-theme=\"blush\">\n                        <div class=\"blush\"></div>\n                        <span>Blush</span> </li>\n                </ul>\n            </div>\n        </div>\n    </aside>\n</section>\n\n<!-- <section class=\"content home\">\n\t<router-outlet></router-outlet> Aca se carga el componente asociado a la ruta actual\n</section> -->"
+module.exports = "<!-- Overlay For Sidebars -->\n<div class=\"overlay\"></div>\n\n<!-- Search  -->\n<div class=\"search-bar\">\n    <div class=\"search-icon\"> <i class=\"material-icons\">search</i> </div>\n    <input type=\"text\" placeholder=\"START TYPING...\">\n    <div class=\"close-search\"> <i class=\"material-icons\">close</i> </div>\n</div>\n\n<!-- Top Bar -->\n<nav class=\"navbar\">\n    <div class=\"container-fluid\">\n        <div class=\"navbar-header\"> <a href=\"javascript:void(0);\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#navbar-collapse\" aria-expanded=\"false\"></a> <a href=\"javascript:void(0);\" class=\"bars\"></a> <a class=\"navbar-brand\" href=\"index.html\"><img src=\"/assets/images/logo-white.png\"></a> </div>\n        <div class=\"collapse navbar-collapse\" id=\"navbar-collapse\">\n            <ul class=\"nav navbar-nav navbar-right\">\n                <li><a (click)=\"logout()\" class=\"mega-menu\" data-close=\"true\"><i class=\"zmdi zmdi-power\"></i></a></li>\n            </ul>\n        </div>\n    </div>\n</nav>\n\n<!-- Left & Right bar menu -->\n<section>\n    <!-- Left Sidebar -->\n    <aside id=\"leftsidebar\" class=\"sidebar\">\n        <!-- User Info -->\n        <div class=\"user-info\">\n            <div class=\"image\"> <img src=\"assets/images/defaultuser.jpg\" width=\"48\" height=\"48\" alt=\"User\" /> </div>\n            <div class=\"btn-group user-helper-dropdown pull-right\" style=\"box-shadow:0 2px 5px rgba(0, 0, 0, 0), 0 2px 10px rgba(0, 0, 0, 0);\"> <i class=\"material-icons\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"true\" style=\"color:white;\">keyboard_arrow_down</i>\n                <ul class=\"dropdown-menu pull-right\">\n                    <li><a href=\"profile.html\"><i class=\"material-icons\">person</i>Profile</a></li>\n                    <li role=\"seperator\" class=\"divider\"></li>\n                    <li><a href=\"javascript:void(0);\"><i class=\"material-icons\">group</i>Followers</a></li>\n                    <li><a href=\"javascript:void(0);\"><i class=\"material-icons\">shopping_cart</i>Sales</a></li>\n                    <li><a href=\"javascript:void(0);\"><i class=\"material-icons\">favorite</i>Likes</a></li>\n                    <li role=\"seperator\" class=\"divider\"></li>\n                    <li><a href=\"sign-in.html\"><i class=\"material-icons\">input</i>Sign Out</a></li>\n                </ul>\n            </div>\n            <div class=\"info-container\">\n                <div class=\"name\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">{{ admin.username }}</div>\n                <div class=\"email\">{{ admin.level }}</div>\n            </div>\n        </div>\n        <!-- #User Info -->\n        <!-- Menu -->\n        <div class=\"menu\">\n            <ul class=\"list\">\n                <li> <a [routerLink]=\"['/home']\" [routerLinkActive]=\"['active']\"><i class=\"material-icons\">assessment</i><span>Panel Principal</span> </a> </li>\n                <li> <a [routerLink]=\"['/user']\" [routerLinkActive]=\"['active']\"><i class=\"material-icons\">account_circle</i><span>Usuarios</span> </a> </li>\n                <li *ngIf=\"admin.level === 'superadmin'\"> <a [routerLink]=\"['/admin']\" [routerLinkActive]=\"['active']\"><i class=\"material-icons\">account_box</i><span>Administradores</span> </a> </li>\n                <li> <a [routerLink]=\"['/wine']\" [routerLinkActive]=\"['active']\"><i class=\"material-icons\">list</i><span>Vinos</span> </a> </li>\n            </ul>\n        </div>\n        <!-- #Menu -->\n    </aside>\n\n</section>"
 
 /***/ }),
 
@@ -608,7 +639,7 @@ module.exports = "<!-- Overlay For Sidebars -->\n<div class=\"overlay\"></div>\n
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_user_service__ = __webpack_require__("../../../../../src/app/services/user.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_admin_service__ = __webpack_require__("../../../../../src/app/services/admin.service.ts");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LayoutComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -623,17 +654,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 var LayoutComponent = (function () {
-    function LayoutComponent(_userService, _router) {
-        this._userService = _userService;
+    function LayoutComponent(_adminService, _router) {
+        this._adminService = _adminService;
         this._router = _router;
     }
     LayoutComponent.prototype.ngOnInit = function () {
-        this.user = this._userService.getUser();
-        this.token = this._userService.getToken();
+        this.admin = this._adminService.getAdmin();
+        this.token = this._adminService.getToken();
     };
     LayoutComponent.prototype.logout = function () {
         localStorage.clear();
-        this.user = null;
+        this.admin = null;
         this.token = null;
         this._router.navigate(['/login']);
     };
@@ -643,9 +674,9 @@ LayoutComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_11" /* Component */])({
         selector: 'layout',
         template: __webpack_require__("../../../../../src/app/layout/layout.component.html"),
-        providers: [__WEBPACK_IMPORTED_MODULE_2__services_user_service__["a" /* UserService */]]
+        providers: [__WEBPACK_IMPORTED_MODULE_2__services_admin_service__["a" /* AdminService */]]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__services_user_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_user_service__["a" /* UserService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _b || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__services_admin_service__["a" /* AdminService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_admin_service__["a" /* AdminService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _b || Object])
 ], LayoutComponent);
 
 var _a, _b;
@@ -711,7 +742,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".loader {\n  margin: 0;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  height: 100vh;\n  background: rgba(51, 51, 51, 0.64);\n}\n.wineglass {\n  height: 36px;\n  position: relative;\n}\n.wineglass:after {\n  content: '';\n  position: absolute;\n  top: 47px;\n  left: 5px;\n  width: 20px;\n  height: 5px;\n  background: white;\n  box-shadow: 0 0 1px white;\n}\n.top {\n  background: white;\n  width: 30px;\n  height: 36px;\n  border-radius: 0 0 36px 36px;\n  box-shadow: 0 0 1px white;\n}\n.top:before {\n  content: '';\n  position: absolute;\n  left: 4px;\n  bottom: 4px;\n  width: 22px;\n  height: 22px;\n  border-radius: 50%;\n  background: linear-gradient(transparent 50%, #781535 50%);\n}\n.left .top:before {\n  -webkit-animation: rotate2 1s linear infinite;\n          animation: rotate2 1s linear infinite;\n}\n.right .top:before {\n  -webkit-animation: rotate1 1s linear infinite;\n          animation: rotate1 1s linear infinite;\n}\n.top:after {\n  content: '';\n  position: absolute;\n  top: 35px;\n  left: 12px;\n  width: 6px;\n  height: 13px;\n  background: white;\n  box-shadow: 0 0 1px white;\n}\n.left {\n  display: inline-block;\n  margin-right: 10px;\n  -webkit-animation: rotate1 1s cubic-bezier(.39,1.52,.46,.92) infinite;\n          animation: rotate1 1s cubic-bezier(.39,1.52,.46,.92) infinite;\n}\n.right {\n  display: inline-block;\n  -webkit-animation: rotate2 1s cubic-bezier(.39,1.52,.46,.92) infinite;\n          animation: rotate2 1s cubic-bezier(.39,1.52,.46,.92) infinite;\n}\n@-webkit-keyframes rotate1{\n  0% {-webkit-transform: rotate(0deg);transform: rotate(0deg);}\n  50% {-webkit-transform:rotate(22deg);transform:rotate(22deg);}\n}\n@keyframes rotate1{\n  0% {-webkit-transform: rotate(0deg);transform: rotate(0deg);}\n  50% {-webkit-transform:rotate(22deg);transform:rotate(22deg);}\n}\n@-webkit-keyframes rotate2{\n  0% {-webkit-transform:rotate(0deg);transform:rotate(0deg);}\n  50% {-webkit-transform:rotate(-22deg);transform:rotate(-22deg);}\n}\n@keyframes rotate2{\n  0% {-webkit-transform:rotate(0deg);transform:rotate(0deg);}\n  50% {-webkit-transform:rotate(-22deg);transform:rotate(-22deg);}\n}\nul {\n  list-style: none;\n  top: 190px;\n  padding: 0;\n  width: 70px;\n  height: 25px;\n  position: absolute;\n  opacity: 0;\n  -webkit-animation: 1s fadeInUp infinite linear 1s;\n          animation: 1s fadeInUp infinite linear 1s;\n}\nli {\n  width: 6px;\n  height: 15px;\n  background: white;\n  position: absolute;\n  box-shadow: 0 0 1px white;\n  -webkit-transform-origin: bottom;\n          transform-origin: bottom;\n}\nli:nth-child(1) {\n  left: 26px;\n  bottom: 5px;\n  -webkit-transform: rotate(-35deg);\n          transform: rotate(-35deg);\n}\nli:nth-child(2) {\n  left: 34px;\n  bottom: 8px;\n}\nli:nth-child(3) {\n  left: 42px;\n  bottom: 5px;\n  -webkit-transform: rotate(35deg);\n          transform: rotate(35deg);\n}\n@-webkit-keyframes fadeInUp {\n  0% {\n    opacity: 0;\n    -webkit-transform: scaleY(1);\n            transform: scaleY(1);\n  }\n\n  33% {\n    opacity: 1;\n    -webkit-transform: scaleY(1.4);\n            transform: scaleY(1.4);\n  }\n  64% {\n   opacity: .1;\n   -webkit-transform: scaleY(1);\n           transform: scaleY(1);\n }\n 100% {\n  opacity: 0;\n  -webkit-transform: scaleY(.3);\n          transform: scaleY(.3);\n}\n}\n@keyframes fadeInUp {\n  0% {\n    opacity: 0;\n    -webkit-transform: scaleY(1);\n            transform: scaleY(1);\n  }\n\n  33% {\n    opacity: 1;\n    -webkit-transform: scaleY(1.4);\n            transform: scaleY(1.4);\n  }\n  64% {\n   opacity: .1;\n   -webkit-transform: scaleY(1);\n           transform: scaleY(1);\n }\n 100% {\n  opacity: 0;\n  -webkit-transform: scaleY(.3);\n          transform: scaleY(.3);\n}\n}", ""]);
+exports.push([module.i, ".loader {\n  margin: 0;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  height: 100vh;\n  background: #9d1c46;\n}\n.wineglass {\n  height: 36px;\n  position: relative;\n}\n.wineglass:after {\n  content: '';\n  position: absolute;\n  top: 47px;\n  left: 5px;\n  width: 20px;\n  height: 5px;\n  background: white;\n  box-shadow: 0 0 1px white;\n}\n.top {\n  background: white;\n  width: 30px;\n  height: 36px;\n  border-radius: 0 0 36px 36px;\n  box-shadow: 0 0 1px white;\n}\n.top:before {\n  content: '';\n  position: absolute;\n  left: 4px;\n  bottom: 4px;\n  width: 22px;\n  height: 22px;\n  border-radius: 50%;\n  background: linear-gradient(transparent 50%, #781535 50%);\n}\n.left .top:before {\n  -webkit-animation: rotate2 1s linear infinite;\n          animation: rotate2 1s linear infinite;\n}\n.right .top:before {\n  -webkit-animation: rotate1 1s linear infinite;\n          animation: rotate1 1s linear infinite;\n}\n.top:after {\n  content: '';\n  position: absolute;\n  top: 35px;\n  left: 12px;\n  width: 6px;\n  height: 13px;\n  background: white;\n  box-shadow: 0 0 1px white;\n}\n.left {\n  display: inline-block;\n  margin-right: 10px;\n  -webkit-animation: rotate1 1s cubic-bezier(.39,1.52,.46,.92) infinite;\n          animation: rotate1 1s cubic-bezier(.39,1.52,.46,.92) infinite;\n}\n.right {\n  display: inline-block;\n  -webkit-animation: rotate2 1s cubic-bezier(.39,1.52,.46,.92) infinite;\n          animation: rotate2 1s cubic-bezier(.39,1.52,.46,.92) infinite;\n}\n@-webkit-keyframes rotate1{\n  0% {-webkit-transform: rotate(0deg);transform: rotate(0deg);}\n  50% {-webkit-transform:rotate(22deg);transform:rotate(22deg);}\n}\n@keyframes rotate1{\n  0% {-webkit-transform: rotate(0deg);transform: rotate(0deg);}\n  50% {-webkit-transform:rotate(22deg);transform:rotate(22deg);}\n}\n@-webkit-keyframes rotate2{\n  0% {-webkit-transform:rotate(0deg);transform:rotate(0deg);}\n  50% {-webkit-transform:rotate(-22deg);transform:rotate(-22deg);}\n}\n@keyframes rotate2{\n  0% {-webkit-transform:rotate(0deg);transform:rotate(0deg);}\n  50% {-webkit-transform:rotate(-22deg);transform:rotate(-22deg);}\n}\nul {\n  list-style: none;\n  top: 190px;\n  padding: 0;\n  width: 70px;\n  height: 25px;\n  position: absolute;\n  opacity: 0;\n  -webkit-animation: 1s fadeInUp infinite linear 1s;\n          animation: 1s fadeInUp infinite linear 1s;\n}\nli {\n  width: 6px;\n  height: 15px;\n  background: white;\n  position: absolute;\n  box-shadow: 0 0 1px white;\n  -webkit-transform-origin: bottom;\n          transform-origin: bottom;\n}\nli:nth-child(1) {\n  left: 26px;\n  bottom: 5px;\n  -webkit-transform: rotate(-35deg);\n          transform: rotate(-35deg);\n}\nli:nth-child(2) {\n  left: 34px;\n  bottom: 8px;\n}\nli:nth-child(3) {\n  left: 42px;\n  bottom: 5px;\n  -webkit-transform: rotate(35deg);\n          transform: rotate(35deg);\n}\n@-webkit-keyframes fadeInUp {\n  0% {\n    opacity: 0;\n    -webkit-transform: scaleY(1);\n            transform: scaleY(1);\n  }\n\n  33% {\n    opacity: 1;\n    -webkit-transform: scaleY(1.4);\n            transform: scaleY(1.4);\n  }\n  64% {\n   opacity: .1;\n   -webkit-transform: scaleY(1);\n           transform: scaleY(1);\n }\n 100% {\n  opacity: 0;\n  -webkit-transform: scaleY(.3);\n          transform: scaleY(.3);\n}\n}\n@keyframes fadeInUp {\n  0% {\n    opacity: 0;\n    -webkit-transform: scaleY(1);\n            transform: scaleY(1);\n  }\n\n  33% {\n    opacity: 1;\n    -webkit-transform: scaleY(1.4);\n            transform: scaleY(1.4);\n  }\n  64% {\n   opacity: .1;\n   -webkit-transform: scaleY(1);\n           transform: scaleY(1);\n }\n 100% {\n  opacity: 0;\n  -webkit-transform: scaleY(.3);\n          transform: scaleY(.3);\n}\n}", ""]);
 
 // exports
 
@@ -766,7 +797,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".container-fluid.custom-background {\n\tbackground: red;\n\tbackground-size: cover;\n}\n.btn.btn-raised.waves-effect.bg-red.login-button{\n\tbackground-color: #781535 !important;\n}\n.col-lg-3.col-md-4.col-xs-12.login-panel > .card{\n\tbackground-color: #eee;\n}\n.wrong-login{\n\tcolor: #b7144a;\n\tfont-size: 13px;\n\toutline-color: red;\n    /* also need animation and -moz-animation */\n    -webkit-animation: shake 0.6s linear;\n}\n\n@-webkit-keyframes shake {\n    8%, 41% {\n        -webkit-transform: translateX(-10px);\n    }\n    25%, 58% {\n        -webkit-transform: translateX(10px);\n    }\n    75% {\n        -webkit-transform: translateX(-5px);\n    }\n    92% {\n        -webkit-transform: translateX(5px);\n    }\n    0%, 100% {\n        -webkit-transform: translateX(0);\n    }\n}\n/**/\n.wineglass {\n  height: 36px;\n  position: relative;\n}\n.wineglass:after {\n  content: ''; \n  position: absolute;\n  top: 47px;\n  left: 5px;\n  width: 20px;\n  height: 5px;\n  background: white;\n  box-shadow: 0 0 1px white;\n}\n.top {\n  background: white;\n  width: 30px;\n  height: 36px;\n  border-radius: 0 0 36px 36px;\n  box-shadow: 0 0 1px white;\n}\n.top:before {\n  content: ''; \n  position: absolute;\n  left: 4px;\n  bottom: 4px;\n  width: 22px;\n  height: 22px;\n  border-radius: 50%;\n  background: linear-gradient(transparent 50%, #F36E3E 50%);\n}\n.left .top:before {\n  -webkit-animation: rotate2 1s linear infinite;\n          animation: rotate2 1s linear infinite;\n}\n.right .top:before {\n  -webkit-animation: rotate1 1s linear infinite;\n          animation: rotate1 1s linear infinite;\n}\n.top:after {\n  content: ''; \n  position: absolute;\n  top: 35px;\n  left: 12px;\n  width: 6px;\n  height: 13px;\n  background: white;\n  box-shadow: 0 0 1px white;\n}\n.left {\n  display: inline-block;\n  margin-right: 10px;\n  -webkit-animation: rotate1 1s cubic-bezier(.39,1.52,.46,.92) infinite;\n          animation: rotate1 1s cubic-bezier(.39,1.52,.46,.92) infinite;\n}\n.right {\n  display: inline-block;\n  -webkit-animation: rotate2 1s cubic-bezier(.39,1.52,.46,.92) infinite;\n          animation: rotate2 1s cubic-bezier(.39,1.52,.46,.92) infinite;\n}\n@-webkit-keyframes rotate1{\n  0% {-webkit-transform: rotate(0deg);transform: rotate(0deg);}\n  50% {-webkit-transform:rotate(22deg);transform:rotate(22deg);}\n}\n@keyframes rotate1{\n  0% {-webkit-transform: rotate(0deg);transform: rotate(0deg);}\n  50% {-webkit-transform:rotate(22deg);transform:rotate(22deg);}\n}\n@-webkit-keyframes rotate2{\n  0% {-webkit-transform:rotate(0deg);transform:rotate(0deg);}\n  50% {-webkit-transform:rotate(-22deg);transform:rotate(-22deg);}\n}\n@keyframes rotate2{\n  0% {-webkit-transform:rotate(0deg);transform:rotate(0deg);}\n  50% {-webkit-transform:rotate(-22deg);transform:rotate(-22deg);}\n}\nul {\n  list-style: none;\n  margin: 0;\n  padding: 0;\n  width: 70px;\n  height: 25px;\n  position: relative;\n  opacity: 0;\n  -webkit-animation: 1s fadeInUp infinite linear 2s;\n          animation: 1s fadeInUp infinite linear 2s;\n}\nli {\n  width: 6px;\n  height: 15px;\n  background: white;\n  position: absolute;\n  box-shadow: 0 0 1px white;\n  -webkit-transform-origin: bottom;\n          transform-origin: bottom;\n}\nli:nth-child(1) {\n  left: 26px;\n  bottom: 5px;\n  -webkit-transform: rotate(-35deg);\n          transform: rotate(-35deg);\n}\nli:nth-child(2) {\n  left: 34px;\n  bottom: 8px;\n}\nli:nth-child(3) {\n  left: 42px;\n  bottom: 5px;\n  -webkit-transform: rotate(35deg);\n          transform: rotate(35deg);\n}\n@-webkit-keyframes fadeInUp {\n  0% {\n    opacity: 0;\n    -webkit-transform: scaleY(1);\n            transform: scaleY(1);\n  }\n  \n  33% {\n    opacity: 1;\n    -webkit-transform: scaleY(1.4);\n            transform: scaleY(1.4);\n  }\n  64% {\n     opacity: .1;\n     -webkit-transform: scaleY(1);\n             transform: scaleY(1);\n  }\n  100% { \n    opacity: 0;\n    -webkit-transform: scaleY(.3);\n            transform: scaleY(.3);\n  }\n}\n@keyframes fadeInUp {\n  0% {\n    opacity: 0;\n    -webkit-transform: scaleY(1);\n            transform: scaleY(1);\n  }\n  \n  33% {\n    opacity: 1;\n    -webkit-transform: scaleY(1.4);\n            transform: scaleY(1.4);\n  }\n  64% {\n     opacity: .1;\n     -webkit-transform: scaleY(1);\n             transform: scaleY(1);\n  }\n  100% { \n    opacity: 0;\n    -webkit-transform: scaleY(.3);\n            transform: scaleY(.3);\n  }\n}", ""]);
+exports.push([module.i, ".container-fluid.custom-background {\n\tbackground: url(/assets/images/back.jpg);\n\tbackground-size: cover;\n}\n.btn.btn-raised.waves-effect.bg-red.login-button{\n\tbackground-color: #781535 !important;\n}\n.col-lg-3.col-md-4.col-xs-12.login-panel > .card{\n\tbackground-color: #eee;\n}\n.wrong-login{\n\tcolor: #b7144a;\n\tfont-size: 13px;\n\toutline-color: red;\n    /* also need animation and -moz-animation */\n    -webkit-animation: shake 0.6s linear;\n}\n\n@-webkit-keyframes shake {\n    8%, 41% {\n        -webkit-transform: translateX(-10px);\n    }\n    25%, 58% {\n        -webkit-transform: translateX(10px);\n    }\n    75% {\n        -webkit-transform: translateX(-5px);\n    }\n    92% {\n        -webkit-transform: translateX(5px);\n    }\n    0%, 100% {\n        -webkit-transform: translateX(0);\n    }\n}\n/**/\n.wineglass {\n  height: 36px;\n  position: relative;\n}\n.wineglass:after {\n  content: ''; \n  position: absolute;\n  top: 47px;\n  left: 5px;\n  width: 20px;\n  height: 5px;\n  background: white;\n  box-shadow: 0 0 1px white;\n}\n.top {\n  background: white;\n  width: 30px;\n  height: 36px;\n  border-radius: 0 0 36px 36px;\n  box-shadow: 0 0 1px white;\n}\n.top:before {\n  content: ''; \n  position: absolute;\n  left: 4px;\n  bottom: 4px;\n  width: 22px;\n  height: 22px;\n  border-radius: 50%;\n  background: linear-gradient(transparent 50%, #F36E3E 50%);\n}\n.left .top:before {\n  -webkit-animation: rotate2 1s linear infinite;\n          animation: rotate2 1s linear infinite;\n}\n.right .top:before {\n  -webkit-animation: rotate1 1s linear infinite;\n          animation: rotate1 1s linear infinite;\n}\n.top:after {\n  content: ''; \n  position: absolute;\n  top: 35px;\n  left: 12px;\n  width: 6px;\n  height: 13px;\n  background: white;\n  box-shadow: 0 0 1px white;\n}\n.left {\n  display: inline-block;\n  margin-right: 10px;\n  -webkit-animation: rotate1 1s cubic-bezier(.39,1.52,.46,.92) infinite;\n          animation: rotate1 1s cubic-bezier(.39,1.52,.46,.92) infinite;\n}\n.right {\n  display: inline-block;\n  -webkit-animation: rotate2 1s cubic-bezier(.39,1.52,.46,.92) infinite;\n          animation: rotate2 1s cubic-bezier(.39,1.52,.46,.92) infinite;\n}\n@-webkit-keyframes rotate1{\n  0% {-webkit-transform: rotate(0deg);transform: rotate(0deg);}\n  50% {-webkit-transform:rotate(22deg);transform:rotate(22deg);}\n}\n@keyframes rotate1{\n  0% {-webkit-transform: rotate(0deg);transform: rotate(0deg);}\n  50% {-webkit-transform:rotate(22deg);transform:rotate(22deg);}\n}\n@-webkit-keyframes rotate2{\n  0% {-webkit-transform:rotate(0deg);transform:rotate(0deg);}\n  50% {-webkit-transform:rotate(-22deg);transform:rotate(-22deg);}\n}\n@keyframes rotate2{\n  0% {-webkit-transform:rotate(0deg);transform:rotate(0deg);}\n  50% {-webkit-transform:rotate(-22deg);transform:rotate(-22deg);}\n}\nul {\n  list-style: none;\n  margin: 0;\n  padding: 0;\n  width: 70px;\n  height: 25px;\n  position: relative;\n  opacity: 0;\n  -webkit-animation: 1s fadeInUp infinite linear 2s;\n          animation: 1s fadeInUp infinite linear 2s;\n}\nli {\n  width: 6px;\n  height: 15px;\n  background: white;\n  position: absolute;\n  box-shadow: 0 0 1px white;\n  -webkit-transform-origin: bottom;\n          transform-origin: bottom;\n}\nli:nth-child(1) {\n  left: 26px;\n  bottom: 5px;\n  -webkit-transform: rotate(-35deg);\n          transform: rotate(-35deg);\n}\nli:nth-child(2) {\n  left: 34px;\n  bottom: 8px;\n}\nli:nth-child(3) {\n  left: 42px;\n  bottom: 5px;\n  -webkit-transform: rotate(35deg);\n          transform: rotate(35deg);\n}\n@-webkit-keyframes fadeInUp {\n  0% {\n    opacity: 0;\n    -webkit-transform: scaleY(1);\n            transform: scaleY(1);\n  }\n  \n  33% {\n    opacity: 1;\n    -webkit-transform: scaleY(1.4);\n            transform: scaleY(1.4);\n  }\n  64% {\n     opacity: .1;\n     -webkit-transform: scaleY(1);\n             transform: scaleY(1);\n  }\n  100% { \n    opacity: 0;\n    -webkit-transform: scaleY(.3);\n            transform: scaleY(.3);\n  }\n}\n@keyframes fadeInUp {\n  0% {\n    opacity: 0;\n    -webkit-transform: scaleY(1);\n            transform: scaleY(1);\n  }\n  \n  33% {\n    opacity: 1;\n    -webkit-transform: scaleY(1.4);\n            transform: scaleY(1.4);\n  }\n  64% {\n     opacity: .1;\n     -webkit-transform: scaleY(1);\n             transform: scaleY(1);\n  }\n  100% { \n    opacity: 0;\n    -webkit-transform: scaleY(.3);\n            transform: scaleY(.3);\n  }\n}\n/* Custom css */\n", ""]);
 
 // exports
 
@@ -779,7 +810,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/login/login.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<!DOCTYPE html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\">\n    <meta content=\"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no\" name=\"viewport\">\n    <title>Varón</title>\n    <!-- Favicon-->\n    <link rel=\"icon\" href=\"favicon.ico\" type=\"image/x-icon\">\n    <!-- Custom Css -->\n\n    <link href=\"assets/css/login.css\" rel=\"stylesheet\">\n\n    <!-- AdminCC You can choose a theme from css/themes instead of get all themes -->\n    <link href=\"assets/css/themes/all-themes.css\" rel=\"stylesheet\" />\n</head>\n\n<body class=\"theme-cyan\">\n<div *ngIf=\"objLoaderStatus\">\n    <loader size=\"large\" type=\"brand\" container=\"true\"></loader>\n</div>\n<div class=\"authentication\" *ngIf=\"!objLoaderStatus\">\n    <div class=\"container-fluid custom-background\">\n        <div class=\"row clearfix\">\n            <div class=\"col-lg-9 col-md-8 col-xs-12\">\n            </div>\n            <div class=\"col-lg-3 col-md-4 col-xs-12 login-panel\">\n                <div class=\"card\">\n                    <h4 class=\"l-login\">Login</h4>\n                    <form class=\"col-md-12\" #loginForm=\"ngForm\" (ngSubmit)=\"onSubmit()\">\n                        <div class=\"form-group form-float\">\n                            <div class=\"form-line\">\n                                <input type=\"text\" class=\"form-control\" name=\"username\" #username=\"ngModel\" [(ngModel)]=\"user.username\" required>\n                                <label class=\"form-label\">Usuario</label>\n                            </div>\n                        </div>\n                        <div class=\"form-group form-float\">\n                            <div class=\"form-line\">\n                                <input type=\"password\" class=\"form-control\" name=\"password\" #password=\"ngModel\" [(ngModel)]=\"user.password\" required>\n                                <label class=\"form-label\">Contraseña</label>\n                            </div>\n                        </div>\n                        <div *ngIf=\"!this.status\">\n                            <label class=\"wrong-login\">Usuario y/o contraseña incorrecto(s)</label>\n                        </div>\n                        <input class=\"btn btn-raised waves-effect bg-red login-button\" type=\"submit\" value=\"Iniciar Sesión\">\n                    </form>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>\n\n<!-- Jquery Core Js -->\n<script src=\"assets/bundles/libscripts.bundle.js\"></script> <!-- Lib Scripts Plugin Js -->\n<script src=\"assets/bundles/vendorscripts.bundle.js\"></script> <!-- Lib Scripts Plugin Js -->\n<script src=\"assets/plugins/css-gradientify/gradientify.min.js\"></script><!-- Gradientify Js -->\n\n<script src=\"assets/bundles/mainscripts.bundle.js\"></script><!-- Custom Js -->\n</body>\n</html>\n"
+module.exports = "<!DOCTYPE html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\">\n    <meta content=\"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no\" name=\"viewport\">\n    <title>Varón</title>\n    <link rel=\"icon\" href=\"favicon.ico\" type=\"image/x-icon\">\n<!-- Custom Css -->\n<link href=\"https://fonts.googleapis.com/icon?family=Material+Icons\" rel=\"stylesheet\" type=\"text/css\">\n<link href=\"assets/css/main.css\" rel=\"stylesheet\">\n<link href=\"assets/css/login.css\" rel=\"stylesheet\">\n\n<!-- AdminCC You can choose a theme from css/themes instead of get all themes -->\n<link href=\"assets/css/themes/all-themes.css\" rel=\"stylesheet\" />\n</head>\n\n<body class=\"theme-cyan\">\n<div *ngIf=\"objLoaderStatus\">\n    <loader size=\"large\" type=\"brand\" container=\"true\"></loader>\n</div>\n<div class=\"authentication\" *ngIf=\"!objLoaderStatus\">\n    <div class=\"container-fluid custom-background\">\n        <div class=\"row clearfix\">\n            <div class=\"col-lg-9 col-md-8 col-xs-12\">\n            </div>\n            <div class=\"col-lg-3 col-md-4 col-xs-12 login-panel\">\n                <div class=\"card\">\n                    <h4 class=\"l-login\">Login</h4>\n                    <form class=\"col-md-12\" #loginForm=\"ngForm\" (ngSubmit)=\"onSubmit()\">\n                        <div class=\"form-group form-float\">\n                            <div class=\"form-line\">\n                                <input type=\"text\" class=\"form-control\" name=\"username\" #username=\"ngModel\" [(ngModel)]=\"admin.username\" placeholder=\"Usuario\">\n                            </div>\n                        </div>\n                        <div class=\"form-group form-float\">\n                            <div class=\"form-line\">\n                                <input type=\"password\" class=\"form-control\" name=\"password\" #password=\"ngModel\" [(ngModel)]=\"admin.password\" placeholder=\"Contraseña\">\n                            </div>\n                        </div>\n                        <div *ngIf=\"!this.status\">\n                            <label class=\"wrong-login\">Usuario y/o contraseña incorrecto(s)</label>\n                        </div>\n                        <input class=\"btn btn-raised waves-effect bg-red login-button\" type=\"submit\" value=\"Iniciar Sesión\">\n                    </form>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>\n<!-- Jquery Core Js -->\n<script src=\"assets/bundles/libscripts.bundle.js\"></script> <!-- Lib Scripts Plugin Js -->\n<script src=\"assets/bundles/vendorscripts.bundle.js\"></script> <!-- Lib Scripts Plugin Js -->\n<script src=\"assets/plugins/css-gradientify/gradientify.min.js\"></script><!-- Gradientify Js -->\n\n<script src=\"assets/bundles/mainscripts.bundle.js\"></script><!-- Custom Js -->\n</body>\n</html>\n"
 
 /***/ }),
 
@@ -789,8 +820,8 @@ module.exports = "<!DOCTYPE html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__models_user__ = __webpack_require__("../../../../../src/app/models/user.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_user_service__ = __webpack_require__("../../../../../src/app/services/user.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__models_admin__ = __webpack_require__("../../../../../src/app/models/admin.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_admin_service__ = __webpack_require__("../../../../../src/app/services/admin.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_loader_service__ = __webpack_require__("../../../../../src/app/services/loader.service.ts");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -808,19 +839,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 var LoginComponent = (function () {
-    function LoginComponent(_route, _router, _userService, _loaderService) {
+    function LoginComponent(_route, _router, _adminService, _loaderService) {
         this._route = _route;
         this._router = _router;
-        this._userService = _userService;
+        this._adminService = _adminService;
         this._loaderService = _loaderService;
         this.status = 1;
-        this.user = new __WEBPACK_IMPORTED_MODULE_2__models_user__["a" /* User */]('', '', '', '');
+        this.admin = new __WEBPACK_IMPORTED_MODULE_2__models_admin__["a" /* Admin */]('', '', '');
         this.objLoaderStatus = false;
     }
     LoginComponent.prototype.ngOnInit = function () {
         var _this = this;
-        console.log(this._userService.getToken());
-        console.log(this._userService.getUser());
         this._loaderService.loaderStatus.subscribe(function (val) {
             _this.objLoaderStatus = val;
         });
@@ -829,14 +858,15 @@ var LoginComponent = (function () {
         var _this = this;
         this.status = 1;
         this._loaderService.displayLoader(true);
-        this._userService.login(this.user).subscribe(function (response) {
+        console.log(this.admin);
+        this._adminService.login(this.admin).subscribe(function (response) {
             _this._loaderService.displayLoader(false);
-            if (response.data.token == undefined) {
+            if (response.status === 'error') {
                 _this.status = 0;
             }
             else {
-                console.log(response.data);
-                localStorage.setItem('user', JSON.stringify(response.data.info));
+                console.log(response);
+                localStorage.setItem('admin', JSON.stringify(response.data.info));
                 localStorage.setItem('token', JSON.stringify(response.data.token));
                 _this._router.navigate(['/home']);
             }
@@ -857,9 +887,9 @@ LoginComponent = __decorate([
         selector: 'login',
         template: __webpack_require__("../../../../../src/app/login/login.component.html"),
         styles: [__webpack_require__("../../../../../src/app/login/login.component.css")],
-        providers: [__WEBPACK_IMPORTED_MODULE_3__services_user_service__["a" /* UserService */], __WEBPACK_IMPORTED_MODULE_4__services_loader_service__["a" /* LoaderService */]]
+        providers: [__WEBPACK_IMPORTED_MODULE_3__services_admin_service__["a" /* AdminService */], __WEBPACK_IMPORTED_MODULE_4__services_loader_service__["a" /* LoaderService */]]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__services_user_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__services_user_service__["a" /* UserService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4__services_loader_service__["a" /* LoaderService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__services_loader_service__["a" /* LoaderService */]) === "function" && _d || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__services_admin_service__["a" /* AdminService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__services_admin_service__["a" /* AdminService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4__services_loader_service__["a" /* LoaderService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__services_loader_service__["a" /* LoaderService */]) === "function" && _d || Object])
 ], LoginComponent);
 
 var _a, _b, _c, _d;
@@ -867,22 +897,21 @@ var _a, _b, _c, _d;
 
 /***/ }),
 
-/***/ "../../../../../src/app/models/user.ts":
+/***/ "../../../../../src/app/models/admin.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return User; });
-var User = (function () {
-    function User(username, password, level, email) {
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Admin; });
+var Admin = (function () {
+    function Admin(username, password, level) {
         this.username = username;
         this.password = password;
         this.level = level;
-        this.email = email;
     }
-    return User;
+    return Admin;
 }());
 
-//# sourceMappingURL=user.js.map
+//# sourceMappingURL=admin.js.map
 
 /***/ }),
 
@@ -938,6 +967,94 @@ ErrorComponent = __decorate([
 ], ErrorComponent);
 
 //# sourceMappingURL=error404.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/services/admin.service.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__("../../../../rxjs/add/operator/map.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__global__ = __webpack_require__("../../../../../src/app/services/global.ts");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AdminService; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var AdminService = (function () {
+    function AdminService(_http) {
+        this._http = _http;
+        this.url = __WEBPACK_IMPORTED_MODULE_3__global__["a" /* GLOBAL */].url;
+    }
+    AdminService.prototype.login = function (admin, token) {
+        if (token === void 0) { token = null; }
+        var params = JSON.stringify(admin);
+        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Headers */]({ 'Content-Type': 'application/json' });
+        console.log(params);
+        return this._http.post(this.url + 'admin/login', params, { headers: headers })
+            .map(function (res) { return res.json(); });
+    };
+    AdminService.prototype.getToken = function () {
+        var token = JSON.parse(localStorage.getItem('token'));
+        if (token != undefined) {
+            this.token = token;
+        }
+        else {
+            this.token = null;
+        }
+        return this.token;
+    };
+    AdminService.prototype.getAdmin = function () {
+        var admin = JSON.parse(localStorage.getItem('admin'));
+        if (admin != undefined) {
+            this.admin = admin;
+        }
+        else {
+            this.admin = null;
+        }
+        return this.admin;
+    };
+    AdminService.prototype.listAdmins = function (token) {
+        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Headers */]({
+            'Content-Type': 'application/json',
+            'token': token
+        });
+        return this._http.get(this.url + 'admin', { headers: headers })
+            .map(function (res) { return res.json(); });
+    };
+    // Obtener usuario por id
+    AdminService.prototype.getAdminToEdit = function (token, id) {
+        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Headers */]({
+            'Content-Type': 'application/json',
+            'token': token
+        });
+        console.log(this.url + 'admin/' + id);
+        return this._http.get(this.url + 'admin/' + id, { headers: headers })
+            .map(function (res) { return res.json(); });
+    };
+    AdminService.prototype.editAdmin = function (token, admin) {
+    };
+    return AdminService;
+}());
+AdminService = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* Injectable */])(),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* Http */]) === "function" && _a || Object])
+], AdminService);
+
+var _a;
+//# sourceMappingURL=admin.service.js.map
 
 /***/ }),
 
@@ -1014,33 +1131,6 @@ var UserService = (function () {
         this._http = _http;
         this.url = __WEBPACK_IMPORTED_MODULE_3__global__["a" /* GLOBAL */].url;
     }
-    UserService.prototype.login = function (user, token) {
-        if (token === void 0) { token = null; }
-        var params = JSON.stringify(user);
-        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Headers */]({ 'Content-Type': 'application/json' });
-        return this._http.post(this.url + 'admin/login', params, { headers: headers })
-            .map(function (res) { return res.json(); });
-    };
-    UserService.prototype.getToken = function () {
-        var token = JSON.parse(localStorage.getItem('token'));
-        if (token != undefined) {
-            this.token = token;
-        }
-        else {
-            this.token = null;
-        }
-        return this.token;
-    };
-    UserService.prototype.getUser = function () {
-        var user = JSON.parse(localStorage.getItem('user'));
-        if (user != undefined) {
-            this.user = user;
-        }
-        else {
-            this.user = null;
-        }
-        return this.user;
-    };
     UserService.prototype.listUsers = function (token) {
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Headers */]({
             'Content-Type': 'application/json',
@@ -1055,6 +1145,7 @@ var UserService = (function () {
             'Content-Type': 'application/json',
             'token': token
         });
+        console.log(this.url + 'user/' + id);
         return this._http.get(this.url + 'user/' + id, { headers: headers })
             .map(function (res) { return res.json(); });
     };
@@ -1123,7 +1214,7 @@ var _a;
 /***/ "../../../../../src/app/user/edit/edit.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<layout></layout>\n<section class=\"content home\">\n    <div class=\"block-header\">\n        <div class=\"row\">\n            <div class=\"col-md-8 col-sm-7 col-xs-12\">\n                <div class=\"h-left clearfix aos-item\" data-aos-duration=\"400\" data-aos-delay=\"300\" data-aos=\"slide-down\">\n                    <h2>Editar Usuario</h2>\n                    <!-- <small class=\"text-muted\">Welcome to CC Application</small> -->\n                    <ol class=\"breadcrumb breadcrumb-col-pink p-l-0\">\n                        <li><a [routerLink]=\"['home']\">Panel Principal</a></li>\n                        <li><a [routerLink]=\"['/user']\">Usuarios</a></li>\n                        <li class=\"active\">Editar Usuario</li>\n                    </ol>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>\n<section class=\"content\">\n    <div>\n        <!-- Basic Validation -->\n        <div class=\"row clearfix\">\n            <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\n                <div class=\"card\">\n                    <div class=\"body\">\n                        <form #formAddUser=\"ngForm\" (ngSubmit)=\"onSubmit()\">\n                            <div class=\"form-group form-float\">\n                                <div class=\"form-line\">\n                                    <input type=\"text\" class=\"form-control\" name=\"email\" #email=\"ngModel\" [(ngModel)]=\"userToEdit.email\" value=\"{{ userToEdit.email}}\" required>\n                                    <label class=\"form-label\">Nombre de Usuario</label>\n                                </div>\n                            </div>\n                            <div class=\"form-group form-float\">\n                                <div class=\"form-line\">\n                                    <input type=\"password\" class=\"form-control\" name=\"password\" #password=\"ngModel\" [(ngModel)]=\"userToEdit.password\" value=\"{{ userToEdit.password }}\" required>\n                                    <label class=\"form-label\">Contraseña</label>\n                                </div>\n                            </div>\n                            <button class=\"btn btn-raised btn-primary waves-effect\" type=\"submit\">Guardar</button>\n                        </form>\n                    </div>\n                </div>\n            </div>\n        </div>\n        <!-- #END# Basic Validation -->\n    </div>\n</section>\n"
+module.exports = "<layout></layout>\n<section class=\"content home\">\n    <div class=\"block-header\">\n        <div class=\"row\">\n            <div class=\"col-md-8 col-sm-7 col-xs-12\">\n                <div class=\"h-left clearfix aos-item\" data-aos-duration=\"400\" data-aos-delay=\"300\" data-aos=\"slide-down\">\n                    <h2>Editar Usuario</h2>\n                    <!-- <small class=\"text-muted\">Welcome to CC Application</small> -->\n                    <ol class=\"breadcrumb breadcrumb-col-pink p-l-0\">\n                        <li><a [routerLink]=\"['home']\">Panel Principal</a></li>\n                        <li><a [routerLink]=\"['/user']\">Usuarios</a></li>\n                        <li class=\"active\">Editar Usuario</li>\n                    </ol>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>\n<section class=\"content\" style=\"margin-top:0px;\">\n    <div>\n        <!-- Basic Validation -->\n        <div class=\"row clearfix\">\n            <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\n                <div class=\"card\">\n                    <div class=\"body\">\n                        <form #formAddUser=\"ngForm\" (ngSubmit)=\"onSubmit()\">\n                            <div class=\"form-group form-float\">\n                                <div class=\"form-line\">\n                                    <input type=\"text\" class=\"form-control\" name=\"email\" #email=\"ngModel\" [(ngModel)]=\"userToEdit.email\" value=\"{{ userToEdit.email}}\" required>\n                                    <label class=\"form-label\">Nombre de Usuario</label>\n                                </div>\n                            </div>\n                            <div class=\"form-group form-float\">\n                                <div class=\"form-line\">\n                                    <input type=\"password\" class=\"form-control\" name=\"password\" #password=\"ngModel\" [(ngModel)]=\"userToEdit.password\" value=\"{{ userToEdit.password }}\" required>\n                                    <label class=\"form-label\">Contraseña</label>\n                                </div>\n                            </div>\n                            <button class=\"btn btn-raised btn-primary waves-effect\" type=\"submit\">Guardar</button>\n                        </form>\n                    </div>\n                </div>\n            </div>\n        </div>\n        <!-- #END# Basic Validation -->\n    </div>\n</section>\n"
 
 /***/ }),
 
@@ -1134,8 +1225,8 @@ module.exports = "<layout></layout>\n<section class=\"content home\">\n    <div 
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_global__ = __webpack_require__("../../../../../src/app/services/global.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__models_user__ = __webpack_require__("../../../../../src/app/models/user.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_user_service__ = __webpack_require__("../../../../../src/app/services/user.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_user_service__ = __webpack_require__("../../../../../src/app/services/user.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_admin_service__ = __webpack_require__("../../../../../src/app/services/admin.service.ts");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EditComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1152,22 +1243,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 var EditComponent = (function () {
-    function EditComponent(_route, _router, _userService) {
+    function EditComponent(_route, _router, _userService, _adminService) {
         this._route = _route;
         this._router = _router;
         this._userService = _userService;
+        this._adminService = _adminService;
         this.title = 'Agregar usuario';
-        this.user = new __WEBPACK_IMPORTED_MODULE_3__models_user__["a" /* User */]('', '', '', '');
-        this.token = this._userService.getToken();
+        // this.admin = new User('','','','');
         this.url = __WEBPACK_IMPORTED_MODULE_2__services_global__["a" /* GLOBAL */].url;
     }
     EditComponent.prototype.ngOnInit = function () {
         var _this = this;
-        console.log('edit component cargado');
-        console.log(this._route.params);
+        this.token = this._adminService.getToken();
         this._route.params.forEach(function (params) {
             _this.id = params['id'];
-            console.log(_this.id);
         });
         this._userService.getUserToEdit(this.token, this.id).subscribe(function (response) {
             console.log(response.status === 'success');
@@ -1198,12 +1287,12 @@ EditComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_11" /* Component */])({
         selector: 'edit-user',
         template: __webpack_require__("../../../../../src/app/user/edit/edit.component.html"),
-        providers: [__WEBPACK_IMPORTED_MODULE_4__services_user_service__["a" /* UserService */]]
+        providers: [__WEBPACK_IMPORTED_MODULE_3__services_user_service__["a" /* UserService */]]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_4__services_user_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__services_user_service__["a" /* UserService */]) === "function" && _c || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__services_user_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__services_user_service__["a" /* UserService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4__services_admin_service__["a" /* AdminService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__services_admin_service__["a" /* AdminService */]) === "function" && _d || Object])
 ], EditComponent);
 
-var _a, _b, _c;
+var _a, _b, _c, _d;
 //# sourceMappingURL=edit.component.js.map
 
 /***/ }),
@@ -1211,7 +1300,7 @@ var _a, _b, _c;
 /***/ "../../../../../src/app/user/list/list.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<layout></layout>\n<section class=\"content home\">\n    <div class=\"block-header\">\n        <div class=\"row\">\n            <div class=\"col-md-8 col-sm-7 col-xs-12\">\n                <div class=\"h-left clearfix aos-item\" data-aos-duration=\"400\" data-aos-delay=\"300\" data-aos=\"slide-down\">\n                    <h2>Lista de Usuarios</h2>\n                    <!-- <small class=\"text-muted\">Welcome to CC Application</small> -->\n                    <ol class=\"breadcrumb breadcrumb-col-pink p-l-0\">\n                        <li><a [routerLink]=\"['/home']\">Panel Principal</a></li>\n                        <li class=\"active\"><a [routerLink]=\"['/user']\">Usuarios</a></li>\n                    </ol>\n                </div>\n            </div>\n            <div class=\"col-md-4 col-sm-5 col-xs-12\">\n                <div class=\"h-right aos-item\" data-aos-duration=\"400\" data-aos-delay=\"300\" data-aos=\"slide-down\">\n                    <a [routerLink]=\"['add']\" class=\"mfb-component__button--main pull-right bg-light-green\"><i class=\"mfb-component__main-icon--resting zmdi zmdi-plus\"></i></a>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>\n<section class=\"content\">\n\t<div>\n\t\t<div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\n\t\t\t<div class=\"card\">\n\t\t\t\t<div class=\"header\">\n\t\t\t\t\t<h2> Lista de Usuarios</h2>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"body\">\n\t\t\t\t\t<table class=\"table table-bordered table-striped table-hover js-basic-example dataTable\">\n\t\t\t\t\t\t<thead>\n\t\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t\t<th>Imagen</th>\n\t\t\t\t\t\t\t\t<th>Nombre</th>\n\t\t\t\t\t\t\t\t<th>Apellido</th>\n\t\t\t\t\t\t\t\t<th>Email</th>\n\t\t\t\t\t\t\t\t<th>Fecha Registro</th>\n\t\t\t\t\t\t\t\t<th>Acciones</th>\n\t\t\t\t\t\t\t</tr>\n\t\t\t\t\t\t</thead>\n\t\t\t\t\t\t<tbody>\n\t\t\t\t\t\t\t<tr *ngFor=\"let user of users\">\n\t\t\t\t\t\t\t\t<td><img src =\"{{ user.picture }}\" style=\"border-radius: 100px;height: 40px;\"></td>\n\t\t\t\t\t\t\t\t<td>{{ user.firstName }}</td>\n\t\t\t\t\t\t\t\t<td>{{ user.lastName }}</td>\n\t\t\t\t\t\t\t\t<td>{{ user.email }}</td>\n\t\t\t\t\t\t\t\t<td>{{ user.createdAt }}</td>\n\t\t\t\t\t\t\t\t<td>\n\t\t\t\t\t\t\t\t\t<a [routerLink]=\"['edit',user.id]\"><i class=\"material-icons\">mode_edit</i></a>\n\t\t\t\t\t\t\t\t\t<a [routerLink]=\"['/edit',user.id, 'edit']\"><i class=\"material-icons\">delete</i></a>\n\t\t\t\t\t\t\t\t</td>\n\t\t\t\t\t\t\t</tr>\n\t\t\t\t\t\t</tbody>\n\t\t\t\t\t</table>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>\n<script src=\"assets/plugins/jquery-datatable/jquery.dataTables.js\"></script>"
+module.exports = "<layout></layout>\n<section class=\"content home\">\n    <div class=\"block-header\">\n        <div class=\"row\">\n            <div class=\"col-md-8 col-sm-7 col-xs-12\">\n                <div class=\"h-left clearfix aos-item\" data-aos-duration=\"400\" data-aos-delay=\"300\" data-aos=\"slide-down\">\n                    <h2>Lista de Usuarios</h2>\n                    <!-- <small class=\"text-muted\">Welcome to CC Application</small> -->\n                    <ol class=\"breadcrumb breadcrumb-col-pink p-l-0\">\n                        <li><a [routerLink]=\"['/home']\">Panel Principal</a></li>\n                        <li class=\"active\"><a [routerLink]=\"['/user']\">Usuarios</a></li>\n                    </ol>\n                </div>\n            </div>\n            <div class=\"col-md-4 col-sm-5 col-xs-12\">\n                <div class=\"h-right aos-item\" data-aos-duration=\"400\" data-aos-delay=\"300\" data-aos=\"slide-down\">\n                    <a [routerLink]=\"['add']\" class=\"mfb-component__button--main pull-right btn-bordeaux\"><i class=\"mfb-component__main-icon--resting zmdi zmdi-plus\"></i></a>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>\n<section class=\"content\" style=\"margin-top:0px;\">\n\t<div>\n\t\t<div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\n\t\t\t<div class=\"card\">\n\t\t\t\t<div class=\"header\">\n\t\t\t\t\t<h2> Lista de Usuarios</h2>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"body\">\n\t\t\t\t\t<table class=\"table table-bordered table-striped table-hover js-basic-example dataTable\">\n\t\t\t\t\t\t<thead>\n\t\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t\t<th>Imagen</th>\n\t\t\t\t\t\t\t\t<th>Nombre</th>\n\t\t\t\t\t\t\t\t<th>Apellido</th>\n\t\t\t\t\t\t\t\t<th>Email</th>\n\t\t\t\t\t\t\t\t<th>Proveedor</th>\n\t\t\t\t\t\t\t\t<th>Acciones</th>\n\t\t\t\t\t\t\t</tr>\n\t\t\t\t\t\t</thead>\n\t\t\t\t\t\t<tbody>\n\t\t\t\t\t\t\t<tr *ngFor=\"let user of users\">\n\t\t\t\t\t\t\t\t<td><img src =\"{{ user.picture }}\" style=\"border-radius: 100px;height: 40px;\"></td>\n\t\t\t\t\t\t\t\t<td>{{ user.firstName }}</td>\n\t\t\t\t\t\t\t\t<td>{{ user.lastName }}</td>\n\t\t\t\t\t\t\t\t<td>{{ user.email }}</td>\n\t\t\t\t\t\t\t\t<td *ngIf=\"user.provider === 'facebook'\" class=\"text-center\"><img src=\"assets/images/facebook.png\"></td>\n\t\t\t\t\t\t\t\t<td *ngIf=\"user.provider === 'google'\"><img src=\"assets/images/facebook.png\"></td>\n\t\t\t\t\t\t\t\t<td>\n\t\t\t\t\t\t\t\t\t<a [routerLink]=\"['edit',user.id]\"><i class=\"material-icons\">mode_edit</i></a>\n\t\t\t\t\t\t\t\t\t<a [routerLink]=\"['/edit',user.id, 'edit']\"><i class=\"material-icons\">delete</i></a>\n\t\t\t\t\t\t\t\t</td>\n\t\t\t\t\t\t\t</tr>\n\t\t\t\t\t\t</tbody>\n\t\t\t\t\t</table>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>\n<script src=\"assets/plugins/jquery-datatable/jquery.dataTables.js\"></script>"
 
 /***/ }),
 
@@ -1222,8 +1311,8 @@ module.exports = "<layout></layout>\n<section class=\"content home\">\n    <div 
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_global__ = __webpack_require__("../../../../../src/app/services/global.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__models_user__ = __webpack_require__("../../../../../src/app/models/user.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_user_service__ = __webpack_require__("../../../../../src/app/services/user.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_user_service__ = __webpack_require__("../../../../../src/app/services/user.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_admin_service__ = __webpack_require__("../../../../../src/app/services/admin.service.ts");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ListComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1240,18 +1329,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 var ListComponent = (function () {
-    function ListComponent(_route, _router, _userService) {
+    function ListComponent(_route, _router, _userService, _adminService) {
         this._route = _route;
         this._router = _router;
         this._userService = _userService;
-        this.title = 'Agregar usuario';
-        this.user = new __WEBPACK_IMPORTED_MODULE_3__models_user__["a" /* User */]('', '', '', '');
-        this.token = this._userService.getToken();
+        this._adminService = _adminService;
+        // this.user = new User('','','','');
         this.url = __WEBPACK_IMPORTED_MODULE_2__services_global__["a" /* GLOBAL */].url;
         this.hola = false;
     }
     ListComponent.prototype.ngOnInit = function () {
         var _this = this;
+        this.token = this._adminService.getToken();
         this._userService.listUsers(this.token).subscribe(function (response) {
             console.log(response.status === 'success');
             console.log(response.data);
@@ -1271,12 +1360,12 @@ ListComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_11" /* Component */])({
         selector: 'list-user',
         template: __webpack_require__("../../../../../src/app/user/list/list.component.html"),
-        providers: [__WEBPACK_IMPORTED_MODULE_4__services_user_service__["a" /* UserService */]]
+        providers: [__WEBPACK_IMPORTED_MODULE_3__services_user_service__["a" /* UserService */], __WEBPACK_IMPORTED_MODULE_4__services_admin_service__["a" /* AdminService */]]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_4__services_user_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__services_user_service__["a" /* UserService */]) === "function" && _c || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__services_user_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__services_user_service__["a" /* UserService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4__services_admin_service__["a" /* AdminService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__services_admin_service__["a" /* AdminService */]) === "function" && _d || Object])
 ], ListComponent);
 
-var _a, _b, _c;
+var _a, _b, _c, _d;
 //# sourceMappingURL=list.component.js.map
 
 /***/ }),
@@ -1366,7 +1455,7 @@ module.exports = "<router-outlet></router-outlet>"
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_user_service__ = __webpack_require__("../../../../../src/app/services/user.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_admin_service__ = __webpack_require__("../../../../../src/app/services/admin.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UserComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -1382,13 +1471,14 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 var UserComponent = (function () {
-    function UserComponent(_userService, _router) {
-        this._userService = _userService;
+    function UserComponent(_adminService, _router) {
+        this._adminService = _adminService;
         this._router = _router;
         this.title = 'Usuarios';
     }
     UserComponent.prototype.ngOnInit = function () {
-        this.token = this._userService.getToken();
+        this.token = this._adminService.getToken();
+        console.log(this.token);
         if (this.token == null) {
             this._router.navigate(['/login']);
         }
@@ -1400,9 +1490,9 @@ UserComponent = __decorate([
         selector: 'user',
         template: __webpack_require__("../../../../../src/app/user/user.component.html"),
         styles: [__webpack_require__("../../../../../src/app/user/user.component.css")],
-        providers: [__WEBPACK_IMPORTED_MODULE_1__services_user_service__["a" /* UserService */]]
+        providers: [__WEBPACK_IMPORTED_MODULE_1__services_admin_service__["a" /* AdminService */]]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_user_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_user_service__["a" /* UserService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */]) === "function" && _b || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_admin_service__["a" /* AdminService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_admin_service__["a" /* AdminService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */]) === "function" && _b || Object])
 ], UserComponent);
 
 var _a, _b;
@@ -1474,7 +1564,7 @@ UserModule = __decorate([
 /***/ "../../../../../src/app/wine/wine.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<layout></layout>\n<section class=\"content home\">\n    <div class=\"block-header\">\n        <div class=\"row\">\n            <div class=\"col-md-8 col-sm-7 col-xs-12\">\n                <div class=\"h-left clearfix aos-item\" data-aos-duration=\"400\" data-aos-delay=\"300\" data-aos=\"slide-down\">\n                    <h2>Lista de Vinos</h2>\n                    <!-- <small class=\"text-muted\">Welcome to CC Application</small> -->\n                    <ol class=\"breadcrumb breadcrumb-col-pink p-l-0\">\n                        <li><a [routerLink]=\"['/home']\">Panel Principal</a></li>\n                        <li class=\"active\">Vinos</li>\n                    </ol>\n                </div>\n            </div>\n            <div class=\"col-md-4 col-sm-5 col-xs-12\">\n                <div class=\"h-right aos-item\" data-aos-duration=\"400\" data-aos-delay=\"300\" data-aos=\"slide-down\">\n                </div>\n            </div>\n        </div>\n    </div>\n</section>\n<section class=\"content\">\n\t<div>\n\t\t<div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\n\t\t\t<div class=\"card\">\n\t\t\t\t<div class=\"header\">\n\t\t\t\t\t<h2> Lista de Vinos</h2>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"body\">\n\t\t\t\t\t<table class=\"table table-bordered table-striped table-hover js-basic-example dataTable\">\n\t\t\t\t\t\t<thead>\n\t\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t\t<th>Nombre</th>\n\t\t\t\t\t\t\t\t<th>Origen</th>\n\t\t\t\t\t\t\t\t<th>Uva</th>\n\t\t\t\t\t\t\t\t<th>Tipo</th>\n\t\t\t\t\t\t\t\t<th>Año</th>\n\t\t\t\t\t\t\t\t<th>Precio</th>\n\t\t\t\t\t\t\t</tr>\n\t\t\t\t\t\t</thead>\n\t\t\t\t\t\t<tbody>\n\t\t\t\t\t\t\t<tr *ngFor=\"let wine of wines\">\n\t\t\t\t\t\t\t\t<td>{{ wine.name }}</td>\n\t\t\t\t\t\t\t\t<td>{{ wine.origin }}</td>\n\t\t\t\t\t\t\t\t<td>{{ wine.grape }}</td>\n\t\t\t\t\t\t\t\t<td>{{ wine.type }}</td>\n\t\t\t\t\t\t\t\t<td>{{ wine.year }}</td>\n\t\t\t\t\t\t\t\t<td>${{ wine.price }}</td>\n\t\t\t\t\t\t\t</tr>\n\t\t\t\t\t\t</tbody>\n\t\t\t\t\t</table>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>\n<script src=\"assets/plugins/jquery-datatable/jquery.dataTables.js\"></script>"
+module.exports = "<layout></layout>\n<section class=\"content home\">\n    <div class=\"block-header\">\n        <div class=\"row\">\n            <div class=\"col-md-8 col-sm-7 col-xs-12\">\n                <div class=\"h-left clearfix aos-item\" data-aos-duration=\"400\" data-aos-delay=\"300\" data-aos=\"slide-down\">\n                    <h2>Lista de Vinos</h2>\n                    <!-- <small class=\"text-muted\">Welcome to CC Application</small> -->\n                    <ol class=\"breadcrumb breadcrumb-col-pink p-l-0\">\n                        <li><a [routerLink]=\"['/home']\">Panel Principal</a></li>\n                        <li class=\"active\">Vinos</li>\n                    </ol>\n                </div>\n            </div>\n            <div class=\"col-md-4 col-sm-5 col-xs-12\">\n                <div class=\"h-right aos-item\" data-aos-duration=\"400\" data-aos-delay=\"300\" data-aos=\"slide-down\">\n                </div>\n            </div>\n        </div>\n    </div>\n</section>\n<section class=\"content\" style=\"margin-top:0px;\">\n\t<div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\n\t\t<div class=\"card\">\n\t\t\t<div class=\"header\">\n\t\t\t\t<h2> Lista de Vinos</h2>\n\t\t\t</div>\n\t\t\t<div class=\"body\">\n\t\t\t\t<table class=\"table table-bordered table-striped table-hover js-basic-example dataTable\">\n\t\t\t\t\t<thead>\n\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t<th>Nombre</th>\n\t\t\t\t\t\t\t<th>Origen</th>\n\t\t\t\t\t\t\t<th>Uva</th>\n\t\t\t\t\t\t\t<th>Tipo</th>\n\t\t\t\t\t\t\t<th>Año</th>\n\t\t\t\t\t\t\t<th>Precio</th>\n\t\t\t\t\t\t</tr>\n\t\t\t\t\t</thead>\n\t\t\t\t\t<tbody>\n\t\t\t\t\t\t<tr *ngFor=\"let wine of wines\">\n\t\t\t\t\t\t\t<td>{{ wine.name }}</td>\n\t\t\t\t\t\t\t<td>{{ wine.origin.name }}</td>\n\t\t\t\t\t\t\t<td>{{ wine.grape.name }}</td>\n\t\t\t\t\t\t\t<td>{{ wine.type.name }}</td>\n\t\t\t\t\t\t\t<td>{{ wine.year }}</td>\n\t\t\t\t\t\t\t<td>${{ wine.price }}</td>\n\t\t\t\t\t\t</tr>\n\t\t\t\t\t</tbody>\n\t\t\t\t</table>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>\n<script src=\"assets/plugins/jquery-datatable/jquery.dataTables.js\"></script>"
 
 /***/ }),
 
@@ -1485,7 +1575,7 @@ module.exports = "<layout></layout>\n<section class=\"content home\">\n    <div 
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_loader_service__ = __webpack_require__("../../../../../src/app/services/loader.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_user_service__ = __webpack_require__("../../../../../src/app/services/user.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_admin_service__ = __webpack_require__("../../../../../src/app/services/admin.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_wine_service__ = __webpack_require__("../../../../../src/app/services/wine.service.ts");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return WineComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -1503,17 +1593,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 var WineComponent = (function () {
-    function WineComponent(_route, _router, _loaderService, _userService, _wineService) {
+    function WineComponent(_route, _router, _loaderService, _adminService, _wineService) {
         this._route = _route;
         this._router = _router;
         this._loaderService = _loaderService;
-        this._userService = _userService;
+        this._adminService = _adminService;
         this._wineService = _wineService;
         this.page = 0;
         this.cant = 50;
         this.objLoaderStatus = false;
-        this.token = this._userService.getToken();
-        this.user = this._userService.getUser();
+        this.token = this._adminService.getToken();
+        this.admin = this._adminService.getAdmin();
     }
     WineComponent.prototype.ngOnInit = function () {
         var _this = this;
@@ -1544,9 +1634,9 @@ WineComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_11" /* Component */])({
         selector: 'wine',
         template: __webpack_require__("../../../../../src/app/wine/wine.component.html"),
-        providers: [__WEBPACK_IMPORTED_MODULE_3__services_user_service__["a" /* UserService */], __WEBPACK_IMPORTED_MODULE_2__services_loader_service__["a" /* LoaderService */], __WEBPACK_IMPORTED_MODULE_4__services_wine_service__["a" /* WineService */]]
+        providers: [__WEBPACK_IMPORTED_MODULE_3__services_admin_service__["a" /* AdminService */], __WEBPACK_IMPORTED_MODULE_2__services_loader_service__["a" /* LoaderService */], __WEBPACK_IMPORTED_MODULE_4__services_wine_service__["a" /* WineService */]]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__services_loader_service__["a" /* LoaderService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_loader_service__["a" /* LoaderService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__services_user_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__services_user_service__["a" /* UserService */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_4__services_wine_service__["a" /* WineService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__services_wine_service__["a" /* WineService */]) === "function" && _e || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__services_loader_service__["a" /* LoaderService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_loader_service__["a" /* LoaderService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__services_admin_service__["a" /* AdminService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__services_admin_service__["a" /* AdminService */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_4__services_wine_service__["a" /* WineService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__services_wine_service__["a" /* WineService */]) === "function" && _e || Object])
 ], WineComponent);
 
 var _a, _b, _c, _d, _e;

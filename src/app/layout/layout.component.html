@@ -27,82 +27,33 @@
         <!-- User Info -->
         <div class="user-info">
             <div class="image"> <img src="assets/images/defaultuser.jpg" width="48" height="48" alt="User" /> </div>
+            <div class="btn-group user-helper-dropdown pull-right" style="box-shadow:0 2px 5px rgba(0, 0, 0, 0), 0 2px 10px rgba(0, 0, 0, 0);"> <i class="material-icons" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="color:white;">keyboard_arrow_down</i>
+                <ul class="dropdown-menu pull-right">
+                    <li><a href="profile.html"><i class="material-icons">person</i>Profile</a></li>
+                    <li role="seperator" class="divider"></li>
+                    <li><a href="javascript:void(0);"><i class="material-icons">group</i>Followers</a></li>
+                    <li><a href="javascript:void(0);"><i class="material-icons">shopping_cart</i>Sales</a></li>
+                    <li><a href="javascript:void(0);"><i class="material-icons">favorite</i>Likes</a></li>
+                    <li role="seperator" class="divider"></li>
+                    <li><a href="sign-in.html"><i class="material-icons">input</i>Sign Out</a></li>
+                </ul>
+            </div>
             <div class="info-container">
-                <div class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ user.username }}</div>
-                <div class="email">{{ user.level }}</div>
-                <div class="btn-group user-helper-dropdown"> <i class="material-icons" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">keyboard_arrow_down</i>
-                    <ul class="dropdown-menu pull-right">
-                        <li><a href="profile.html"><i class="material-icons">person</i>Profile</a></li>
-                        <li role="seperator" class="divider"></li>
-                        <li><a href="javascript:void(0);"><i class="material-icons">group</i>Followers</a></li>
-                        <li><a href="javascript:void(0);"><i class="material-icons">shopping_cart</i>Sales</a></li>
-                        <li><a href="javascript:void(0);"><i class="material-icons">favorite</i>Likes</a></li>
-                        <li role="seperator" class="divider"></li>
-                        <li><a href="sign-in.html"><i class="material-icons">input</i>Sign Out</a></li>
-                    </ul>
-                </div>
+                <div class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ admin.username }}</div>
+                <div class="email">{{ admin.level }}</div>
             </div>
         </div>
         <!-- #User Info -->
         <!-- Menu -->
         <div class="menu">
             <ul class="list">
-                <li> <a [routerLink]="['/home']" [routerLinkActive]="active"><i class="material-icons">assessment</i><span>Panel Principal</span> </a> </li>
-                <li> <a [routerLink]="['/user']"><i class="material-icons">account_circle</i><span>Usuarios</span> </a> </li>
-                <li> <a [routerLink]="['/wine']"><i class="material-icons">list</i><span>Vinos</span> </a> </li>
+                <li> <a [routerLink]="['/home']" [routerLinkActive]="['active']"><i class="material-icons">assessment</i><span>Panel Principal</span> </a> </li>
+                <li> <a [routerLink]="['/user']" [routerLinkActive]="['active']"><i class="material-icons">account_circle</i><span>Usuarios</span> </a> </li>
+                <li *ngIf="admin.level === 'superadmin'"> <a [routerLink]="['/admin']" [routerLinkActive]="['active']"><i class="material-icons">account_box</i><span>Administradores</span> </a> </li>
+                <li> <a [routerLink]="['/wine']" [routerLinkActive]="['active']"><i class="material-icons">list</i><span>Vinos</span> </a> </li>
             </ul>
         </div>
         <!-- #Menu -->
     </aside>
 
-    <!-- Right Sidebar -->
-    <aside id="rightsidebar" class="right-sidebar">
-        <ul class="nav nav-tabs tab-nav-right" role="tablist">
-            <li role="presentation" class="active"><a href="#skins" data-toggle="tab">Skins</a></li>
-            <li role="presentation"><a href="#chat" data-toggle="tab">Chat</a></li>
-            <li role="presentation"><a href="#settings" data-toggle="tab">Setting</a></li>
-        </ul>
-        <div class="tab-content">
-            <div role="tabpanel" class="tab-pane fade in active in active" id="skins">
-                <ul class="demo-choose-skin">
-                    <h6>Flat Color</h6>
-                    <li data-theme="red"  class="active">
-                        <div class="red"></div>
-                        <span>Red</span> </li>
-                    <li data-theme="purple">
-                        <div class="purple"></div>
-                        <span>Purple</span> </li>
-                    <li data-theme="deep-purple">
-                        <div class="deep-purple"></div>
-                        <span>Deep Purple</span> </li>
-                    <li data-theme="blue">
-                        <div class="blue"></div>
-                        <span>Blue</span> </li>
-                    <li data-theme="cyan">
-                        <div class="cyan"></div>
-                        <span>Cyan</span> </li>
-                    <li data-theme="blue-grey">
-                        <div class="blue-grey"></div>
-                        <span>Blue Grey</span> </li>
-                    <li data-theme="black">
-                        <div class="black"></div>
-                        <span>Black</span> </li>
-                    <h6>Gradient Theme</h6>
-                    <li data-theme="green">
-                        <div class="green"></div>
-                        <span>Green</span> </li>
-                    <li data-theme="orange">
-                        <div class="orange"></div>
-                        <span>Orange</span> </li>
-                    <li data-theme="blush">
-                        <div class="blush"></div>
-                        <span>Blush</span> </li>
-                </ul>
-            </div>
-        </div>
-    </aside>
 </section>
-
-<!-- <section class="content home">
-	<router-outlet></router-outlet> Aca se carga el componente asociado a la ruta actual
-</section> -->

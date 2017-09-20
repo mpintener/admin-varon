@@ -1,1 +1,54 @@
 <layout></layout>
+<layout></layout>
+<section class="content home">
+    <div class="block-header">
+        <div class="row">
+            <div class="col-md-8 col-sm-7 col-xs-12">
+                <div class="h-left clearfix aos-item" data-aos-duration="400" data-aos-delay="300" data-aos="slide-down">
+                    <h2>Editar Administrador</h2>
+                    <!-- <small class="text-muted">Welcome to CC Application</small> -->
+                    <ol class="breadcrumb breadcrumb-col-pink p-l-0">
+                        <li><a [routerLink]="['home']">Panel Principal</a></li>
+                        <!-- <li><a [routerLink]="['admin']">Administradores</a></li> -->
+                        <li class="active">Editar Administrador</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="content" style="margin-top:0px;">
+    <div>
+        <!-- Basic Validation -->
+        <div class="row clearfix">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="card">
+                    <div class="body">
+                        <form #formAddUser="ngForm" (ngSubmit)="onSubmit()">
+                            <div class="form-group form-float">
+                                <div class="form-line">
+                                    <input type="text" class="form-control" name="username" value="{{ adminToEdit.username}}" placeholder="Nombre de Usuario">
+                                </div>
+                            </div>
+                            <div class="form-group form-float">
+                                <div class="form-line">
+                                    <input type="password" class="form-control" name="password" value="{{ adminToEdit.password }}" placeholder="Deje en blanco para mantener la contraseña actual">
+                                </div>
+                            </div>
+                            <div class="form-group" *ngIf="admin.level === 'superadmin'">
+                                <div class="col-sm-6">
+                                <select class="form-control show-tick">
+                                    <option value="admin">Admin</option>
+                                    <option value="superadmin">Superadmin</option>
+                                </select>
+                            </div>
+                            </div>
+                            <button class="btn btn-raised btn-primary waves-effect" type="submit">Guardar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- #END# Basic Validation -->
+    </div>
+</section>

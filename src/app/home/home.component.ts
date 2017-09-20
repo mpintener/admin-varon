@@ -1,26 +1,26 @@
 import { Component, OnInit } from '@angular/core';
-import { UserService } from '../services/user.service';
+import { AdminService } from '../services/admin.service';
 import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
 	selector: 'home',
 	templateUrl: 'home.component.html',
-	providers: [UserService]
+	providers: [AdminService]
 })
 
 export class HomeComponent{
 	public title = 'Panel Principal';
 	public token;
-	public user;
+	public admin;
 
 	constructor(
-		private _userService: UserService,
+		private _adminService: AdminService,
 		private _router: Router,
 	){}
 
 	ngOnInit(){
-		this.user = this._userService.getUser();
-		this.token = this._userService.getToken();
+		this.admin = this._adminService.getAdmin();
+		this.token = this._adminService.getToken();
 		if (this.token == null) {
 			this._router.navigate(['/login']);
 		}
@@ -28,7 +28,7 @@ export class HomeComponent{
 
 	logout(){
 		localStorage.clear();
-		this.user = null;
+		this.admin = null;
 		this.token = null;
 		this._router.navigate(['/login']);
 	}

@@ -1,5 +1,5 @@
 .container-fluid.custom-background {
-	background: red;
+	background: url(/assets/images/back.jpg);
 	background-size: cover;
 }
 .btn.btn-raised.waves-effect.bg-red.login-button{
@@ -149,3 +149,4 @@ li:nth-child(3) {
     transform: scaleY(.3);
   }
 }
+/* Custom css */

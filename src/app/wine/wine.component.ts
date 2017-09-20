@@ -1,18 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, Params } from '@angular/router';
-import { User } from '../models/user';
+import { Admin } from '../models/admin';
 import { LoaderService } from '../services/loader.service';
-import { UserService } from '../services/user.service';
+import { AdminService } from '../services/admin.service';
 import { WineService } from '../services/wine.service';
 
 @Component({
 	selector: 'wine',
 	templateUrl: './wine.component.html',
-	providers: [UserService, LoaderService, WineService]
+	providers: [AdminService, LoaderService, WineService]
 })
 
 export class WineComponent implements OnInit{
-	public user: User;
+	public admin: Admin;
 	public token;
 	public wines;
 	public objLoaderStatus: boolean;
@@ -23,12 +23,12 @@ export class WineComponent implements OnInit{
 		private _route: ActivatedRoute,
 		private _router: Router,
 		private _loaderService: LoaderService,
-		private _userService: UserService,
+		private _adminService: AdminService,
 		private _wineService: WineService
 		){
 		this.objLoaderStatus = false;
-		this.token = this._userService.getToken();
-		this.user = this._userService.getUser();
+		this.token = this._adminService.getToken();
+		this.admin = this._adminService.getAdmin();
 	}
 
 	ngOnInit(){

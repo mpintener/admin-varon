@@ -5,14 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <title>Varón</title>
-    <!-- Favicon-->
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <!-- Custom Css -->
+<!-- Custom Css -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
+<link href="assets/css/main.css" rel="stylesheet">
+<link href="assets/css/login.css" rel="stylesheet">
 
-    <link href="assets/css/login.css" rel="stylesheet">
-
-    <!-- AdminCC You can choose a theme from css/themes instead of get all themes -->
-    <link href="assets/css/themes/all-themes.css" rel="stylesheet" />
+<!-- AdminCC You can choose a theme from css/themes instead of get all themes -->
+<link href="assets/css/themes/all-themes.css" rel="stylesheet" />
 </head>
 
 <body class="theme-cyan">
@@ -30,14 +30,12 @@
                     <form class="col-md-12" #loginForm="ngForm" (ngSubmit)="onSubmit()">
                         <div class="form-group form-float">
                             <div class="form-line">
-                                <input type="text" class="form-control" name="username" #username="ngModel" [(ngModel)]="user.username" required>
-                                <label class="form-label">Usuario</label>
+                                <input type="text" class="form-control" name="username" #username="ngModel" [(ngModel)]="admin.username" placeholder="Usuario">
                             </div>
                         </div>
                         <div class="form-group form-float">
                             <div class="form-line">
-                                <input type="password" class="form-control" name="password" #password="ngModel" [(ngModel)]="user.password" required>
-                                <label class="form-label">Contraseña</label>
+                                <input type="password" class="form-control" name="password" #password="ngModel" [(ngModel)]="admin.password" placeholder="Contraseña">
                             </div>
                         </div>
                         <div *ngIf="!this.status">
@@ -50,7 +48,6 @@
         </div>
     </div>
 </div>
-
 <!-- Jquery Core Js -->
 <script src="assets/bundles/libscripts.bundle.js"></script> <!-- Lib Scripts Plugin Js -->
 <script src="assets/bundles/vendorscripts.bundle.js"></script> <!-- Lib Scripts Plugin Js -->

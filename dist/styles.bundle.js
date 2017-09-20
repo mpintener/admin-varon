@@ -35,7 +35,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "/* You can add global styles to this file, and also import other style files */\na > img {\n\twidth: 94px;\n\tmargin-left: 35px;\n}", ""]);
+exports.push([module.i, "/* You can add global styles to this file, and also import other style files */\na > img {\n\twidth: 94px;\n\tmargin-left: 35px;\n}\n\na.active {\n\tbackground-color: #eee;\n\tborder-left-color: #9d1c46;\n}\n.btn-bordeaux{\n\tbackground-color: #9d1c46 !important;\n}\n.btn-bordeaux:hover{\n\tcolor: #eee;\n}", ""]);
 
 // exports
 

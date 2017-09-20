@@ -1,18 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, Params } from '@angular/router';
-import { User } from '../models/user';
-import { UserService } from '../services/user.service';
+import { Admin } from '../models/admin';
+import { AdminService } from '../services/admin.service';
 import { LoaderService } from '../services/loader.service';
 
 @Component({
 	selector: 'login',
 	templateUrl: './login.component.html',
 	styleUrls: ['./login.component.css'],
-	providers: [UserService, LoaderService]
+	providers: [AdminService, LoaderService]
 })
 
 export class LoginComponent implements OnInit{
-	public user: User;
+	public admin: Admin;
 	public identity;
 	public token;
 	public status = 1;
@@ -21,16 +21,14 @@ export class LoginComponent implements OnInit{
 	constructor(
 		private _route: ActivatedRoute,
 		private _router: Router,
-		private _userService: UserService,
+		private _adminService: AdminService,
 		private _loaderService: LoaderService
 		){
-		this.user = new User('','','','');
+		this.admin = new Admin('','','');
 		this.objLoaderStatus = false;
 	}
 
 	ngOnInit(){
-		console.log(this._userService.getToken());
-		console.log(this._userService.getUser());
 		this._loaderService.loaderStatus.subscribe((val: boolean) => {
             this.objLoaderStatus = val;
         });
@@ -39,14 +37,15 @@ export class LoginComponent implements OnInit{
 	onSubmit(){
 		this.status = 1;
 		this._loaderService.displayLoader(true);
-		this._userService.login(this.user).subscribe(
+		console.log(this.admin);
+		this._adminService.login(this.admin).subscribe(
 			response => {
 				this._loaderService.displayLoader(false);
-				if (response.data.token == undefined) {
+				if (response.status === 'error') {
 					this.status = 0;
 				} else {
-					console.log(response.data);
-					localStorage.setItem('user', JSON.stringify(response.data.info));
+					console.log(response);
+					localStorage.setItem('admin', JSON.stringify(response.data.info));
 					localStorage.setItem('token', JSON.stringify(response.data.token));
 					this._router.navigate(['/home']);
 				}

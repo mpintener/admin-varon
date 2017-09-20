@@ -1,8 +1,9 @@
 import { Component, OnInit, DoCheck } from '@angular/core';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 import { GLOBAL } from '../../services/global';
-import { User } from '../../models/user';
+import { Admin } from '../../models/admin';
 import { UserService } from '../../services/user.service';
+import { AdminService } from '../../services/admin.service';
 
 
 @Component({
@@ -10,9 +11,9 @@ import { UserService } from '../../services/user.service';
 	templateUrl: './edit.component.html',
 	providers: [UserService]
 })
-export class EditComponent{
-	public user: User;
-	public userToEdit: User;
+export class EditComponent implements OnInit{
+	public admin: Admin;
+	public adminToEdit: Admin;
 	public token;
 	public url;
 	public id;
@@ -20,10 +21,29 @@ export class EditComponent{
 	constructor(
 		private _route: ActivatedRoute,
 		private _router: Router,
-		private _userService: UserService
+		private _userService: UserService,
+		private _adminService: AdminService
 	){
-		this.user = new User('','','','');
-		this.token = this._userService.getToken();
 		this.url = GLOBAL.url;
+	}
+
+	ngOnInit(){
+		this.admin = this._adminService.getAdmin();
+		this.token = this._adminService.getToken();
+		this._route.params.forEach((params: Params) => {
+			this.id = params['id'];
+		});
+		console.log(this.id);
+		console.log(this.token);
+		this._adminService.getAdminToEdit(this.token, this.id).subscribe(
+			response => {
+				console.log(response);
+				if (response.status === 'success') {
+					this.adminToEdit = response.data;
+				}
+			}, error => {
+				console.log(<any>error);
+			}
+		);
 	}
 }
