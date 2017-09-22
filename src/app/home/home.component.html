@@ -17,7 +17,7 @@
 					<div class="card info-box">
 						<div class="icon bg-red"><i class="zmdi zmdi-account-circle"></i></div>
 						<div class="content">
-							<div class="text">Usuarios Nuevos</div>
+							<div class="text">Total de Usuarios</div>
 							<div class="number count-to" data-from="0" data-to="125" data-speed="1000" data-fresh-interval="20">125</div>
 						</div>
 					</div>
@@ -65,41 +65,11 @@
                         </tr>
                     </thead>
                     <tbody class="no-border-x">
-                        <tr>
-                            <td>Vino 1</td>
-                            <td>Aug 23, 2016</td>
-                            <td class="number">$149</td>
-                            <td>24</td>
-                        </tr>
-                        <tr>
-                            <td>Vino 2</td>
-                            <td>Aug 20, 2016</td>
-                            <td class="number">$535</td>
-                            <td>22</td>
-                        </tr>
-                        <tr>
-                            <td>Vino 3</td>
-                            <td>Aug 18, 2016</td>
-                            <td class="number">$583</td>
-                            <td>13</td>
-                        </tr>
-                        <tr>
-                            <td>Vino 4</td>
-                            <td>Aug 15, 2016</td>
-                            <td class="number">$350</td>
-                            <td>10</td>
-                        </tr>
-                        <tr>
-                            <td>Vino 5</td>
-                            <td>Aug 13, 2016</td>
-                            <td class="number">$495</td>
-                            <td>7</td>
-                        </tr>
-                        <tr>
-                            <td>Vino 6</td>
-                            <td>Aug 18, 2016</td>
-                            <td class="number">$583</td>
-                            <td>4</td>
+                        <tr *ngFor="let wine of favoriteWines">
+                            <td>{{ wine.wine.name }}</td>
+                            <td>{{ wine.wine.grape.name }}</td>
+                            <td class="number">{{ wine.wine.price}}</td>
+                            <td>{{ wine.cant }}</td>
                         </tr>
                     </tbody>
                 </table>

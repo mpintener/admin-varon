@@ -24,4 +24,14 @@ export class WineService{
 			.map(res => res.json());
 	}
 
+	getFavoriteWines(token){
+		let headers = new Headers({
+			'Content-Type': 'application/json',
+			'token': token
+		});
+
+		return this._http.get(this.url+'wine/favorites', {headers: headers})
+			.map(res => res.json());
+	}
+
 }
