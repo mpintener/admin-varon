@@ -1,13 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { ChartService } from '../services/chart.service';
 import { AdminService } from '../services/admin.service';
+import { UserService } from '../services/user.service';
 import { WineService } from '../services/wine.service';
 import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
 	selector: 'home',
 	templateUrl: 'home.component.html',
-	providers: [ChartService, AdminService, WineService]
+	providers: [ChartService, AdminService, WineService, UserService]
 })
 
 export class HomeComponent{
@@ -16,10 +17,12 @@ export class HomeComponent{
 	public admin;
     public favoriteWines;
     public favoriteWine;
+    public totalUsers:number;
 
 	constructor(
 		private _adminService: AdminService,
 		private _chartService: ChartService,
+		private _userService: UserService,
 		private _wineService: WineService,
 		private _router: Router,
 		){
@@ -36,6 +39,14 @@ export class HomeComponent{
 			response => {
 				this.favoriteWines = response.data;
 				this.favoriteWine = response.data[0].wine;
+			}, error => {
+				console.log(<any>error);
+			}
+		);
+
+		this._userService.listUsers(this.token).subscribe(
+			response => {
+				this.totalUsers = response.data.length;
 			}, error => {
 				console.log(<any>error);
 			}
