@@ -31,12 +31,24 @@ export class DonutChartComponent implements OnInit {
 		console.log(e);
 	}
 
+	public donutChartColors:Array<any> = [
+    { // grey
+      backgroundColor: ['#820333', '#C9283E', '#540032'],
+      borderColor: [],
+      pointBackgroundColor: 'rgba(148,159,177,1)',
+      pointBorderColor: '#fff',
+      pointHoverBackgroundColor: '#fff',
+      pointHoverBorderColor: 'rgba(148,159,177,0.8)'
+    }
+  ];
+
 	ngOnInit(){
 		this._chartService.getDonutChartData(this.token).subscribe(
 			response => {
 				var results = response.data;
-				this.fav1 = response.data;
 				// console.log(this.fav1);
+				this.pieChartLabels = [];
+				this.pieChartData = [];
 				response.data.forEach((item, index) => {
 				    this.pieChartLabels.push(item.wine.name);
 				    this.pieChartData.push(item.cant);
