@@ -40,11 +40,10 @@
 								<td>{{ user.firstName }}</td>
 								<td>{{ user.lastName }}</td>
 								<td>{{ user.email }}</td>
-								<td *ngIf="user.provider === 'facebook'" class="text-center"><img src="assets/images/facebook.png"></td>
-								<td *ngIf="user.provider === 'google'"><img src="assets/images/facebook.png"></td>
+								<td *ngIf="user.provider === 'facebook'" class="text-center"><img src="assets/images/fb-logo.png" style="width:25px;"></td>
+								<td *ngIf="user.provider === 'google'"><img src="assets/images/google-logo.png" style="width:25px;"></td>
 								<td>
 									<a [routerLink]="['edit',user.id]"><i class="material-icons">mode_edit</i></a>
-									<a [routerLink]="['/edit',user.id, 'edit']"><i class="material-icons">delete</i></a>
 								</td>
 							</tr>
 						</tbody>
