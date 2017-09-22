@@ -68,7 +68,7 @@
                         <tr *ngFor="let wine of favoriteWines">
                             <td>{{ wine.wine.name }}</td>
                             <td>{{ wine.wine.grape.name }}</td>
-                            <td class="number">{{ wine.wine.price}}</td>
+                            <td class="number">${{ wine.wine.price}}</td>
                             <td>{{ wine.cant }}</td>
                         </tr>
                     </tbody>
