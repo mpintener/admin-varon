@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnChanges, DoCheck, SimpleChanges } from '@angular/core';
 import { ChartService } from '../../services/chart.service';
 import { AdminService } from '../../services/admin.service';
 
@@ -8,13 +8,12 @@ import { AdminService } from '../../services/admin.service';
 	providers: [ChartService]
 })
 export class DonutChartComponent implements OnInit {
-	// lineChart
-	public pieChartLabels:string[] = ['Download Sales', 'In-Store Sales', 'Mail Sales'];
-	public pieChartData:number[] = [300, 500, 100];
+	public pieChartLabels:string[] = ['Vino X', 'Vino XX', 'Vino XXX'];
+ 	public pieChartData:number[] = [];
 	public pieChartType:string = 'pie';
 	public data:any;
+	public labels:any;
 	public token;
-	public fav1;
 
 	constructor(
 		private _chartService: ChartService,
@@ -45,20 +44,27 @@ export class DonutChartComponent implements OnInit {
 	ngOnInit(){
 		this._chartService.getDonutChartData(this.token).subscribe(
 			response => {
-				var results = response.data;
-				// console.log(this.fav1);
-				this.pieChartLabels = [];
-				this.pieChartData = [];
-				response.data.forEach((item, index) => {
-				    this.pieChartLabels.push(item.wine.name);
-				    this.pieChartData.push(item.cant);
-				});
-				console.log(this.pieChartLabels);
-				console.log(this.pieChartData);
+				let result = response.data;
+				let data = [];
+				let labels = [];
+				result.forEach((item, index) => {
+					console.log(index);
+					console.log(item.wine.name);
+					data[index] = item.cant;
+					labels[index] = item.wine.name;
+					}
+				);
+				this.pieChartData = data;
+				this.pieChartLabels = labels;
 			}, error => {
 				console.log(<any>error);
 			}
 		);
+	}
+
+	ngAfterViewiInit(){
+		this.pieChartLabels = this.pieChartLabels;
+		this.pieChartData = this.pieChartData;
 	}
 
 }

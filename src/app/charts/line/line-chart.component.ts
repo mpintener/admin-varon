@@ -19,21 +19,20 @@ export class LineChartComponent implements OnInit{
 		console.log(e);
 	}
 
+	public lineChartColors:Array<any> = [
+	    { // grey
+	      backgroundColor: 'rgba(130, 3, 51, 0.62)',
+	      borderColor: 'rgba(130, 3, 51, 0.92)',
+	      pointBackgroundColor: 'rgba(148,159,177,1)',
+	      pointBorderColor: '#fff',
+	      pointHoverBackgroundColor: '#fff',
+	      pointHoverBorderColor: 'rgba(148,159,177,0.8)'
+	    }
+	];
+
 	constructor(
 		private _chartService: ChartService
 	){}
-
-	public lineChartColors:Array<any> = [
-    { // grey
-      backgroundColor: 'rgba(130, 3, 51, 0.62)',
-      borderColor: 'rgba(130, 3, 51, 0.92)',
-      pointBackgroundColor: 'rgba(148,159,177,1)',
-      pointBorderColor: '#fff',
-      pointHoverBackgroundColor: '#fff',
-      pointHoverBorderColor: 'rgba(148,159,177,0.8)'
-    }
-  ];
-
 	ngOnInit(){
 		this.data = this._chartService.getLineChartData();
 		this.lineChartData = this.data.data;

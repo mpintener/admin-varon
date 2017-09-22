@@ -15,6 +15,7 @@ export class HomeComponent{
 	public token;
 	public admin;
     public favoriteWines;
+    public favoriteWine;
 
 	constructor(
 		private _adminService: AdminService,
@@ -34,6 +35,7 @@ export class HomeComponent{
 		this._wineService.getFavoriteWines(this.token).subscribe(
 			response => {
 				this.favoriteWines = response.data;
+				this.favoriteWine = response.data[0].wine;
 			}, error => {
 				console.log(<any>error);
 			}
