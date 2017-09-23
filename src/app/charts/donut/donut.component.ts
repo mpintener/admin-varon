@@ -1,6 +1,7 @@
-import { Component, OnInit, OnChanges, DoCheck, SimpleChanges } from '@angular/core';
+import { Component, OnInit, OnChanges, DoCheck, SimpleChanges, ViewChild } from '@angular/core';
 import { ChartService } from '../../services/chart.service';
 import { AdminService } from '../../services/admin.service';
+import { BaseChartDirective } from 'ng2-charts/ng2-charts';
 
 @Component({
 	selector: 'donut-chart',
@@ -8,7 +9,8 @@ import { AdminService } from '../../services/admin.service';
 	providers: [ChartService]
 })
 export class DonutChartComponent implements OnInit {
-	public pieChartLabels:string[] = ['Vino X', 'Vino XX', 'Vino XXX'];
+	@ViewChild(BaseChartDirective) chart: BaseChartDirective;
+	public pieChartLabels:string[] = [];
  	public pieChartData:number[] = [];
 	public pieChartType:string = 'pie';
 	public data:any;
@@ -48,23 +50,16 @@ export class DonutChartComponent implements OnInit {
 				let data = [];
 				let labels = [];
 				result.forEach((item, index) => {
-					console.log(index);
-					console.log(item.wine.name);
 					data[index] = item.cant;
 					labels[index] = item.wine.name;
 					}
 				);
 				this.pieChartData = data;
 				this.pieChartLabels = labels;
+				this.chart.chart.update();
 			}, error => {
 				console.log(<any>error);
 			}
 		);
 	}
-
-	ngAfterViewiInit(){
-		this.pieChartLabels = this.pieChartLabels;
-		this.pieChartData = this.pieChartData;
-	}
-
 }
