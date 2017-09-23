@@ -18,6 +18,8 @@ export class HomeComponent{
     public favoriteWines;
     public favoriteWine;
     public totalUsers:number;
+    public facebookUsers:number = 0;
+    public googleUsers:number = 0;
 
 	constructor(
 		private _adminService: AdminService,
@@ -47,6 +49,14 @@ export class HomeComponent{
 		this._userService.listUsers(this.token).subscribe(
 			response => {
 				this.totalUsers = response.data.length;
+				response.data.forEach((item, index)=>{
+					console.log(item);
+					if (item.provider === 'facebook') {
+						this.facebookUsers+=1;
+					} else {
+						this.googleUsers+=1;
+					}
+				});
 			}, error => {
 				console.log(<any>error);
 			}

@@ -50,12 +50,15 @@ export class DonutChartComponent implements OnInit {
 				let data = [];
 				let labels = [];
 				result.forEach((item, index) => {
+					// console.log(item.cant);
+					// console.log(item.wine.name);
 					data[index] = item.cant;
 					labels[index] = item.wine.name;
 					}
 				);
 				this.pieChartData = data;
 				this.pieChartLabels = labels;
+				this.chart.chart.update();
 				this.chart.chart.update();
 			}, error => {
 				console.log(<any>error);
