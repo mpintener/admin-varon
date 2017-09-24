@@ -23,12 +23,20 @@ export class AddComponent{
 		private _router: Router,
 		private _adminService: AdminService
 	){
-		this.user = new Admin('','','');
-		this.token = this._adminService.getAdmin();
+		this.adminToAdd = new Admin('','','');
+		this.token = this._adminService.getToken();
 		this.url = GLOBAL.url;
 	}
 
 	onSubmit(){
-		
+		this._adminService.addAdmin(this.token, this.adminToAdd).subscribe(
+			response => {
+				if (response.status === 'success') {
+					this._router.navigate(['/admin']);
+				}
+			}, error => {
+				console.log(<any>error);
+			}
+		);
 	}
 }
