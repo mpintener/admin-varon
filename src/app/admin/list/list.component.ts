@@ -26,17 +26,7 @@ export class ListComponent implements OnInit{
 	}
 
 	ngOnInit(){
-		this._adminService.listAdmins(this.token).subscribe(
-			response => {
-				if (response.status === 'success') {
-					this.admins = response.data;
-				} else {
-					console.log(response);
-				}
-			}, error => {
-				console.log(<any>error);
-			}
-		);
+		this.getAll();
 	}
 
 	delete(id){
@@ -45,8 +35,21 @@ export class ListComponent implements OnInit{
 			response => {
 				console.log(response);
 				if (response.status === 'success') {
-					this.admins = this.admins;
+					this.getAll();
+				}
+			}, error => {
+				console.log(<any>error);
+			}
+		);
+	}
 
+	getAll(){
+		this._adminService.listAdmins(this.token).subscribe(
+			response => {
+				if (response.status === 'success') {
+					this.admins = response.data;
+				} else {
+					console.log(response);
 				}
 			}, error => {
 				console.log(<any>error);
