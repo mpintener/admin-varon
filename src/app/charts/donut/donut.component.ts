@@ -9,7 +9,6 @@ import { BaseChartDirective } from 'ng2-charts/ng2-charts';
 	providers: [ChartService]
 })
 export class DonutChartComponent implements OnInit {
-	@ViewChild(BaseChartDirective) chart: BaseChartDirective;
 	public pieChartLabels:string[] = [];
  	public pieChartData:number[] = [];
 	public pieChartType:string = 'pie';
@@ -56,7 +55,6 @@ export class DonutChartComponent implements OnInit {
 				);
 				this.pieChartData = data;
 				this.pieChartLabels = labels;
-				this.chart.chart.update();
 			}, error => {
 				console.log(<any>error);
 			}
