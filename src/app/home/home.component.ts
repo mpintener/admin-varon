@@ -50,7 +50,6 @@ export class HomeComponent{
 			response => {
 				this.totalUsers = response.data.length;
 				response.data.forEach((item, index)=>{
-					console.log(item);
 					if (item.provider === 'facebook') {
 						this.facebookUsers+=1;
 					} else {
