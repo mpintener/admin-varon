@@ -74,9 +74,29 @@ export class AdminService{
 			'Content-Type':'application/json',
 			'token': token
 		});
-		console.log(params);
-		console.log(this.url+'admin/'+id);
+
 		return this._http.put(this.url+'admin/'+id, params, {headers: headers})
+			.map(res => res.json());
+	}
+
+	addAdmin(token, admin:Admin){
+		let params = JSON.stringify(admin);
+		let headers = new Headers({
+			'Content-Type':'application/json',
+			'token': token
+		});
+
+		return this._http.post(this.url+'admin', params, {headers: headers})
+			.map(res => res.json());
+	}
+
+	deleteAdmin(token, id){
+		let headers = new Headers({
+			'Content-Type':'application/json',
+			'token': token
+		});
+
+		return this._http.delete(this.url+'admin/'+id, {headers: headers})
 			.map(res => res.json());
 	}
 }

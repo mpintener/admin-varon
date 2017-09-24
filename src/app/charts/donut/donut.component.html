@@ -1,0 +1,9 @@
+<div class="col-md-6" *ngIf="pieChartData != 0 && pieChartLabels != 0">
+ 	<canvas baseChart
+ 	[data]="pieChartData"
+ 	[labels]="pieChartLabels"
+ 	[colors]="donutChartColors"
+ 	[chartType]="pieChartType"
+ 	(chartHover)="chartHovered($event)"
+ 	(chartClick)="chartClicked($event)"></canvas>
+</div>

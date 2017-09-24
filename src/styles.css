@@ -31,3 +31,6 @@ a.active {
 	color: white;
     background-color: #444;
 }
+.delete-element{
+	cursor: pointer;
+}

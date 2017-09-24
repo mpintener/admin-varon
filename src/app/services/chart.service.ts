@@ -5,26 +5,23 @@ import { Observable } from 'rxjs/Observable';
 import { GLOBAL } from './global';
 
 @Injectable()
-export class WineService{
+export class ChartService {
+	public chartData;
 	public url: string;
-	public token;
-	public user;
 
 	constructor(private _http: Http){
 		this.url = GLOBAL.url;
 	}
 
-	listWines(token, page, cant){
-		let headers = new Headers({
-			'Content-Type': 'application/json',
-			'token': token
-		});
-
-		return this._http.get(this.url+'wine?page='+page+'&cant='+cant, {headers: headers})
-			.map(res => res.json());
+	getLineChartData(){
+		this.chartData = {
+			'labels': ['Enero', 'Feberero', 'Marzo', 'Abril', 'Mayo'],
+			'data': [23, 60, 45, 80, 91]
+		}
+		return this.chartData;
 	}
 
-	getFavoriteWines(token){
+	getDonutChartData(token){
 		let headers = new Headers({
 			'Content-Type': 'application/json',
 			'token': token
@@ -33,5 +30,4 @@ export class WineService{
 		return this._http.get(this.url+'wine/favorites', {headers: headers})
 			.map(res => res.json());
 	}
-
 }

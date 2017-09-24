@@ -37,23 +37,19 @@ export class LoginComponent implements OnInit{
 	onSubmit(){
 		this.status = 1;
 		this._loaderService.displayLoader(true);
-		console.log(this.admin);
 		this._adminService.login(this.admin).subscribe(
 			response => {
 				this._loaderService.displayLoader(false);
 				if (response.status === 'error') {
 					this.status = 0;
 				} else {
-					console.log(response);
 					localStorage.setItem('admin', JSON.stringify(response.data.info));
 					localStorage.setItem('token', JSON.stringify(response.data.token));
 					this._router.navigate(['/home']);
 				}
 			}, error => {
 				this._loaderService.displayLoader(false);
-				console.log(error);
 				var errorMessage = <any>error;
-
 				if (errorMessage != null) {
 					var body = JSON.parse(error._body);
 					this.status = errorMessage;
