@@ -4,7 +4,6 @@ import { GLOBAL } from '../../services/global';
 import { Admin } from '../../models/admin';
 import { AdminService } from '../../services/admin.service';
 
-
 @Component({
 	selector: 'list-admin',
 	templateUrl: './list.component.html',
@@ -29,11 +28,25 @@ export class ListComponent implements OnInit{
 	ngOnInit(){
 		this._adminService.listAdmins(this.token).subscribe(
 			response => {
-				console.log(response);
 				if (response.status === 'success') {
 					this.admins = response.data;
 				} else {
 					console.log(response);
+				}
+			}, error => {
+				console.log(<any>error);
+			}
+		);
+	}
+
+	delete(id){
+		console.log(id);
+		this._adminService.deleteAdmin(this.token, id).subscribe(
+			response => {
+				console.log(response);
+				if (response.status === 'success') {
+					this.admins = this.admins;
+
 				}
 			}, error => {
 				console.log(<any>error);
