@@ -3,6 +3,7 @@ import { Http, Response, Headers } from '@angular/http';
 import 'rxjs/add/operator/map';
 import { Observable } from 'rxjs/Observable';
 import { GLOBAL } from './global';
+import { User } from '../models/user';
 
 
 @Injectable()
@@ -35,7 +36,14 @@ export class UserService{
 			.map(res => res.json());
 	}
 
-	editUser(token, user){
-
+	editUser(token, user: User, id){
+		let params = JSON.stringify(user);
+		let headers = new Headers({
+			'Content-Type':'application/json',
+			'token': token
+		});
+		console.log(params);
+		return this._http.put(this.url+'user/'+id, params, {headers: headers})
+			.map(res => res.json());
 	}
 }

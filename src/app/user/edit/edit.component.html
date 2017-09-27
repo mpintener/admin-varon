@@ -23,7 +23,7 @@
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="card">
                     <div class="body">
-                        <form #formAddUser="ngForm" (ngSubmit)="onSubmit()">
+                        <form #formEditUser="ngForm" (ngSubmit)="onSubmit()">
                             <div class="form-group form-float">
                                 <div class="form-line">
                                     <input type="text" class="form-control" name="email" #email="ngModel" [(ngModel)]="userToEdit.email" value="{{ userToEdit.email}}" required>
