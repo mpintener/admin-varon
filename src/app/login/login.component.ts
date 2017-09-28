@@ -40,7 +40,8 @@ export class LoginComponent implements OnInit{
 		this._adminService.login(this.admin).subscribe(
 			response => {
 				this._loaderService.displayLoader(false);
-				if (response.status === 'error') {
+				console.log(response);
+				if (response.data === 'admin not found') {
 					this.status = 0;
 				} else {
 					localStorage.setItem('admin', JSON.stringify(response.data.info));
