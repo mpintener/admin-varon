@@ -45,14 +45,17 @@ export class DonutChartComponent implements OnInit {
 	ngOnInit(){
 		this._chartService.getDonutChartData(this.token).subscribe(
 			response => {
-				let result = response.data;
+				let result = response.data.slice(0,3);
 				let data = [];
 				let labels = [];
+				var tot = 3;
 				result.forEach((item, index) => {
-					data[index] = item.cant;
-					labels[index] = item.wine.name;
-					}
-				);
+					do {
+						data[index] = item.cant;
+						labels[index] = item.wine.name;
+						tot++;
+					} while (tot < 3);
+				});
 				this.pieChartData = data;
 				this.pieChartLabels = labels;
 			}, error => {

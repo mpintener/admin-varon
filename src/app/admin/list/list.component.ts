@@ -9,7 +9,7 @@ import { AdminService } from '../../services/admin.service';
 	templateUrl: './list.component.html',
 	providers: [AdminService]
 })
-export class ListComponent implements OnInit{
+export class AdminListComponent implements OnInit{
 	public admin: Admin;
 	public admins: Admin[];
 	public token;

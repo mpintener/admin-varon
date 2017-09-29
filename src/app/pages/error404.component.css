@@ -8,3 +8,11 @@
 .col-lg-3.col-md-4.col-xs-12.login-panel > .card{
 	background-color: #eee;
 }
+
+div.l-detail{
+	background: rgba(238, 238, 238, 0.42);
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
