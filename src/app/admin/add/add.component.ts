@@ -10,7 +10,7 @@ import { AdminService } from '../../services/admin.service';
 	templateUrl: './add.component.html',
 	providers: [AdminService]
 })
-export class AddComponent{
+export class AdminAddComponent{
 	public title = 'Agregar Administrador';
 	public user: Admin;
 	public adminToAdd: Admin;

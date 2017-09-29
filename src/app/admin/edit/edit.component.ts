@@ -11,7 +11,7 @@ import { AdminService } from '../../services/admin.service';
 	templateUrl: './edit.component.html',
 	providers: [UserService]
 })
-export class EditComponent implements OnInit{
+export class AdminEditComponent implements OnInit{
 	public admin: Admin;
 	public adminToEdit: Admin;
 	public token;
