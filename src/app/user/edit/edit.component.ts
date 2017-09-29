@@ -12,7 +12,7 @@ import { AdminService } from '../../services/admin.service';
 	templateUrl: './edit.component.html',
 	providers: [UserService]
 })
-export class EditComponent implements OnInit{
+export class UserEditComponent implements OnInit{
 	public title = 'Agregar usuario';
 	public admin: Admin;
 	public userToEdit: User;

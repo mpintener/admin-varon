@@ -12,7 +12,7 @@ import { AdminService } from '../../services/admin.service';
 	templateUrl: './list.component.html',
 	providers: [UserService, AdminService]
 })
-export class ListComponent implements OnInit{
+export class UserListComponent implements OnInit{
 	public admin: Admin;
 	public users: User[];
 	public token;
