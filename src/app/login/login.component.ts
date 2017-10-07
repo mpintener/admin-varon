@@ -41,21 +41,12 @@ export class LoginComponent implements OnInit{
 			response => {
 				this._loaderService.displayLoader(false);
 				console.log(response);
-				if (!response.ok) {
-					this.status = 0;
-				} else {
-					localStorage.setItem('admin', JSON.stringify(response.data.info));
-					localStorage.setItem('token', JSON.stringify(response.data.token));
-					this._router.navigate(['/home']);
-				}
+				localStorage.setItem('admin', JSON.stringify(response.data.info));
+				localStorage.setItem('token', JSON.stringify(response.data.token));
+				this._router.navigate(['/home']);
 			}, error => {
 				this._loaderService.displayLoader(false);
-				console.log(<any>error);
 				this.status = 0;
-				// if (errorMessage != null) {
-				// 	var body = JSON.parse(error._body);
-				// 	this.status = errorMessage;
-				// }
 			}
 		);
 	}
