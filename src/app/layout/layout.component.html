@@ -36,10 +36,10 @@
         <!-- Menu -->
         <div class="menu">
             <ul class="list">
-                <li> <a [routerLink]="['/home']" [routerLinkActive]="['active']"><i class="material-icons">assessment</i><span>Panel Principal</span> </a> </li>
-                <li> <a [routerLink]="['/user']" [routerLinkActive]="['active']"><i class="material-icons">account_circle</i><span>Usuarios</span> </a> </li>
-                <li *ngIf="admin.level === 'superadmin'"> <a [routerLink]="['/admin']" [routerLinkActive]="['active']"><i class="material-icons">account_box</i><span>Administradores</span> </a> </li>
-                <li> <a [routerLink]="['/wine']" [routerLinkActive]="['active']"><i class="material-icons">list</i><span>Vinos</span> </a> </li>
+                <li> <a [routerLink]="['/home']" [routerLinkActive]="['active']"><i class="fa fa-home"></i> <span>Panel Principal</span> </a> </li>
+                <li> <a [routerLink]="['/user']" [routerLinkActive]="['active']"><i class="fa fa-users"></i><span> Usuarios</span> </a> </li>
+                <li *ngIf="admin.level === 'superadmin'"> <a [routerLink]="['/admin']" [routerLinkActive]="['active']"><i class="fa fa-user-secret"></i><span> Administradores</span> </a> </li>
+                <li> <a [routerLink]="['/wine']" [routerLinkActive]="['active']"><i class="fa fa-list"></i><span>Vinos</span> </a> </li>
             </ul>
         </div>
         <!-- #Menu -->
