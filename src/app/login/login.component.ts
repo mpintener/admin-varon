@@ -41,7 +41,7 @@ export class LoginComponent implements OnInit{
 			response => {
 				this._loaderService.displayLoader(false);
 				console.log(response);
-				if (response.data === 'admin not found') {
+				if (!response.ok) {
 					this.status = 0;
 				} else {
 					localStorage.setItem('admin', JSON.stringify(response.data.info));
@@ -50,11 +50,12 @@ export class LoginComponent implements OnInit{
 				}
 			}, error => {
 				this._loaderService.displayLoader(false);
-				var errorMessage = <any>error;
-				if (errorMessage != null) {
-					var body = JSON.parse(error._body);
-					this.status = errorMessage;
-				}
+				console.log(<any>error);
+				this.status = 0;
+				// if (errorMessage != null) {
+				// 	var body = JSON.parse(error._body);
+				// 	this.status = errorMessage;
+				// }
 			}
 		);
 	}
