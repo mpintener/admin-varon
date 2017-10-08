@@ -5,6 +5,7 @@ import { Routes, RouterModule } from '@angular/router';
 // Importar los componentes que voy a utilizar
 import { ErrorComponent } from './pages/error404.component';
 import { HomeComponent } from './home/home.component';
+import { NotificationComponent } from './notification/notification.component';
 import { LoginComponent } from './login/login.component';
 import { AdminComponent } from './admin/admin.component';
 import { AdminAddComponent } from './admin/add/add.component';
@@ -74,6 +75,10 @@ export const routes: Routes = [
 	{
 		path: 'wine',
 		component: WineComponent
+	},
+	{
+		path: 'notification',
+		component: NotificationComponent
 	},
 	{
 		path: '**',

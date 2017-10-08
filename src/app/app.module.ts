@@ -26,6 +26,7 @@ import { AdminComponent } from './admin/admin.component';
 import { AdminEditComponent } from './admin/edit/edit.component';
 import { AdminAddComponent } from './admin/add/add.component';
 import { AdminListComponent } from './admin/list/list.component';
+import { NotificationComponent } from './notification/notification.component';
 
 @NgModule({
 	declarations: [
@@ -41,6 +42,7 @@ import { AdminListComponent } from './admin/list/list.component';
 		WineComponent,
 		LoaderComponent,
 		ErrorComponent,
+		NotificationComponent,
 		UserComponent,
 		UserListComponent,
 		UserEditComponent
