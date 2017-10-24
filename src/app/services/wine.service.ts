@@ -29,6 +29,7 @@ export class WineService{
 			'Content-Type': 'application/json',
 			'token': token
 		});
+		console.log(this.url+'wine/favorites');
 
 		return this._http.get(this.url+'wine/favorites', {headers: headers})
 			.map(res => res.json());
