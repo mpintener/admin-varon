@@ -5,6 +5,7 @@ import { FormsModule }   from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { LayoutModule } from './layout/layout.module';
 import { NgModule } from '@angular/core';
+import { Ng2TableModule } from 'ng2-table/ng2-table';
 
 // Para las rutas
 import { AppRoutingModule } from './app.routing';
@@ -25,6 +26,7 @@ import { AdminComponent } from './admin/admin.component';
 import { AdminEditComponent } from './admin/edit/edit.component';
 import { AdminAddComponent } from './admin/add/add.component';
 import { AdminListComponent } from './admin/list/list.component';
+import { NotificationComponent } from './notification/notification.component';
 
 @NgModule({
 	declarations: [
@@ -40,6 +42,7 @@ import { AdminListComponent } from './admin/list/list.component';
 		WineComponent,
 		LoaderComponent,
 		ErrorComponent,
+		NotificationComponent,
 		UserComponent,
 		UserListComponent,
 		UserEditComponent
@@ -50,7 +53,8 @@ import { AdminListComponent } from './admin/list/list.component';
 		ChartsModule,
 		FormsModule,
 		HttpModule,
-		LayoutModule
+		LayoutModule,
+		Ng2TableModule
 	],
 	exports: [
 		ChartsModule,

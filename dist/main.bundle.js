@@ -44,7 +44,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var AdminAddComponent = /** @class */ (function () {
+var AdminAddComponent = (function () {
     function AdminAddComponent(_route, _router, _adminService) {
         this._route = _route;
         this._router = _router;
@@ -64,18 +64,18 @@ var AdminAddComponent = /** @class */ (function () {
             console.log(error);
         });
     };
-    AdminAddComponent = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'add-admin',
-            template: __webpack_require__("../../../../../src/app/admin/add/add.component.html"),
-            providers: [__WEBPACK_IMPORTED_MODULE_4__services_admin_service__["a" /* AdminService */]]
-        }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_4__services_admin_service__["a" /* AdminService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__services_admin_service__["a" /* AdminService */]) === "function" && _c || Object])
-    ], AdminAddComponent);
     return AdminAddComponent;
-    var _a, _b, _c;
 }());
+AdminAddComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'add-admin',
+        template: __webpack_require__("../../../../../src/app/admin/add/add.component.html"),
+        providers: [__WEBPACK_IMPORTED_MODULE_4__services_admin_service__["a" /* AdminService */]]
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_4__services_admin_service__["a" /* AdminService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__services_admin_service__["a" /* AdminService */]) === "function" && _c || Object])
+], AdminAddComponent);
 
+var _a, _b, _c;
 //# sourceMappingURL=add.component.js.map
 
 /***/ }),
@@ -107,7 +107,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var AdminComponent = /** @class */ (function () {
+var AdminComponent = (function () {
     function AdminComponent(_adminService, _router) {
         this._adminService = _adminService;
         this._router = _router;
@@ -117,18 +117,18 @@ var AdminComponent = /** @class */ (function () {
         this.admin = this._adminService.getAdmin();
         this.token = this._adminService.getToken();
     };
-    AdminComponent = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'admin',
-            template: __webpack_require__("../../../../../src/app/admin/admin.component.html"),
-            providers: [__WEBPACK_IMPORTED_MODULE_1__services_admin_service__["a" /* AdminService */]]
-        }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_admin_service__["a" /* AdminService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_admin_service__["a" /* AdminService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */]) === "function" && _b || Object])
-    ], AdminComponent);
     return AdminComponent;
-    var _a, _b;
 }());
+AdminComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'admin',
+        template: __webpack_require__("../../../../../src/app/admin/admin.component.html"),
+        providers: [__WEBPACK_IMPORTED_MODULE_1__services_admin_service__["a" /* AdminService */]]
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_admin_service__["a" /* AdminService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_admin_service__["a" /* AdminService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */]) === "function" && _b || Object])
+], AdminComponent);
 
+var _a, _b;
 //# sourceMappingURL=admin.component.js.map
 
 /***/ }),
@@ -166,7 +166,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var AdminEditComponent = /** @class */ (function () {
+var AdminEditComponent = (function () {
     function AdminEditComponent(_route, _router, _userService, _adminService) {
         this._route = _route;
         this._router = _router;
@@ -201,18 +201,18 @@ var AdminEditComponent = /** @class */ (function () {
             console.log(error);
         });
     };
-    AdminEditComponent = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'edit-admin',
-            template: __webpack_require__("../../../../../src/app/admin/edit/edit.component.html"),
-            providers: [__WEBPACK_IMPORTED_MODULE_4__services_user_service__["a" /* UserService */]]
-        }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_4__services_user_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__services_user_service__["a" /* UserService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_5__services_admin_service__["a" /* AdminService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__services_admin_service__["a" /* AdminService */]) === "function" && _d || Object])
-    ], AdminEditComponent);
     return AdminEditComponent;
-    var _a, _b, _c, _d;
 }());
+AdminEditComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'edit-admin',
+        template: __webpack_require__("../../../../../src/app/admin/edit/edit.component.html"),
+        providers: [__WEBPACK_IMPORTED_MODULE_4__services_user_service__["a" /* UserService */]]
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_4__services_user_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__services_user_service__["a" /* UserService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_5__services_admin_service__["a" /* AdminService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__services_admin_service__["a" /* AdminService */]) === "function" && _d || Object])
+], AdminEditComponent);
 
+var _a, _b, _c, _d;
 //# sourceMappingURL=edit.component.js.map
 
 /***/ }),
@@ -246,7 +246,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var AdminListComponent = /** @class */ (function () {
+var AdminListComponent = (function () {
     function AdminListComponent(_route, _router, _adminService) {
         this._route = _route;
         this._router = _router;
@@ -283,18 +283,18 @@ var AdminListComponent = /** @class */ (function () {
             console.log(error);
         });
     };
-    AdminListComponent = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'list-admin',
-            template: __webpack_require__("../../../../../src/app/admin/list/list.component.html"),
-            providers: [__WEBPACK_IMPORTED_MODULE_3__services_admin_service__["a" /* AdminService */]]
-        }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__services_admin_service__["a" /* AdminService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__services_admin_service__["a" /* AdminService */]) === "function" && _c || Object])
-    ], AdminListComponent);
     return AdminListComponent;
-    var _a, _b, _c;
 }());
+AdminListComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'list-admin',
+        template: __webpack_require__("../../../../../src/app/admin/list/list.component.html"),
+        providers: [__WEBPACK_IMPORTED_MODULE_3__services_admin_service__["a" /* AdminService */]]
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__services_admin_service__["a" /* AdminService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__services_admin_service__["a" /* AdminService */]) === "function" && _c || Object])
+], AdminListComponent);
 
+var _a, _b, _c;
 //# sourceMappingURL=list.component.js.map
 
 /***/ }),
@@ -337,19 +337,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 
-var AppComponent = /** @class */ (function () {
+var AppComponent = (function () {
     function AppComponent() {
         this.title = 'app';
     }
-    AppComponent = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'app-root',
-            template: __webpack_require__("../../../../../src/app/app.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/app.component.css")]
-        })
-    ], AppComponent);
     return AppComponent;
 }());
+AppComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-root',
+        template: __webpack_require__("../../../../../src/app/app.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/app.component.css")]
+    })
+], AppComponent);
 
 //# sourceMappingURL=app.component.js.map
 
@@ -367,22 +367,25 @@ var AppComponent = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__layout_layout_module__ = __webpack_require__("../../../../../src/app/layout/layout.module.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__app_routing__ = __webpack_require__("../../../../../src/app/app.routing.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_error404_component__ = __webpack_require__("../../../../../src/app/pages/error404.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__home_home_component__ = __webpack_require__("../../../../../src/app/home/home.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__loader_loader_component__ = __webpack_require__("../../../../../src/app/loader/loader.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__charts_line_line_chart_component__ = __webpack_require__("../../../../../src/app/charts/line/line-chart.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__charts_donut_donut_component__ = __webpack_require__("../../../../../src/app/charts/donut/donut.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__login_login_component__ = __webpack_require__("../../../../../src/app/login/login.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__wine_wine_component__ = __webpack_require__("../../../../../src/app/wine/wine.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__user_user_component__ = __webpack_require__("../../../../../src/app/user/user.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__user_list_list_component__ = __webpack_require__("../../../../../src/app/user/list/list.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__user_edit_edit_component__ = __webpack_require__("../../../../../src/app/user/edit/edit.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__admin_admin_component__ = __webpack_require__("../../../../../src/app/admin/admin.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__admin_edit_edit_component__ = __webpack_require__("../../../../../src/app/admin/edit/edit.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__admin_add_add_component__ = __webpack_require__("../../../../../src/app/admin/add/add.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__admin_list_list_component__ = __webpack_require__("../../../../../src/app/admin/list/list.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_ng2_table_ng2_table__ = __webpack_require__("../../../../ng2-table/ng2-table.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_ng2_table_ng2_table___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_ng2_table_ng2_table__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__app_routing__ = __webpack_require__("../../../../../src/app/app.routing.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_error404_component__ = __webpack_require__("../../../../../src/app/pages/error404.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__home_home_component__ = __webpack_require__("../../../../../src/app/home/home.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__loader_loader_component__ = __webpack_require__("../../../../../src/app/loader/loader.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__charts_line_line_chart_component__ = __webpack_require__("../../../../../src/app/charts/line/line-chart.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__charts_donut_donut_component__ = __webpack_require__("../../../../../src/app/charts/donut/donut.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__login_login_component__ = __webpack_require__("../../../../../src/app/login/login.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__wine_wine_component__ = __webpack_require__("../../../../../src/app/wine/wine.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__user_user_component__ = __webpack_require__("../../../../../src/app/user/user.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__user_list_list_component__ = __webpack_require__("../../../../../src/app/user/list/list.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__user_edit_edit_component__ = __webpack_require__("../../../../../src/app/user/edit/edit.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__admin_admin_component__ = __webpack_require__("../../../../../src/app/admin/admin.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__admin_edit_edit_component__ = __webpack_require__("../../../../../src/app/admin/edit/edit.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__admin_add_add_component__ = __webpack_require__("../../../../../src/app/admin/add/add.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__admin_list_list_component__ = __webpack_require__("../../../../../src/app/admin/list/list.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__notification_notification_component__ = __webpack_require__("../../../../../src/app/notification/notification.component.ts");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -390,6 +393,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -414,53 +418,56 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var AppModule = /** @class */ (function () {
+
+var AppModule = (function () {
     function AppModule() {
     }
-    AppModule = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_6__angular_core__["NgModule"])({
-            declarations: [
-                __WEBPACK_IMPORTED_MODULE_8__app_component__["a" /* AppComponent */],
-                __WEBPACK_IMPORTED_MODULE_19__admin_admin_component__["a" /* AdminComponent */],
-                __WEBPACK_IMPORTED_MODULE_20__admin_edit_edit_component__["a" /* AdminEditComponent */],
-                __WEBPACK_IMPORTED_MODULE_21__admin_add_add_component__["a" /* AdminAddComponent */],
-                __WEBPACK_IMPORTED_MODULE_22__admin_list_list_component__["a" /* AdminListComponent */],
-                __WEBPACK_IMPORTED_MODULE_13__charts_donut_donut_component__["a" /* DonutChartComponent */],
-                __WEBPACK_IMPORTED_MODULE_14__login_login_component__["a" /* LoginComponent */],
-                __WEBPACK_IMPORTED_MODULE_12__charts_line_line_chart_component__["a" /* LineChartComponent */],
-                __WEBPACK_IMPORTED_MODULE_10__home_home_component__["a" /* HomeComponent */],
-                __WEBPACK_IMPORTED_MODULE_15__wine_wine_component__["a" /* WineComponent */],
-                __WEBPACK_IMPORTED_MODULE_11__loader_loader_component__["a" /* LoaderComponent */],
-                __WEBPACK_IMPORTED_MODULE_9__pages_error404_component__["a" /* ErrorComponent */],
-                __WEBPACK_IMPORTED_MODULE_16__user_user_component__["a" /* UserComponent */],
-                __WEBPACK_IMPORTED_MODULE_17__user_list_list_component__["a" /* UserListComponent */],
-                __WEBPACK_IMPORTED_MODULE_18__user_edit_edit_component__["a" /* UserEditComponent */]
-            ],
-            imports: [
-                __WEBPACK_IMPORTED_MODULE_7__app_routing__["a" /* AppRoutingModule */],
-                __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
-                __WEBPACK_IMPORTED_MODULE_2_ng2_charts__["ChartsModule"],
-                __WEBPACK_IMPORTED_MODULE_3__angular_forms__["a" /* FormsModule */],
-                __WEBPACK_IMPORTED_MODULE_4__angular_http__["a" /* HttpModule */],
-                __WEBPACK_IMPORTED_MODULE_5__layout_layout_module__["a" /* LayoutModule */]
-            ],
-            exports: [
-                __WEBPACK_IMPORTED_MODULE_2_ng2_charts__["ChartsModule"],
-                __WEBPACK_IMPORTED_MODULE_13__charts_donut_donut_component__["a" /* DonutChartComponent */],
-                __WEBPACK_IMPORTED_MODULE_11__loader_loader_component__["a" /* LoaderComponent */],
-                __WEBPACK_IMPORTED_MODULE_12__charts_line_line_chart_component__["a" /* LineChartComponent */],
-                __WEBPACK_IMPORTED_MODULE_5__layout_layout_module__["a" /* LayoutModule */]
-            ],
-            providers: [{
-                    provide: __WEBPACK_IMPORTED_MODULE_1__angular_common__["a" /* LocationStrategy */],
-                    useClass: __WEBPACK_IMPORTED_MODULE_1__angular_common__["b" /* HashLocationStrategy */]
-                }
-            ],
-            bootstrap: [__WEBPACK_IMPORTED_MODULE_8__app_component__["a" /* AppComponent */]]
-        })
-    ], AppModule);
     return AppModule;
 }());
+AppModule = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_6__angular_core__["NgModule"])({
+        declarations: [
+            __WEBPACK_IMPORTED_MODULE_9__app_component__["a" /* AppComponent */],
+            __WEBPACK_IMPORTED_MODULE_20__admin_admin_component__["a" /* AdminComponent */],
+            __WEBPACK_IMPORTED_MODULE_21__admin_edit_edit_component__["a" /* AdminEditComponent */],
+            __WEBPACK_IMPORTED_MODULE_22__admin_add_add_component__["a" /* AdminAddComponent */],
+            __WEBPACK_IMPORTED_MODULE_23__admin_list_list_component__["a" /* AdminListComponent */],
+            __WEBPACK_IMPORTED_MODULE_14__charts_donut_donut_component__["a" /* DonutChartComponent */],
+            __WEBPACK_IMPORTED_MODULE_15__login_login_component__["a" /* LoginComponent */],
+            __WEBPACK_IMPORTED_MODULE_13__charts_line_line_chart_component__["a" /* LineChartComponent */],
+            __WEBPACK_IMPORTED_MODULE_11__home_home_component__["a" /* HomeComponent */],
+            __WEBPACK_IMPORTED_MODULE_16__wine_wine_component__["a" /* WineComponent */],
+            __WEBPACK_IMPORTED_MODULE_12__loader_loader_component__["a" /* LoaderComponent */],
+            __WEBPACK_IMPORTED_MODULE_10__pages_error404_component__["a" /* ErrorComponent */],
+            __WEBPACK_IMPORTED_MODULE_24__notification_notification_component__["a" /* NotificationComponent */],
+            __WEBPACK_IMPORTED_MODULE_17__user_user_component__["a" /* UserComponent */],
+            __WEBPACK_IMPORTED_MODULE_18__user_list_list_component__["a" /* UserListComponent */],
+            __WEBPACK_IMPORTED_MODULE_19__user_edit_edit_component__["a" /* UserEditComponent */]
+        ],
+        imports: [
+            __WEBPACK_IMPORTED_MODULE_8__app_routing__["a" /* AppRoutingModule */],
+            __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["BrowserModule"],
+            __WEBPACK_IMPORTED_MODULE_2_ng2_charts__["ChartsModule"],
+            __WEBPACK_IMPORTED_MODULE_3__angular_forms__["a" /* FormsModule */],
+            __WEBPACK_IMPORTED_MODULE_4__angular_http__["a" /* HttpModule */],
+            __WEBPACK_IMPORTED_MODULE_5__layout_layout_module__["a" /* LayoutModule */],
+            __WEBPACK_IMPORTED_MODULE_7_ng2_table_ng2_table__["Ng2TableModule"]
+        ],
+        exports: [
+            __WEBPACK_IMPORTED_MODULE_2_ng2_charts__["ChartsModule"],
+            __WEBPACK_IMPORTED_MODULE_14__charts_donut_donut_component__["a" /* DonutChartComponent */],
+            __WEBPACK_IMPORTED_MODULE_12__loader_loader_component__["a" /* LoaderComponent */],
+            __WEBPACK_IMPORTED_MODULE_13__charts_line_line_chart_component__["a" /* LineChartComponent */],
+            __WEBPACK_IMPORTED_MODULE_5__layout_layout_module__["a" /* LayoutModule */]
+        ],
+        providers: [{
+                provide: __WEBPACK_IMPORTED_MODULE_1__angular_common__["LocationStrategy"],
+                useClass: __WEBPACK_IMPORTED_MODULE_1__angular_common__["HashLocationStrategy"]
+            }
+        ],
+        bootstrap: [__WEBPACK_IMPORTED_MODULE_9__app_component__["a" /* AppComponent */]]
+    })
+], AppModule);
 
 //# sourceMappingURL=app.module.js.map
 
@@ -474,15 +481,16 @@ var AppModule = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pages_error404_component__ = __webpack_require__("../../../../../src/app/pages/error404.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__home_home_component__ = __webpack_require__("../../../../../src/app/home/home.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__login_login_component__ = __webpack_require__("../../../../../src/app/login/login.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__admin_admin_component__ = __webpack_require__("../../../../../src/app/admin/admin.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__admin_add_add_component__ = __webpack_require__("../../../../../src/app/admin/add/add.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__admin_list_list_component__ = __webpack_require__("../../../../../src/app/admin/list/list.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__admin_edit_edit_component__ = __webpack_require__("../../../../../src/app/admin/edit/edit.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__user_user_component__ = __webpack_require__("../../../../../src/app/user/user.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__user_edit_edit_component__ = __webpack_require__("../../../../../src/app/user/edit/edit.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__user_list_list_component__ = __webpack_require__("../../../../../src/app/user/list/list.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__wine_wine_component__ = __webpack_require__("../../../../../src/app/wine/wine.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__notification_notification_component__ = __webpack_require__("../../../../../src/app/notification/notification.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__login_login_component__ = __webpack_require__("../../../../../src/app/login/login.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__admin_admin_component__ = __webpack_require__("../../../../../src/app/admin/admin.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__admin_add_add_component__ = __webpack_require__("../../../../../src/app/admin/add/add.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__admin_list_list_component__ = __webpack_require__("../../../../../src/app/admin/list/list.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__admin_edit_edit_component__ = __webpack_require__("../../../../../src/app/admin/edit/edit.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__user_user_component__ = __webpack_require__("../../../../../src/app/user/user.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__user_edit_edit_component__ = __webpack_require__("../../../../../src/app/user/edit/edit.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__user_list_list_component__ = __webpack_require__("../../../../../src/app/user/list/list.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__wine_wine_component__ = __webpack_require__("../../../../../src/app/wine/wine.component.ts");
 /* unused harmony export routes */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppRoutingModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -506,6 +514,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
 var routes = [
     {
         path: '',
@@ -518,21 +527,21 @@ var routes = [
     },
     {
         path: 'user',
-        component: __WEBPACK_IMPORTED_MODULE_9__user_user_component__["a" /* UserComponent */],
+        component: __WEBPACK_IMPORTED_MODULE_10__user_user_component__["a" /* UserComponent */],
         data: {
             title: 'Detalle'
         },
         children: [
             {
                 path: '',
-                component: __WEBPACK_IMPORTED_MODULE_11__user_list_list_component__["a" /* UserListComponent */],
+                component: __WEBPACK_IMPORTED_MODULE_12__user_list_list_component__["a" /* UserListComponent */],
                 data: {
                     title: 'Detalle'
                 }
             },
             {
                 path: 'edit/:id',
-                component: __WEBPACK_IMPORTED_MODULE_10__user_edit_edit_component__["a" /* UserEditComponent */],
+                component: __WEBPACK_IMPORTED_MODULE_11__user_edit_edit_component__["a" /* UserEditComponent */],
                 data: {
                     title: 'Detalle'
                 }
@@ -541,46 +550,50 @@ var routes = [
     },
     {
         path: 'admin',
-        component: __WEBPACK_IMPORTED_MODULE_5__admin_admin_component__["a" /* AdminComponent */],
+        component: __WEBPACK_IMPORTED_MODULE_6__admin_admin_component__["a" /* AdminComponent */],
         children: [
             {
                 path: '',
-                component: __WEBPACK_IMPORTED_MODULE_7__admin_list_list_component__["a" /* AdminListComponent */]
+                component: __WEBPACK_IMPORTED_MODULE_8__admin_list_list_component__["a" /* AdminListComponent */]
             },
             {
                 path: 'edit/:id',
-                component: __WEBPACK_IMPORTED_MODULE_8__admin_edit_edit_component__["a" /* AdminEditComponent */]
+                component: __WEBPACK_IMPORTED_MODULE_9__admin_edit_edit_component__["a" /* AdminEditComponent */]
             },
             {
                 path: 'add',
-                component: __WEBPACK_IMPORTED_MODULE_6__admin_add_add_component__["a" /* AdminAddComponent */]
+                component: __WEBPACK_IMPORTED_MODULE_7__admin_add_add_component__["a" /* AdminAddComponent */]
             },
         ]
     },
     {
         path: 'login',
-        component: __WEBPACK_IMPORTED_MODULE_4__login_login_component__["a" /* LoginComponent */]
+        component: __WEBPACK_IMPORTED_MODULE_5__login_login_component__["a" /* LoginComponent */]
     },
     {
         path: 'wine',
-        component: __WEBPACK_IMPORTED_MODULE_12__wine_wine_component__["a" /* WineComponent */]
+        component: __WEBPACK_IMPORTED_MODULE_13__wine_wine_component__["a" /* WineComponent */]
+    },
+    {
+        path: 'notification',
+        component: __WEBPACK_IMPORTED_MODULE_4__notification_notification_component__["a" /* NotificationComponent */]
     },
     {
         path: '**',
         component: __WEBPACK_IMPORTED_MODULE_2__pages_error404_component__["a" /* ErrorComponent */]
     }
 ];
-var AppRoutingModule = /** @class */ (function () {
+var AppRoutingModule = (function () {
     function AppRoutingModule() {
     }
-    AppRoutingModule = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
-            imports: [__WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* RouterModule */].forRoot(routes)],
-            exports: [__WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* RouterModule */]]
-        })
-    ], AppRoutingModule);
     return AppRoutingModule;
 }());
+AppRoutingModule = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
+        imports: [__WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* RouterModule */].forRoot(routes)],
+        exports: [__WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* RouterModule */]]
+    })
+], AppRoutingModule);
 
 //# sourceMappingURL=app.routing.js.map
 
@@ -613,7 +626,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var DonutChartComponent = /** @class */ (function () {
+var DonutChartComponent = (function () {
     function DonutChartComponent(_chartService, _admintService) {
         this._chartService = _chartService;
         this._admintService = _admintService;
@@ -658,18 +671,18 @@ var DonutChartComponent = /** @class */ (function () {
             console.log(error);
         });
     };
-    DonutChartComponent = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'donut-chart',
-            template: __webpack_require__("../../../../../src/app/charts/donut/donut.component.html"),
-            providers: [__WEBPACK_IMPORTED_MODULE_1__services_chart_service__["a" /* ChartService */]]
-        }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_chart_service__["a" /* ChartService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_chart_service__["a" /* ChartService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__services_admin_service__["a" /* AdminService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_admin_service__["a" /* AdminService */]) === "function" && _b || Object])
-    ], DonutChartComponent);
     return DonutChartComponent;
-    var _a, _b;
 }());
+DonutChartComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'donut-chart',
+        template: __webpack_require__("../../../../../src/app/charts/donut/donut.component.html"),
+        providers: [__WEBPACK_IMPORTED_MODULE_1__services_chart_service__["a" /* ChartService */]]
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_chart_service__["a" /* ChartService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_chart_service__["a" /* ChartService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__services_admin_service__["a" /* AdminService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_admin_service__["a" /* AdminService */]) === "function" && _b || Object])
+], DonutChartComponent);
 
+var _a, _b;
 //# sourceMappingURL=donut.component.js.map
 
 /***/ }),
@@ -686,7 +699,8 @@ module.exports = "<div class=\"col-md-6\">\n\t<canvas baseChart\n\t    [data]=\"
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_chart_service__ = __webpack_require__("../../../../../src/app/services/chart.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_user_service__ = __webpack_require__("../../../../../src/app/services/user.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_admin_service__ = __webpack_require__("../../../../../src/app/services/admin.service.ts");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LineChartComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -699,13 +713,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-var LineChartComponent = /** @class */ (function () {
-    function LineChartComponent(_chartService) {
-        this._chartService = _chartService;
+
+var LineChartComponent = (function () {
+    function LineChartComponent(_userService, _adminService) {
+        this._userService = _userService;
+        this._adminService = _adminService;
         // lineChart
         this.lineChartData = [];
         this.lineChartLabels = [];
         this.lineChartType = 'line';
+        this.labels = [];
         this.lineChartColors = [
             {
                 backgroundColor: 'rgba(130, 3, 51, 0.62)',
@@ -721,22 +738,49 @@ var LineChartComponent = /** @class */ (function () {
         console.log(e);
     };
     LineChartComponent.prototype.ngOnInit = function () {
-        this.data = this._chartService.getLineChartData();
-        this.lineChartData = this.data.data;
-        this.lineChartLabels = this.data.labels;
+        var _this = this;
+        this.token = this._adminService.getToken();
+        this._userService.listUsers(this.token).subscribe(function (response) {
+            var data = response.data;
+            data.forEach(function (item, index) {
+                if (!_this.labels.find(function (x) { return x == item.createdDate; })) {
+                    _this.labels.push(item.createdDate);
+                }
+            });
+            console.log(_this.labels);
+            _this.lineChartLabels = _this.labels;
+        }, function (error) {
+        });
+        var date = new Date();
+        console.log(date.getDay());
+        this.chartData = {
+            'labels': this.labels,
+            'data': [23, 60, 45, 80, 91]
+        };
+        this.lineChartLabels = [23, 60, 45, 80, 91];
     };
-    LineChartComponent = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'line-chart',
-            template: __webpack_require__("../../../../../src/app/charts/line/line-chart.component.html"),
-            providers: [__WEBPACK_IMPORTED_MODULE_1__services_chart_service__["a" /* ChartService */]]
-        }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_chart_service__["a" /* ChartService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_chart_service__["a" /* ChartService */]) === "function" && _a || Object])
-    ], LineChartComponent);
+    LineChartComponent.prototype.randomize = function () {
+        var _lineChartData = new Array(this.lineChartData.length);
+        for (var i = 0; i < this.lineChartData.length; i++) {
+            _lineChartData[i] = { data: new Array(this.lineChartData[i].data.length), label: this.lineChartData[i].label };
+            for (var j = 0; j < this.lineChartData[i].data.length; j++) {
+                _lineChartData[i].data[j] = Math.floor((Math.random() * 100) + 1);
+            }
+        }
+        this.lineChartData = _lineChartData;
+    };
     return LineChartComponent;
-    var _a;
 }());
+LineChartComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'line-chart',
+        template: __webpack_require__("../../../../../src/app/charts/line/line-chart.component.html"),
+        providers: [__WEBPACK_IMPORTED_MODULE_1__services_user_service__["a" /* UserService */]]
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_user_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_user_service__["a" /* UserService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__services_admin_service__["a" /* AdminService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_admin_service__["a" /* AdminService */]) === "function" && _b || Object])
+], LineChartComponent);
 
+var _a, _b;
 //# sourceMappingURL=line-chart.component.js.map
 
 /***/ }),
@@ -744,7 +788,7 @@ var LineChartComponent = /** @class */ (function () {
 /***/ "../../../../../src/app/home/home.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<layout></layout>\n<div class=\"block-header\">\n\t<div class=\"row\">\n\t\t<div class=\"col-md-8 col-sm-7 col-xs-12\">\n\t\t\t<div class=\"h-left clearfix aos-item\" data-aos-duration=\"400\" data-aos-delay=\"300\" data-aos=\"slide-down\">\n\t\t\t\t<h2>PANEL PRINCIPAL</h2>\n\t\t\t\t<!-- <small class=\"text-muted\">Welcome to CC Application</small> -->\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</div>\n<section class=\"content home\" style=\"margin-left: 270px;\">\n\t<div class=\"row clearfix\">\n\t\t<div class=\"col-lg-12 col-md-6 col-sm-12 col-xs-12\">\n\t\t\t<div class=\"row clearfix top-report\">\n\t\t\t\t<div class=\"col-md-4 col-sm-6 col-xs-12\">\n\t\t\t\t\t<div class=\"card info-box\">\n\t\t\t\t\t\t<div class=\"icon bg-red\"><i class=\"zmdi zmdi-account-circle\"></i></div>\n\t\t\t\t\t\t<div class=\"content\">\n\t\t\t\t\t\t\t<div class=\"text\">Total de Usuarios</div>\n\t\t\t\t\t\t\t<div class=\"number count-to\" data-from=\"0\" data-to=\"125\" data-speed=\"1000\" data-fresh-interval=\"20\">{{ totalUsers }}</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"col-md-4 col-sm-6 col-xs-12\">\n\t\t\t\t\t<div class=\"card info-box\">\n                        <div class=\"icon bg-red\"><i class=\"zmdi zmdi-star\"></i></div>\n                        <div class=\"content\">\n                            <div class=\"text\">Vino Favorito</div>\n                            <div class=\"number count-to\" data-from=\"0\" data-to=\"125\" data-speed=\"1000\" data-fresh-interval=\"20\">{{ favoriteWine.name }}</div>\n                        </div>\n                    </div>\n                </div>\n                <div class=\"col-md-4 col-sm-6 col-xs-12\">\n                 <div class=\"card info-box\">\n                    <div class=\"icon bg-red\"><i class=\"zmdi zmdi-star\"></i></div>\n                    <div class=\"content\">\n                        <div class=\"text\">Uva Favorita</div>\n                        <div class=\"number count-to\" data-from=\"0\" data-to=\"125\" data-speed=\"1000\" data-fresh-interval=\"20\">{{ favoriteWine.grape.name }}</div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>\n<div class=\"row\" style=\"padding-bottom: 25px;\">\n    <line-chart></line-chart>\n    <donut-chart></donut-chart>\n</div>\n<div class=\"row clearfix\">\n    <!-- Purchases -->\n    <div class=\"col-xs-12 col-sm-12 col-md-8\">\n        <div class=\"card aos-item\" data-aos-duration=\"400\" data-aos-delay=\"100\" data-aos=\"fade-up\">\n            <div class=\"header\">\n                <h2>Los más elegidos</h2>\n            </div>\n            <div class=\"body table-responsive\">\n                <table class=\"table table-striped table-borderless\">\n                    <thead>\n                        <tr>\n                            <th style=\"width:40%;\">Nombre</th>\n                            <th style=\"width:20%;\">Uva</th>\n                            <th class=\"number\">Precio</th>\n                            <th style=\"width:20%;\"><i class=\"zmdi zmdi-favorite\"></i></th>\n                        </tr>\n                    </thead>\n                    <tbody class=\"no-border-x\">\n                        <tr *ngFor=\"let wine of favoriteWines\">\n                            <td>{{ wine.wine.name }}</td>\n                            <td>{{ wine.wine.grape.name }}</td>\n                            <td class=\"number\">${{ wine.wine.price}}</td>\n                            <td>{{ wine.cant }}</td>\n                        </tr>\n                    </tbody>\n                </table>\n            </div>\n        </div>\n    </div>\n    <!-- #END# Purchases -->\n    <div class=\"col-xs-12 col-sm-12 col-md-4\">\n        <div class=\"card aos-item\" data-aos-duration=\"400\" data-aos-delay=\"200\" data-aos=\"fade-up\">\n            <div class=\"header\">\n                <h2>Resumen</h2>\n            </div>\n            <div class=\"body\">\n                <ul class=\"inbox-widget list-unstyled clearfix\">\n                    <li class=\"inbox-inner aos-item\" data-aos-duration=\"400\" data-aos-delay=\"100\" data-aos=\"fade-down\">\n                        <div class=\"inbox-item\">\n                            <div class=\"inbox-img\"> <img src=\"assets/images/google-logo.png\" alt=\"\"> </div>\n                            <div class=\"inbox-item-info\">\n                                <p class=\"author\">Google Plus</p>\n                                <p class=\"inbox-message\">{{ googleUsers }} Usuarios Registrados</p>\n                            </div>\n                        </div>\n                    </li>\n                    <li class=\"inbox-inner aos-item\" data-aos-duration=\"400\" data-aos-delay=\"200\" data-aos=\"fade-down\">\n                        <div class=\"inbox-item\">\n                            <div class=\"inbox-img\"> <img src=\"assets/images/fb-logo.png\" alt=\"\"> </div>\n                            <div class=\"inbox-item-info\">\n                                <p class=\"author\">Facebook</p>\n                                <p class=\"inbox-message\">{{ facebookUsers }} Usuarios Registrados</p>\n                            </div>\n                        </div>\n                    </li>\n                </ul>\n            </div>\n        </div>\n    </div>\n</div>\n</section>"
+module.exports = "<layout></layout>\n<div class=\"block-header\">\n\t<div class=\"row\">\n\t\t<div class=\"col-md-8 col-sm-7 col-xs-12\">\n\t\t\t<div class=\"h-left clearfix aos-item\" data-aos-duration=\"400\" data-aos-delay=\"300\" data-aos=\"slide-down\">\n\t\t\t\t<h2>PANEL PRINCIPAL</h2>\n\t\t\t\t<!-- <small class=\"text-muted\">Welcome to CC Application</small> -->\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</div>\n<section class=\"content home\" style=\"margin-left: 270px;\">\n\t<div class=\"row clearfix\">\n\t\t<div class=\"col-lg-12 col-md-6 col-sm-12 col-xs-12\">\n\t\t\t<div class=\"row clearfix top-report\">\n\t\t\t\t<div class=\"col-md-4 col-sm-6 col-xs-12\">\n\t\t\t\t\t<div class=\"card info-box\">\n\t\t\t\t\t\t<div class=\"icon bg-red\"><i class=\"zmdi zmdi-account-circle\"></i></div>\n\t\t\t\t\t\t<div class=\"content\">\n\t\t\t\t\t\t\t<div class=\"text\">Total de Usuarios</div>\n\t\t\t\t\t\t\t<div class=\"number count-to widgets\">{{ totalUsers }}</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"col-md-4 col-sm-6 col-xs-12\">\n\t\t\t\t\t<div class=\"card info-box\">\n                        <div class=\"icon bg-red\"><i class=\"zmdi zmdi-star\"></i></div>\n                        <div class=\"content\">\n                            <div class=\"text\">Vino Favorito</div>\n                            <div class=\"number count-to widgets\">{{ favoriteWine.name }}</div>\n                        </div>\n                    </div>\n                </div>\n                <div class=\"col-md-4 col-sm-6 col-xs-12\">\n                 <div class=\"card info-box\">\n                    <div class=\"icon bg-red\"><i class=\"zmdi zmdi-star\"></i></div>\n                    <div class=\"content\">\n                        <div class=\"text\">Uva Favorita</div>\n                        <div class=\"number count-to widgets\">{{ favoriteWine.grape.name }}</div>\n                    </div>\n                </div>\n                </div>\n            </div>\n        </div>\n    </div>\n<div class=\"row\" style=\"padding-bottom: 25px;\">\n    <line-chart></line-chart>\n    <donut-chart></donut-chart>\n</div>\n<div class=\"row clearfix\">\n    <!-- Purchases -->\n    <!-- <div class=\"col-xs-12 col-sm-12 col-md-8\">\n        <div class=\"card aos-item\" data-aos-duration=\"400\" data-aos-delay=\"100\" data-aos=\"fade-up\">\n            <div class=\"header\">\n                <h2>Los más elegidos</h2>\n            </div>\n            <div class=\"body table-responsive\">\n                <table class=\"table table-striped table-borderless\">\n                    <thead>\n                        <tr>\n                            <th style=\"width:40%;\">Nombre</th>\n                            <th style=\"width:20%;\">Uva</th>\n                            <th class=\"number\">Precio</th>\n                            <th style=\"width:20%;\"><i class=\"zmdi zmdi-favorite\"></i></th>\n                        </tr>\n                    </thead>\n                    <tbody class=\"no-border-x\">\n                        <tr *ngFor=\"let wine of favoriteWines\">\n                            <td>{{ wine.wine.name }}</td>\n                            <td>{{ wine.wine.grape.name }}</td>\n                            <td class=\"number\">${{ wine.wine.price}}</td>\n                            <td>{{ wine.cant }}</td>\n                        </tr>\n                    </tbody>\n                </table>\n            </div>\n        </div>\n    </div> -->\n    <!-- #END# Purchases -->\n    <div class=\"col-xs-12 col-sm-12 col-md-4\">\n        <div class=\"card aos-item\" data-aos-duration=\"400\" data-aos-delay=\"200\" data-aos=\"fade-up\">\n            <div class=\"header\">\n                <h2>Resumen</h2>\n            </div>\n            <div class=\"body\">\n                <ul class=\"inbox-widget list-unstyled clearfix\">\n                    <li class=\"inbox-inner aos-item\" data-aos-duration=\"400\" data-aos-delay=\"100\" data-aos=\"fade-down\">\n                        <div class=\"inbox-item\">\n                            <div class=\"inbox-img\"> <img src=\"assets/images/google-logo.png\" alt=\"\"> </div>\n                            <div class=\"inbox-item-info\">\n                                <p class=\"author\">Google Plus</p>\n                                <p class=\"inbox-message\">{{ googleUsers }} Usuarios Registrados</p>\n                            </div>\n                        </div>\n                    </li>\n                    <li class=\"inbox-inner aos-item\" data-aos-duration=\"400\" data-aos-delay=\"200\" data-aos=\"fade-down\">\n                        <div class=\"inbox-item\">\n                            <div class=\"inbox-img\"> <img src=\"assets/images/fb-logo.png\" alt=\"\"> </div>\n                            <div class=\"inbox-item-info\">\n                                <p class=\"author\">Facebook</p>\n                                <p class=\"inbox-message\">{{ facebookUsers }} Usuarios Registrados</p>\n                            </div>\n                        </div>\n                    </li>\n                </ul>\n            </div>\n        </div>\n    </div>\n</div>\n</section>"
 
 /***/ }),
 
@@ -774,7 +818,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var HomeComponent = /** @class */ (function () {
+var HomeComponent = (function () {
     function HomeComponent(_adminService, _chartService, _userService, _wineService, _router) {
         this._adminService = _adminService;
         this._chartService = _chartService;
@@ -794,9 +838,11 @@ var HomeComponent = /** @class */ (function () {
         }
         this._wineService.getFavoriteWines(this.token).subscribe(function (response) {
             _this.favoriteWines = response.data;
+            var cont;
+            _this.favoriteWines.forEach(function (item, index) {
+            });
             _this.favoriteWine = response.data[0].wine;
         }, function (error) {
-            console.log(error);
         });
         this._userService.listUsers(this.token).subscribe(function (response) {
             _this.totalUsers = response.data.length;
@@ -812,18 +858,18 @@ var HomeComponent = /** @class */ (function () {
             console.log(error);
         });
     };
-    HomeComponent = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'home',
-            template: __webpack_require__("../../../../../src/app/home/home.component.html"),
-            providers: [__WEBPACK_IMPORTED_MODULE_1__services_chart_service__["a" /* ChartService */], __WEBPACK_IMPORTED_MODULE_2__services_admin_service__["a" /* AdminService */], __WEBPACK_IMPORTED_MODULE_4__services_wine_service__["a" /* WineService */], __WEBPACK_IMPORTED_MODULE_3__services_user_service__["a" /* UserService */]]
-        }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__services_admin_service__["a" /* AdminService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_admin_service__["a" /* AdminService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__services_chart_service__["a" /* ChartService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_chart_service__["a" /* ChartService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__services_user_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__services_user_service__["a" /* UserService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4__services_wine_service__["a" /* WineService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__services_wine_service__["a" /* WineService */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_5__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__angular_router__["b" /* Router */]) === "function" && _e || Object])
-    ], HomeComponent);
     return HomeComponent;
-    var _a, _b, _c, _d, _e;
 }());
+HomeComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'home',
+        template: __webpack_require__("../../../../../src/app/home/home.component.html"),
+        providers: [__WEBPACK_IMPORTED_MODULE_1__services_chart_service__["a" /* ChartService */], __WEBPACK_IMPORTED_MODULE_2__services_admin_service__["a" /* AdminService */], __WEBPACK_IMPORTED_MODULE_4__services_wine_service__["a" /* WineService */], __WEBPACK_IMPORTED_MODULE_3__services_user_service__["a" /* UserService */]]
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__services_admin_service__["a" /* AdminService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_admin_service__["a" /* AdminService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__services_chart_service__["a" /* ChartService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_chart_service__["a" /* ChartService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__services_user_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__services_user_service__["a" /* UserService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4__services_wine_service__["a" /* WineService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__services_wine_service__["a" /* WineService */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_5__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__angular_router__["b" /* Router */]) === "function" && _e || Object])
+], HomeComponent);
 
+var _a, _b, _c, _d, _e;
 //# sourceMappingURL=home.component.js.map
 
 /***/ }),
@@ -831,7 +877,7 @@ var HomeComponent = /** @class */ (function () {
 /***/ "../../../../../src/app/layout/layout.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<!-- Overlay For Sidebars -->\n<div class=\"overlay\"></div>\n\n<!-- Search  -->\n<div class=\"search-bar\">\n    <div class=\"search-icon\"> <i class=\"material-icons\">search</i> </div>\n    <input type=\"text\" placeholder=\"START TYPING...\">\n    <div class=\"close-search\"> <i class=\"material-icons\">close</i> </div>\n</div>\n\n<!-- Top Bar -->\n<nav class=\"navbar\">\n    <div class=\"container-fluid\">\n        <div class=\"navbar-header\"> <a href=\"javascript:void(0);\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#navbar-collapse\" aria-expanded=\"false\"></a> <a href=\"javascript:void(0);\" class=\"bars\"></a> <a class=\"navbar-brand\" [routerLink]=\"['/home']\" style=\"color: #fefefe;margin-left: 55px;\">VARON</a></div>\n        <div class=\"collapse navbar-collapse\" id=\"navbar-collapse\">\n            <ul class=\"nav navbar-nav navbar-right\">\n                <li><a (click)=\"logout()\" class=\"mega-menu logout-button\" data-close=\"true\"><i class=\"zmdi zmdi-power\"></i></a></li>\n            </ul>\n        </div>\n    </div>\n</nav>\n\n<!-- Left & Right bar menu -->\n<section>\n    <!-- Left Sidebar -->\n    <aside id=\"leftsidebar\" class=\"sidebar\">\n        <!-- User Info -->\n        <div class=\"user-info\">\n            <div class=\"image\"> <img src=\"assets/images/defaultuser.jpg\" width=\"48\" height=\"48\" alt=\"User\" /> </div>\n            <div class=\"info-container\">\n                <div class=\"name\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">{{ admin.username }}</div>\n                <div class=\"email\">{{ admin.level }}</div>\n            </div>\n        </div>\n        <!-- #User Info -->\n        <!-- Menu -->\n        <div class=\"menu\">\n            <ul class=\"list\">\n                <li> <a [routerLink]=\"['/home']\" [routerLinkActive]=\"['active']\"><i class=\"material-icons\">assessment</i><span>Panel Principal</span> </a> </li>\n                <li> <a [routerLink]=\"['/user']\" [routerLinkActive]=\"['active']\"><i class=\"material-icons\">account_circle</i><span>Usuarios</span> </a> </li>\n                <li *ngIf=\"admin.level === 'superadmin'\"> <a [routerLink]=\"['/admin']\" [routerLinkActive]=\"['active']\"><i class=\"material-icons\">account_box</i><span>Administradores</span> </a> </li>\n                <li> <a [routerLink]=\"['/wine']\" [routerLinkActive]=\"['active']\"><i class=\"material-icons\">list</i><span>Vinos</span> </a> </li>\n            </ul>\n        </div>\n        <!-- #Menu -->\n    </aside>\n\n</section>"
+module.exports = "<!-- Overlay For Sidebars -->\n<div class=\"overlay\"></div>\n\n<!-- Search  -->\n<div class=\"search-bar\">\n    <div class=\"search-icon\"> <i class=\"material-icons\">search</i> </div>\n    <input type=\"text\" placeholder=\"START TYPING...\">\n    <div class=\"close-search\"> <i class=\"material-icons\">close</i> </div>\n</div>\n\n<!-- Top Bar -->\n<nav class=\"navbar\">\n    <div class=\"container-fluid\">\n        <div class=\"navbar-header\"> <a href=\"javascript:void(0);\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#navbar-collapse\" aria-expanded=\"false\"></a> <a href=\"javascript:void(0);\" class=\"bars\"></a> <a class=\"navbar-brand\" [routerLink]=\"['/home']\" style=\"color: #fefefe;margin-left: 55px;\">VARON</a></div>\n        <div class=\"collapse navbar-collapse\" id=\"navbar-collapse\">\n            <ul class=\"nav navbar-nav navbar-right\">\n                <li><a (click)=\"logout()\" class=\"mega-menu logout-button\" data-close=\"true\"><i class=\"zmdi zmdi-power\"></i></a></li>\n            </ul>\n        </div>\n    </div>\n</nav>\n\n<!-- Left & Right bar menu -->\n<section>\n    <!-- Left Sidebar -->\n    <aside id=\"leftsidebar\" class=\"sidebar\">\n        <!-- User Info -->\n        <div class=\"user-info\">\n            <div class=\"image\"> <img src=\"assets/images/defaultuser.jpg\" width=\"48\" height=\"48\" alt=\"User\" /> </div>\n            <div class=\"info-container\">\n                <div class=\"name\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">{{ admin.username }}</div>\n                <div class=\"email\">{{ admin.level }}</div>\n            </div>\n        </div>\n        <!-- #User Info -->\n        <!-- Menu -->\n        <div class=\"menu\">\n            <ul class=\"list\">\n                <li> <a [routerLink]=\"['/home']\" [routerLinkActive]=\"['active']\"><i class=\"fa fa-home\"></i> <span>Panel Principal</span> </a> </li>\n                <li> <a [routerLink]=\"['/user']\" [routerLinkActive]=\"['active']\"><i class=\"fa fa-users\"></i><span> Usuarios</span> </a> </li>\n                <li *ngIf=\"admin.level === 'superadmin'\"> <a [routerLink]=\"['/admin']\" [routerLinkActive]=\"['active']\"><i class=\"fa fa-user-secret\"></i><span> Administradores</span> </a> </li>\n                <li> <a [routerLink]=\"['/wine']\" [routerLinkActive]=\"['active']\"><i class=\"fa fa-list\"></i><span>Vinos</span> </a> </li>\n                <li> <a [routerLink]=\"['/notification']\" [routerLinkActive]=\"['active']\"><i class=\"fa fa-bookmark\"></i><span>Notificaciones</span> </a> </li>\n            </ul>\n        </div>\n        <!-- #Menu -->\n    </aside>\n\n</section>"
 
 /***/ }),
 
@@ -855,7 +901,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var LayoutComponent = /** @class */ (function () {
+var LayoutComponent = (function () {
     function LayoutComponent(_adminService, _router) {
         this._adminService = _adminService;
         this._router = _router;
@@ -870,18 +916,18 @@ var LayoutComponent = /** @class */ (function () {
         this.token = null;
         this._router.navigate(['/login']);
     };
-    LayoutComponent = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'layout',
-            template: __webpack_require__("../../../../../src/app/layout/layout.component.html"),
-            providers: [__WEBPACK_IMPORTED_MODULE_2__services_admin_service__["a" /* AdminService */]]
-        }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__services_admin_service__["a" /* AdminService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_admin_service__["a" /* AdminService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _b || Object])
-    ], LayoutComponent);
     return LayoutComponent;
-    var _a, _b;
 }());
+LayoutComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'layout',
+        template: __webpack_require__("../../../../../src/app/layout/layout.component.html"),
+        providers: [__WEBPACK_IMPORTED_MODULE_2__services_admin_service__["a" /* AdminService */]]
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__services_admin_service__["a" /* AdminService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_admin_service__["a" /* AdminService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _b || Object])
+], LayoutComponent);
 
+var _a, _b;
 //# sourceMappingURL=layout.component.js.map
 
 /***/ }),
@@ -909,28 +955,28 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var LayoutModule = /** @class */ (function () {
+var LayoutModule = (function () {
     function LayoutModule() {
     }
-    LayoutModule = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_4__angular_core__["NgModule"])({
-            declarations: [
-                __WEBPACK_IMPORTED_MODULE_5__layout_layout_component__["a" /* LayoutComponent */]
-            ],
-            imports: [
-                __WEBPACK_IMPORTED_MODULE_1__angular_common__["c" /* CommonModule */],
-                __WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* HttpModule */],
-                __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormsModule */],
-                __WEBPACK_IMPORTED_MODULE_0__angular_router__["a" /* RouterModule */]
-            ],
-            exports: [
-                __WEBPACK_IMPORTED_MODULE_5__layout_layout_component__["a" /* LayoutComponent */]
-            ],
-            providers: []
-        })
-    ], LayoutModule);
     return LayoutModule;
 }());
+LayoutModule = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_4__angular_core__["NgModule"])({
+        declarations: [
+            __WEBPACK_IMPORTED_MODULE_5__layout_layout_component__["a" /* LayoutComponent */]
+        ],
+        imports: [
+            __WEBPACK_IMPORTED_MODULE_1__angular_common__["CommonModule"],
+            __WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* HttpModule */],
+            __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormsModule */],
+            __WEBPACK_IMPORTED_MODULE_0__angular_router__["a" /* RouterModule */]
+        ],
+        exports: [
+            __WEBPACK_IMPORTED_MODULE_5__layout_layout_component__["a" /* LayoutComponent */]
+        ],
+        providers: []
+    })
+], LayoutModule);
 
 //# sourceMappingURL=layout.module.js.map
 
@@ -974,18 +1020,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 
-var LoaderComponent = /** @class */ (function () {
+var LoaderComponent = (function () {
     function LoaderComponent() {
     }
-    LoaderComponent = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'loader',
-            template: __webpack_require__("../../../../../src/app/loader/loader.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/loader/loader.component.css")]
-        })
-    ], LoaderComponent);
     return LoaderComponent;
 }());
+LoaderComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'loader',
+        template: __webpack_require__("../../../../../src/app/loader/loader.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/loader/loader.component.css")]
+    })
+], LoaderComponent);
 
 //# sourceMappingURL=loader.component.js.map
 
@@ -1040,7 +1086,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var LoginComponent = /** @class */ (function () {
+var LoginComponent = (function () {
     function LoginComponent(_route, _router, _adminService, _loaderService) {
         this._route = _route;
         this._router = _router;
@@ -1063,36 +1109,27 @@ var LoginComponent = /** @class */ (function () {
         this._adminService.login(this.admin).subscribe(function (response) {
             _this._loaderService.displayLoader(false);
             console.log(response);
-            if (response.data === 'admin not found') {
-                _this.status = 0;
-            }
-            else {
-                localStorage.setItem('admin', JSON.stringify(response.data.info));
-                localStorage.setItem('token', JSON.stringify(response.data.token));
-                _this._router.navigate(['/home']);
-            }
+            localStorage.setItem('admin', JSON.stringify(response.data.info));
+            localStorage.setItem('token', JSON.stringify(response.data.token));
+            _this._router.navigate(['/home']);
         }, function (error) {
             _this._loaderService.displayLoader(false);
-            var errorMessage = error;
-            if (errorMessage != null) {
-                var body = JSON.parse(error._body);
-                _this.status = errorMessage;
-            }
+            _this.status = 0;
         });
     };
-    LoginComponent = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'login',
-            template: __webpack_require__("../../../../../src/app/login/login.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/login/login.component.css")],
-            providers: [__WEBPACK_IMPORTED_MODULE_3__services_admin_service__["a" /* AdminService */], __WEBPACK_IMPORTED_MODULE_4__services_loader_service__["a" /* LoaderService */]]
-        }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__services_admin_service__["a" /* AdminService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__services_admin_service__["a" /* AdminService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4__services_loader_service__["a" /* LoaderService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__services_loader_service__["a" /* LoaderService */]) === "function" && _d || Object])
-    ], LoginComponent);
     return LoginComponent;
-    var _a, _b, _c, _d;
 }());
+LoginComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'login',
+        template: __webpack_require__("../../../../../src/app/login/login.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/login/login.component.css")],
+        providers: [__WEBPACK_IMPORTED_MODULE_3__services_admin_service__["a" /* AdminService */], __WEBPACK_IMPORTED_MODULE_4__services_loader_service__["a" /* LoaderService */]]
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__services_admin_service__["a" /* AdminService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__services_admin_service__["a" /* AdminService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4__services_loader_service__["a" /* LoaderService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__services_loader_service__["a" /* LoaderService */]) === "function" && _d || Object])
+], LoginComponent);
 
+var _a, _b, _c, _d;
 //# sourceMappingURL=login.component.js.map
 
 /***/ }),
@@ -1102,7 +1139,7 @@ var LoginComponent = /** @class */ (function () {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Admin; });
-var Admin = /** @class */ (function () {
+var Admin = (function () {
     function Admin(username, password, level) {
         if (level === void 0) { level = 'admin'; }
         this.username = username;
@@ -1121,7 +1158,7 @@ var Admin = /** @class */ (function () {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return User; });
-var User = /** @class */ (function () {
+var User = (function () {
     function User(username, password, level, email) {
         this.username = username;
         this.password = password;
@@ -1132,6 +1169,75 @@ var User = /** @class */ (function () {
 }());
 
 //# sourceMappingURL=user.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/notification/notification.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<layout></layout>\n<section class=\"content home\">\n\t<div class=\"block-header\">\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-md-8 col-sm-7 col-xs-12\">\n\t\t\t\t<div class=\"h-left clearfix aos-item\" data-aos-duration=\"400\" data-aos-delay=\"300\" data-aos=\"slide-down\">\n\t\t\t\t\t<h2>Enviar Notificaciones</h2>\n\t\t\t\t\t<!-- <small class=\"text-muted\">Welcome to CC Application</small> -->\n\t\t\t\t\t<ol class=\"breadcrumb breadcrumb-col-pink p-l-0\">\n\t\t\t\t\t\t<li><a [routerLink]=\"['/home']\">Panel Principal</a></li>\n\t\t\t\t\t\t<li class=\"active\">Notificaciones</li>\n\t\t\t\t\t</ol>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<div class=\"col-md-4 col-sm-5 col-xs-12\">\n\t\t\t\t<div class=\"h-right aos-item\" data-aos-duration=\"400\" data-aos-delay=\"300\" data-aos=\"slide-down\">\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>\n<section class=\"content\" style=\"margin-top:0px;\">\n\t<div class=\"row clearfix\">\n\t\t<div class=\"col-lg-12 col-sm-12 col-md-12\">\n\t\t\t<div class=\"card\">\n\t\t\t\t<div class=\"body\" id=\"footer\">\n\t\t\t\t\t<div class=\"row\">\n\t\t\t\t\t\t<div class=\"col-lg-12 col-xs-12 col-sm-4\">\n\t\t\t\t\t\t\t<h5>Enviar Notificaciones</h5>\n\t\t\t\t\t\t\t<p></p>\n\t\t\t\t\t\t\t<div class=\"input-group\">\n\t\t\t\t\t\t\t\t<div class=\"form-line\">\n\t\t\t\t\t\t\t\t\t<input type=\"text\" class=\"form-control date\" placeholder=\"Ingresa el texto aquí...\">\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<button (click)=\"sendPush()\"> <i class=\"material-icons\">send</i> </button>\n\t\t\t\t\t\t\t\t<span class=\"input-group-addon\" (click)=\"sendPush()\"> <i class=\"material-icons\">send</i> </span> \n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/notification/notification.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_admin_service__ = __webpack_require__("../../../../../src/app/services/admin.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_loader_service__ = __webpack_require__("../../../../../src/app/services/loader.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_notification_service__ = __webpack_require__("../../../../../src/app/services/notification.service.ts");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NotificationComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var NotificationComponent = (function () {
+    function NotificationComponent(_route, _router, _adminService, _notificationService, _loaderService) {
+        this._route = _route;
+        this._router = _router;
+        this._adminService = _adminService;
+        this._notificationService = _notificationService;
+        this._loaderService = _loaderService;
+        this.admin = this._adminService.getAdmin();
+        this.token = this._adminService.getToken();
+    }
+    NotificationComponent.prototype.sendPush = function () {
+        var message = {
+            title: 'Hola',
+            body: 'Probando..Probando..'
+        };
+        console.log('aca');
+        this._notificationService.sendPush(this.token, message).subscribe(function (response) {
+            console.log(response);
+        }, function (error) {
+            console.log(error);
+        });
+    };
+    return NotificationComponent;
+}());
+NotificationComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'notification',
+        template: __webpack_require__("../../../../../src/app/notification/notification.component.html"),
+        providers: [__WEBPACK_IMPORTED_MODULE_2__services_admin_service__["a" /* AdminService */], __WEBPACK_IMPORTED_MODULE_3__services_loader_service__["a" /* LoaderService */], __WEBPACK_IMPORTED_MODULE_4__services_notification_service__["a" /* NotificationService */]]
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__services_admin_service__["a" /* AdminService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_admin_service__["a" /* AdminService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4__services_notification_service__["a" /* NotificationService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__services_notification_service__["a" /* NotificationService */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_3__services_loader_service__["a" /* LoaderService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__services_loader_service__["a" /* LoaderService */]) === "function" && _e || Object])
+], NotificationComponent);
+
+var _a, _b, _c, _d, _e;
+//# sourceMappingURL=notification.component.js.map
 
 /***/ }),
 
@@ -1173,18 +1279,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 
-var ErrorComponent = /** @class */ (function () {
+var ErrorComponent = (function () {
     function ErrorComponent() {
     }
-    ErrorComponent = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'error-404',
-            template: __webpack_require__("../../../../../src/app/pages/error404.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/pages/error404.component.css")]
-        })
-    ], ErrorComponent);
     return ErrorComponent;
 }());
+ErrorComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'error-404',
+        template: __webpack_require__("../../../../../src/app/pages/error404.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/pages/error404.component.css")]
+    })
+], ErrorComponent);
 
 //# sourceMappingURL=error404.component.js.map
 
@@ -1213,7 +1319,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var AdminService = /** @class */ (function () {
+var AdminService = (function () {
     function AdminService(_http) {
         this._http = _http;
         this.url = __WEBPACK_IMPORTED_MODULE_3__global__["a" /* GLOBAL */].url;
@@ -1289,14 +1395,14 @@ var AdminService = /** @class */ (function () {
         return this._http.delete(this.url + 'admin/' + id, { headers: headers })
             .map(function (res) { return res.json(); });
     };
-    AdminService = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* Http */]) === "function" && _a || Object])
-    ], AdminService);
     return AdminService;
-    var _a;
 }());
+AdminService = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* Http */]) === "function" && _a || Object])
+], AdminService);
 
+var _a;
 //# sourceMappingURL=admin.service.js.map
 
 /***/ }),
@@ -1324,18 +1430,24 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var ChartService = /** @class */ (function () {
+var ChartService = (function () {
     function ChartService(_http) {
         this._http = _http;
         this.url = __WEBPACK_IMPORTED_MODULE_3__global__["a" /* GLOBAL */].url;
     }
-    ChartService.prototype.getLineChartData = function () {
-        this.chartData = {
-            'labels': ['Enero', 'Feberero', 'Marzo', 'Abril', 'Mayo'],
-            'data': [23, 60, 45, 80, 91]
-        };
-        return this.chartData;
-    };
+    // getLineChartData(token){
+    // 	this.chartData = {
+    // 		'labels': ['Enero', 'Feberero', 'Marzo', 'Abril', 'Mayo'],
+    // 		'data': [23, 60, 45, 80, 91]
+    // 	}
+    // 	return this.chartData;
+    // 	let headers = new Headers({
+    // 		'Content-Type': 'application/json',
+    // 		'token': token
+    // 	});
+    // 	return this._http.get(this.url+'user', {headers: headers})
+    // 		.map(res => res.json());
+    // }
     ChartService.prototype.getDonutChartData = function (token) {
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Headers */]({
             'Content-Type': 'application/json',
@@ -1344,14 +1456,14 @@ var ChartService = /** @class */ (function () {
         return this._http.get(this.url + 'wine/favorites', { headers: headers })
             .map(function (res) { return res.json(); });
     };
-    ChartService = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* Http */]) === "function" && _a || Object])
-    ], ChartService);
     return ChartService;
-    var _a;
 }());
+ChartService = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* Http */]) === "function" && _a || Object])
+], ChartService);
 
+var _a;
 //# sourceMappingURL=chart.service.js.map
 
 /***/ }),
@@ -1384,20 +1496,69 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 
 
-var LoaderService = /** @class */ (function () {
+var LoaderService = (function () {
     function LoaderService() {
         this.loaderStatus = new __WEBPACK_IMPORTED_MODULE_1_rxjs_BehaviorSubject__["BehaviorSubject"](false);
     }
     LoaderService.prototype.displayLoader = function (value) {
         this.loaderStatus.next(value);
     };
-    LoaderService = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])()
-    ], LoaderService);
     return LoaderService;
 }());
+LoaderService = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])()
+], LoaderService);
 
 //# sourceMappingURL=loader.service.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/services/notification.service.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__("../../../../rxjs/add/operator/map.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__global__ = __webpack_require__("../../../../../src/app/services/global.ts");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NotificationService; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var NotificationService = (function () {
+    function NotificationService(_http) {
+        this._http = _http;
+        this.url = __WEBPACK_IMPORTED_MODULE_3__global__["a" /* GLOBAL */].url;
+    }
+    NotificationService.prototype.sendPush = function (token, message) {
+        var params = JSON.stringify(message);
+        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Headers */]({
+            'Content-Type': 'application/json',
+            'token': token
+        });
+        return this._http.post(this.url + 'user/push', params, { headers: headers })
+            .map(function (res) { return res.json(); });
+    };
+    return NotificationService;
+}());
+NotificationService = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* Http */]) === "function" && _a || Object])
+], NotificationService);
+
+var _a;
+//# sourceMappingURL=notification.service.js.map
 
 /***/ }),
 
@@ -1424,7 +1585,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var UserService = /** @class */ (function () {
+var UserService = (function () {
     function UserService(_http) {
         this._http = _http;
         this.url = __WEBPACK_IMPORTED_MODULE_3__global__["a" /* GLOBAL */].url;
@@ -1457,14 +1618,14 @@ var UserService = /** @class */ (function () {
         return this._http.put(this.url + 'user/' + id, params, { headers: headers })
             .map(function (res) { return res.json(); });
     };
-    UserService = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* Http */]) === "function" && _a || Object])
-    ], UserService);
     return UserService;
-    var _a;
 }());
+UserService = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* Http */]) === "function" && _a || Object])
+], UserService);
 
+var _a;
 //# sourceMappingURL=user.service.js.map
 
 /***/ }),
@@ -1492,7 +1653,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var WineService = /** @class */ (function () {
+var WineService = (function () {
     function WineService(_http) {
         this._http = _http;
         this.url = __WEBPACK_IMPORTED_MODULE_3__global__["a" /* GLOBAL */].url;
@@ -1510,17 +1671,18 @@ var WineService = /** @class */ (function () {
             'Content-Type': 'application/json',
             'token': token
         });
+        console.log(this.url + 'wine/favorites');
         return this._http.get(this.url + 'wine/favorites', { headers: headers })
             .map(function (res) { return res.json(); });
     };
-    WineService = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* Http */]) === "function" && _a || Object])
-    ], WineService);
     return WineService;
-    var _a;
 }());
+WineService = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* Http */]) === "function" && _a || Object])
+], WineService);
 
+var _a;
 //# sourceMappingURL=wine.service.js.map
 
 /***/ }),
@@ -1558,7 +1720,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var UserEditComponent = /** @class */ (function () {
+var UserEditComponent = (function () {
     function UserEditComponent(_route, _router, _userService, _adminService) {
         this._route = _route;
         this._router = _router;
@@ -1595,18 +1757,18 @@ var UserEditComponent = /** @class */ (function () {
             console.log(error);
         });
     };
-    UserEditComponent = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'edit-user',
-            template: __webpack_require__("../../../../../src/app/user/edit/edit.component.html"),
-            providers: [__WEBPACK_IMPORTED_MODULE_4__services_user_service__["a" /* UserService */]]
-        }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_4__services_user_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__services_user_service__["a" /* UserService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_5__services_admin_service__["a" /* AdminService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__services_admin_service__["a" /* AdminService */]) === "function" && _d || Object])
-    ], UserEditComponent);
     return UserEditComponent;
-    var _a, _b, _c, _d;
 }());
+UserEditComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'edit-user',
+        template: __webpack_require__("../../../../../src/app/user/edit/edit.component.html"),
+        providers: [__WEBPACK_IMPORTED_MODULE_4__services_user_service__["a" /* UserService */]]
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_4__services_user_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__services_user_service__["a" /* UserService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_5__services_admin_service__["a" /* AdminService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__services_admin_service__["a" /* AdminService */]) === "function" && _d || Object])
+], UserEditComponent);
 
+var _a, _b, _c, _d;
 //# sourceMappingURL=edit.component.js.map
 
 /***/ }),
@@ -1614,7 +1776,7 @@ var UserEditComponent = /** @class */ (function () {
 /***/ "../../../../../src/app/user/list/list.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<layout></layout>\n<section class=\"content home\">\n    <div class=\"block-header\">\n        <div class=\"row\">\n            <div class=\"col-md-8 col-sm-7 col-xs-12\">\n                <div class=\"h-left clearfix aos-item\" data-aos-duration=\"400\" data-aos-delay=\"300\" data-aos=\"slide-down\">\n                    <h2>Lista de Usuarios</h2>\n                    <ol class=\"breadcrumb breadcrumb-col-pink p-l-0\">\n                        <li><a [routerLink]=\"['/home']\">Panel Principal</a></li>\n                        <li class=\"active\"><a [routerLink]=\"['/user']\">Usuarios</a></li>\n                    </ol>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>\n<section class=\"content\" style=\"margin-top:0px;\">\n\t<div>\n\t\t<div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\n\t\t\t<div class=\"card\">\n\t\t\t\t<div class=\"header\">\n\t\t\t\t\t<h2> Lista de Usuarios</h2>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"body\">\n\t\t\t\t\t<table class=\"table table-bordered table-striped table-hover js-basic-example dataTable\">\n\t\t\t\t\t\t<thead>\n\t\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t\t<th>Imagen</th>\n\t\t\t\t\t\t\t\t<th>Nombre</th>\n\t\t\t\t\t\t\t\t<th>Apellido</th>\n\t\t\t\t\t\t\t\t<th>Email</th>\n\t\t\t\t\t\t\t\t<th>Proveedor</th>\n\t\t\t\t\t\t\t\t<th>Acciones</th>\n\t\t\t\t\t\t\t</tr>\n\t\t\t\t\t\t</thead>\n\t\t\t\t\t\t<tbody>\n\t\t\t\t\t\t\t<tr *ngFor=\"let user of users\">\n\t\t\t\t\t\t\t\t<td><img src =\"{{ user.picture }}\" height=\"40\" style=\"border-radius: 100px;height: 40px;\" width=\"40\"></td>\n\t\t\t\t\t\t\t\t<td>{{ user.firstName }}</td>\n\t\t\t\t\t\t\t\t<td>{{ user.lastName }}</td>\n\t\t\t\t\t\t\t\t<td>{{ user.email }}</td>\n\t\t\t\t\t\t\t\t<td *ngIf=\"user.provider === 'facebook'\" class=\"text-center\"><img src=\"assets/images/fb-logo.png\" style=\"width:25px;\"></td>\n\t\t\t\t\t\t\t\t<td *ngIf=\"user.provider === 'google'\"><img src=\"assets/images/google-logo.png\" style=\"width:25px;\"></td>\n\t\t\t\t\t\t\t\t<td>\n\t\t\t\t\t\t\t\t\t<a [routerLink]=\"['edit',user.id]\"><i class=\"material-icons\">mode_edit</i></a>\n\t\t\t\t\t\t\t\t</td>\n\t\t\t\t\t\t\t</tr>\n\t\t\t\t\t\t</tbody>\n\t\t\t\t\t</table>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>\n<script src=\"assets/plugins/jquery-datatable/jquery.dataTables.js\"></script>"
+module.exports = "<layout></layout>\n<section class=\"content home\">\n    <div class=\"block-header\">\n        <div class=\"row\">\n            <div class=\"col-md-8 col-sm-7 col-xs-12\">\n                <div class=\"h-left clearfix aos-item\" data-aos-duration=\"400\" data-aos-delay=\"300\" data-aos=\"slide-down\">\n                    <h2>Lista de Usuarios</h2>\n                    <ol class=\"breadcrumb breadcrumb-col-pink p-l-0\">\n                        <li><a [routerLink]=\"['/home']\">Panel Principal</a></li>\n                        <li class=\"active\"><a [routerLink]=\"['/user']\">Usuarios</a></li>\n                    </ol>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>\n<section class=\"content\" style=\"margin-top:0px;\">\n\t<div>\n\t\t<div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\n\t\t\t<div class=\"card\">\n\t\t\t\t<div class=\"header\">\n\t\t\t\t\t<h2> Lista de Usuarios</h2>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"body\">\n\t\t\t\t\t<table class=\"table table-bordered table-striped table-hover js-basic-example dataTable\">\n\t\t\t\t\t\t<thead>\n\t\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t\t<th>Imagen</th>\n\t\t\t\t\t\t\t\t<th>Nombre</th>\n\t\t\t\t\t\t\t\t<th>Apellido</th>\n\t\t\t\t\t\t\t\t<th>Email</th>\n\t\t\t\t\t\t\t\t<th>Proveedor</th>\n\t\t\t\t\t\t\t\t<th>Acciones</th>\n\t\t\t\t\t\t\t</tr>\n\t\t\t\t\t\t</thead>\n\t\t\t\t\t\t<tbody>\n\t\t\t\t\t\t\t<tr *ngFor=\"let user of users\">\n\t\t\t\t\t\t\t\t<td><img src =\"{{ user.picture }}\" height=\"40\" style=\"border-radius: 100px;height: 40px;\" width=\"40\"></td>\n\t\t\t\t\t\t\t\t<td>{{ user.firstName }}</td>\n\t\t\t\t\t\t\t\t<td>{{ user.lastName }}</td>\n\t\t\t\t\t\t\t\t<td>{{ user.email }}</td>\n\t\t\t\t\t\t\t\t<td *ngIf=\"user.provider === 'facebook'\" class=\"text-center\"><img src=\"assets/images/fb-logo.png\" style=\"width:25px;\"></td>\n\t\t\t\t\t\t\t\t<td *ngIf=\"user.provider === 'google'\" class=\"text-center\"><img src=\"assets/images/google-logo.png\" style=\"width:25px;\"></td>\n\t\t\t\t\t\t\t\t<td>\n\t\t\t\t\t\t\t\t\t<a [routerLink]=\"['edit',user.id]\"><i class=\"material-icons\">mode_edit</i></a>\n\t\t\t\t\t\t\t\t</td>\n\t\t\t\t\t\t\t</tr>\n\t\t\t\t\t\t</tbody>\n\t\t\t\t\t</table>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>\n<script src=\"assets/plugins/jquery-datatable/jquery.dataTables.js\"></script>"
 
 /***/ }),
 
@@ -1642,7 +1804,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var UserListComponent = /** @class */ (function () {
+var UserListComponent = (function () {
     function UserListComponent(_route, _router, _userService, _adminService) {
         this._route = _route;
         this._router = _router;
@@ -1668,18 +1830,18 @@ var UserListComponent = /** @class */ (function () {
             console.log(error);
         });
     };
-    UserListComponent = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'list-user',
-            template: __webpack_require__("../../../../../src/app/user/list/list.component.html"),
-            providers: [__WEBPACK_IMPORTED_MODULE_3__services_user_service__["a" /* UserService */], __WEBPACK_IMPORTED_MODULE_4__services_admin_service__["a" /* AdminService */]]
-        }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__services_user_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__services_user_service__["a" /* UserService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4__services_admin_service__["a" /* AdminService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__services_admin_service__["a" /* AdminService */]) === "function" && _d || Object])
-    ], UserListComponent);
     return UserListComponent;
-    var _a, _b, _c, _d;
 }());
+UserListComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'list-user',
+        template: __webpack_require__("../../../../../src/app/user/list/list.component.html"),
+        providers: [__WEBPACK_IMPORTED_MODULE_3__services_user_service__["a" /* UserService */], __WEBPACK_IMPORTED_MODULE_4__services_admin_service__["a" /* AdminService */]]
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__services_user_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__services_user_service__["a" /* UserService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4__services_admin_service__["a" /* AdminService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__services_admin_service__["a" /* AdminService */]) === "function" && _d || Object])
+], UserListComponent);
 
+var _a, _b, _c, _d;
 //# sourceMappingURL=list.component.js.map
 
 /***/ }),
@@ -1729,7 +1891,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var UserComponent = /** @class */ (function () {
+var UserComponent = (function () {
     function UserComponent(_adminService, _router) {
         this._adminService = _adminService;
         this._router = _router;
@@ -1742,19 +1904,19 @@ var UserComponent = /** @class */ (function () {
             this._router.navigate(['/login']);
         }
     };
-    UserComponent = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'user',
-            template: __webpack_require__("../../../../../src/app/user/user.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/user/user.component.css")],
-            providers: [__WEBPACK_IMPORTED_MODULE_1__services_admin_service__["a" /* AdminService */]]
-        }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_admin_service__["a" /* AdminService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_admin_service__["a" /* AdminService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */]) === "function" && _b || Object])
-    ], UserComponent);
     return UserComponent;
-    var _a, _b;
 }());
+UserComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'user',
+        template: __webpack_require__("../../../../../src/app/user/user.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/user/user.component.css")],
+        providers: [__WEBPACK_IMPORTED_MODULE_1__services_admin_service__["a" /* AdminService */]]
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_admin_service__["a" /* AdminService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_admin_service__["a" /* AdminService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */]) === "function" && _b || Object])
+], UserComponent);
 
+var _a, _b;
 //# sourceMappingURL=user.component.js.map
 
 /***/ }),
@@ -1762,7 +1924,7 @@ var UserComponent = /** @class */ (function () {
 /***/ "../../../../../src/app/wine/wine.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<layout></layout>\n<section class=\"content home\">\n    <div class=\"block-header\">\n        <div class=\"row\">\n            <div class=\"col-md-8 col-sm-7 col-xs-12\">\n                <div class=\"h-left clearfix aos-item\" data-aos-duration=\"400\" data-aos-delay=\"300\" data-aos=\"slide-down\">\n                    <h2>Lista de Vinos</h2>\n                    <!-- <small class=\"text-muted\">Welcome to CC Application</small> -->\n                    <ol class=\"breadcrumb breadcrumb-col-pink p-l-0\">\n                        <li><a [routerLink]=\"['/home']\">Panel Principal</a></li>\n                        <li class=\"active\">Vinos</li>\n                    </ol>\n                </div>\n            </div>\n            <div class=\"col-md-4 col-sm-5 col-xs-12\">\n                <div class=\"h-right aos-item\" data-aos-duration=\"400\" data-aos-delay=\"300\" data-aos=\"slide-down\">\n                </div>\n            </div>\n        </div>\n    </div>\n</section>\n<section class=\"content\" style=\"margin-top:0px;\">\n\t<div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\n\t\t<div class=\"card\">\n\t\t\t<div class=\"header\">\n\t\t\t\t<h2> Lista de Vinos</h2>\n\t\t\t</div>\n\t\t\t<div class=\"body\">\n\t\t\t\t<table class=\"table table-bordered table-striped table-hover js-basic-example dataTable\">\n\t\t\t\t\t<thead>\n\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t<th>Nombre</th>\n\t\t\t\t\t\t\t<th>Origen</th>\n\t\t\t\t\t\t\t<th>Uva</th>\n\t\t\t\t\t\t\t<th>Tipo</th>\n\t\t\t\t\t\t\t<th>Año</th>\n\t\t\t\t\t\t\t<th>Precio</th>\n\t\t\t\t\t\t</tr>\n\t\t\t\t\t</thead>\n\t\t\t\t\t<tbody>\n\t\t\t\t\t\t<tr *ngFor=\"let wine of wines\">\n\t\t\t\t\t\t\t<td>{{ wine.name }}</td>\n\t\t\t\t\t\t\t<td>{{ wine.origin.name }}</td>\n\t\t\t\t\t\t\t<td>{{ wine.grape.name }}</td>\n\t\t\t\t\t\t\t<td>{{ wine.type.name }}</td>\n\t\t\t\t\t\t\t<td>{{ wine.year }}</td>\n\t\t\t\t\t\t\t<td>${{ wine.price }}</td>\n\t\t\t\t\t\t</tr>\n\t\t\t\t\t</tbody>\n\t\t\t\t</table>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>\n<script src=\"assets/plugins/jquery-datatable/jquery.dataTables.js\"></script>"
+module.exports = "<layout></layout>\n<section class=\"content home\">\n\t<div class=\"block-header\">\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-md-8 col-sm-7 col-xs-12\">\n\t\t\t\t<div class=\"h-left clearfix aos-item\" data-aos-duration=\"400\" data-aos-delay=\"300\" data-aos=\"slide-down\">\n\t\t\t\t\t<h2>Lista de Vinos</h2>\n\t\t\t\t\t<!-- <small class=\"text-muted\">Welcome to CC Application</small> -->\n\t\t\t\t\t<ol class=\"breadcrumb breadcrumb-col-pink p-l-0\">\n\t\t\t\t\t\t<li><a [routerLink]=\"['/home']\">Panel Principal</a></li>\n\t\t\t\t\t\t<li class=\"active\">Vinos</li>\n\t\t\t\t\t</ol>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<div class=\"col-md-4 col-sm-5 col-xs-12\">\n\t\t\t\t<div class=\"h-right aos-item\" data-aos-duration=\"400\" data-aos-delay=\"300\" data-aos=\"slide-down\">\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>\n<section class=\"content\" style=\"margin-top:0px;\">\n\t<div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\n\t\t<div class=\"card\">\n\t\t\t<div class=\"header\">\n\t\t\t\t<h2> Lista de Vinos</h2>\n\t\t\t</div>\n\t\t\t<div class=\"body\">\n\t\t\t<div class=\"row clearfix\">\n            <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\n                <div class=\"card\">\n                    <div class=\"body table-responsive\">\n                        <table class=\"table table-striped\">\n                            <thead>\n                                <tr>\n                                    <th>NOMBRE</th>\n                                    <th>UVA</th>\n                                    <th>TIPO</th>\n                                    <th>BODEGA</th>\n                                    <th>PRECIO</th>\n                                </tr>\n                            </thead>\n                            <tbody  *ngIf=\"wines\">\n                                <tr *ngFor=\"let wine of wines\">\n                                    <th scope=\"row\">{{ wine ? wine.name : 'No Disponible' }}</th>\n                                    <td>{{ wine.grape.name ? wine.grape.name : 'No Disponible' }}</td>\n                                    <td>{{ wine.type ? wine.type.name : 'No Disponible' }}</td>\n                                    <td>{{ wine.cellar ? wine.cellar.name : 'No Disponible' }}</td>\n                                    <td>{{ wine.price ? '$ '+wine.price+',00' : 'No Disponible' }}</td>\n                                </tr>\n                            </tbody>\n                        </table>\n                    </div>\n                </div>\n            </div>\n        \t</div>\n        \t<!-- <div class=\"row clearfix\">\n\t            <div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">\n\t                <div class=\"\">\n\t                    <div class=\"row pull-right\">\n\t                        <div class=\"\">\n\t                            <nav>\n\t                                <ul class=\"pagination\">\n\t                                    <li> <a href=\"javascript:void(0);\" class=\"waves-effect\"> <i class=\"material-icons\">chevron_left</i> </a> </li>\n\t                                    <li><a href=\"javascript:void(0);\" class=\"waves-effect\">1</a></li>\n\t                                    <li><a href=\"javascript:void(0);\" class=\"waves-effect\">2</a></li>\n\t                                    <li><a href=\"javascript:void(0);\" class=\"waves-effect\">3</a></li>\n\t                                    <li><a href=\"javascript:void(0);\" class=\"waves-effect\">4</a></li>\n\t                                    <li><a href=\"javascript:void(0);\" class=\"waves-effect\">5</a></li>\n\t                                    <li> <a href=\"javascript:void(0);\" class=\"waves-effect\"> <i class=\"material-icons\">chevron_right</i> </a> </li>\n\t                                </ul>\n\t                            </nav>\n\t                        </div>\n\t                    </div>\n\t                </div>\n\t            </div>\n\t        </div> -->\n\t\t<br>\n\t\t</div>\n\t</div>\n</div>\n</section>\n<script src=\"assets/plugins/jquery-datatable/jquery.dataTables.js\"></script>"
 
 /***/ }),
 
@@ -1786,11 +1948,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+// import { TableData } from './table-data';
 
 
 
 
-var WineComponent = /** @class */ (function () {
+var WineComponent = (function () {
     function WineComponent(_route, _router, _loaderService, _adminService, _wineService) {
         this._route = _route;
         this._router = _router;
@@ -1798,7 +1961,7 @@ var WineComponent = /** @class */ (function () {
         this._adminService = _adminService;
         this._wineService = _wineService;
         this.page = 0;
-        this.cant = 50;
+        this.cant = 0;
         this.objLoaderStatus = false;
         this.token = this._adminService.getToken();
         this.admin = this._adminService.getAdmin();
@@ -1816,28 +1979,31 @@ var WineComponent = /** @class */ (function () {
                 console.log(response.status === 'success');
                 console.log(response.data);
                 if (response.status === 'success') {
-                    _this.wines = response.data;
+                    _this.wines = response.data.wines;
+                    // this.wines.forEach((item, index) => {
+                    console.log(_this.wines[10].cellar ? 'hola' : 'chau');
+                    // });
                 }
                 else {
-                    console.log(response);
+                    console.log('aca' + response);
                 }
             }, function (error) {
                 console.log(error);
             });
         }
     };
-    WineComponent = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'wine',
-            template: __webpack_require__("../../../../../src/app/wine/wine.component.html"),
-            providers: [__WEBPACK_IMPORTED_MODULE_3__services_admin_service__["a" /* AdminService */], __WEBPACK_IMPORTED_MODULE_2__services_loader_service__["a" /* LoaderService */], __WEBPACK_IMPORTED_MODULE_4__services_wine_service__["a" /* WineService */]]
-        }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__services_loader_service__["a" /* LoaderService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_loader_service__["a" /* LoaderService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__services_admin_service__["a" /* AdminService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__services_admin_service__["a" /* AdminService */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_4__services_wine_service__["a" /* WineService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__services_wine_service__["a" /* WineService */]) === "function" && _e || Object])
-    ], WineComponent);
     return WineComponent;
-    var _a, _b, _c, _d, _e;
 }());
+WineComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'wine',
+        template: __webpack_require__("../../../../../src/app/wine/wine.component.html"),
+        providers: [__WEBPACK_IMPORTED_MODULE_3__services_admin_service__["a" /* AdminService */], __WEBPACK_IMPORTED_MODULE_2__services_loader_service__["a" /* LoaderService */], __WEBPACK_IMPORTED_MODULE_4__services_wine_service__["a" /* WineService */]]
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__services_loader_service__["a" /* LoaderService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_loader_service__["a" /* LoaderService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__services_admin_service__["a" /* AdminService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__services_admin_service__["a" /* AdminService */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_4__services_wine_service__["a" /* WineService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__services_wine_service__["a" /* WineService */]) === "function" && _e || Object])
+], WineComponent);
 
+var _a, _b, _c, _d, _e;
 //# sourceMappingURL=wine.component.js.map
 
 /***/ }),
@@ -1851,6 +2017,7 @@ var WineComponent = /** @class */ (function () {
 // The build system defaults to the dev environment which uses `environment.ts`, but if you do
 // `ng build --env=prod` then `environment.prod.ts` will be used instead.
 // The list of which env maps to which file can be found in `.angular-cli.json`.
+// The file contents for the current environment will overwrite these during build.
 var environment = {
     production: false
 };
@@ -1879,240 +2046,240 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dyna
 
 /***/ }),
 
-/***/ "../../../../moment/locale recursive ^\\.\\/.*$":
+/***/ "../../../../chart.js/node_modules/moment/locale recursive ^\\.\\/.*$":
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"./af": "../../../../moment/locale/af.js",
-	"./af.js": "../../../../moment/locale/af.js",
-	"./ar": "../../../../moment/locale/ar.js",
-	"./ar-dz": "../../../../moment/locale/ar-dz.js",
-	"./ar-dz.js": "../../../../moment/locale/ar-dz.js",
-	"./ar-kw": "../../../../moment/locale/ar-kw.js",
-	"./ar-kw.js": "../../../../moment/locale/ar-kw.js",
-	"./ar-ly": "../../../../moment/locale/ar-ly.js",
-	"./ar-ly.js": "../../../../moment/locale/ar-ly.js",
-	"./ar-ma": "../../../../moment/locale/ar-ma.js",
-	"./ar-ma.js": "../../../../moment/locale/ar-ma.js",
-	"./ar-sa": "../../../../moment/locale/ar-sa.js",
-	"./ar-sa.js": "../../../../moment/locale/ar-sa.js",
-	"./ar-tn": "../../../../moment/locale/ar-tn.js",
-	"./ar-tn.js": "../../../../moment/locale/ar-tn.js",
-	"./ar.js": "../../../../moment/locale/ar.js",
-	"./az": "../../../../moment/locale/az.js",
-	"./az.js": "../../../../moment/locale/az.js",
-	"./be": "../../../../moment/locale/be.js",
-	"./be.js": "../../../../moment/locale/be.js",
-	"./bg": "../../../../moment/locale/bg.js",
-	"./bg.js": "../../../../moment/locale/bg.js",
-	"./bn": "../../../../moment/locale/bn.js",
-	"./bn.js": "../../../../moment/locale/bn.js",
-	"./bo": "../../../../moment/locale/bo.js",
-	"./bo.js": "../../../../moment/locale/bo.js",
-	"./br": "../../../../moment/locale/br.js",
-	"./br.js": "../../../../moment/locale/br.js",
-	"./bs": "../../../../moment/locale/bs.js",
-	"./bs.js": "../../../../moment/locale/bs.js",
-	"./ca": "../../../../moment/locale/ca.js",
-	"./ca.js": "../../../../moment/locale/ca.js",
-	"./cs": "../../../../moment/locale/cs.js",
-	"./cs.js": "../../../../moment/locale/cs.js",
-	"./cv": "../../../../moment/locale/cv.js",
-	"./cv.js": "../../../../moment/locale/cv.js",
-	"./cy": "../../../../moment/locale/cy.js",
-	"./cy.js": "../../../../moment/locale/cy.js",
-	"./da": "../../../../moment/locale/da.js",
-	"./da.js": "../../../../moment/locale/da.js",
-	"./de": "../../../../moment/locale/de.js",
-	"./de-at": "../../../../moment/locale/de-at.js",
-	"./de-at.js": "../../../../moment/locale/de-at.js",
-	"./de-ch": "../../../../moment/locale/de-ch.js",
-	"./de-ch.js": "../../../../moment/locale/de-ch.js",
-	"./de.js": "../../../../moment/locale/de.js",
-	"./dv": "../../../../moment/locale/dv.js",
-	"./dv.js": "../../../../moment/locale/dv.js",
-	"./el": "../../../../moment/locale/el.js",
-	"./el.js": "../../../../moment/locale/el.js",
-	"./en-au": "../../../../moment/locale/en-au.js",
-	"./en-au.js": "../../../../moment/locale/en-au.js",
-	"./en-ca": "../../../../moment/locale/en-ca.js",
-	"./en-ca.js": "../../../../moment/locale/en-ca.js",
-	"./en-gb": "../../../../moment/locale/en-gb.js",
-	"./en-gb.js": "../../../../moment/locale/en-gb.js",
-	"./en-ie": "../../../../moment/locale/en-ie.js",
-	"./en-ie.js": "../../../../moment/locale/en-ie.js",
-	"./en-nz": "../../../../moment/locale/en-nz.js",
-	"./en-nz.js": "../../../../moment/locale/en-nz.js",
-	"./eo": "../../../../moment/locale/eo.js",
-	"./eo.js": "../../../../moment/locale/eo.js",
-	"./es": "../../../../moment/locale/es.js",
-	"./es-do": "../../../../moment/locale/es-do.js",
-	"./es-do.js": "../../../../moment/locale/es-do.js",
-	"./es.js": "../../../../moment/locale/es.js",
-	"./et": "../../../../moment/locale/et.js",
-	"./et.js": "../../../../moment/locale/et.js",
-	"./eu": "../../../../moment/locale/eu.js",
-	"./eu.js": "../../../../moment/locale/eu.js",
-	"./fa": "../../../../moment/locale/fa.js",
-	"./fa.js": "../../../../moment/locale/fa.js",
-	"./fi": "../../../../moment/locale/fi.js",
-	"./fi.js": "../../../../moment/locale/fi.js",
-	"./fo": "../../../../moment/locale/fo.js",
-	"./fo.js": "../../../../moment/locale/fo.js",
-	"./fr": "../../../../moment/locale/fr.js",
-	"./fr-ca": "../../../../moment/locale/fr-ca.js",
-	"./fr-ca.js": "../../../../moment/locale/fr-ca.js",
-	"./fr-ch": "../../../../moment/locale/fr-ch.js",
-	"./fr-ch.js": "../../../../moment/locale/fr-ch.js",
-	"./fr.js": "../../../../moment/locale/fr.js",
-	"./fy": "../../../../moment/locale/fy.js",
-	"./fy.js": "../../../../moment/locale/fy.js",
-	"./gd": "../../../../moment/locale/gd.js",
-	"./gd.js": "../../../../moment/locale/gd.js",
-	"./gl": "../../../../moment/locale/gl.js",
-	"./gl.js": "../../../../moment/locale/gl.js",
-	"./gom-latn": "../../../../moment/locale/gom-latn.js",
-	"./gom-latn.js": "../../../../moment/locale/gom-latn.js",
-	"./he": "../../../../moment/locale/he.js",
-	"./he.js": "../../../../moment/locale/he.js",
-	"./hi": "../../../../moment/locale/hi.js",
-	"./hi.js": "../../../../moment/locale/hi.js",
-	"./hr": "../../../../moment/locale/hr.js",
-	"./hr.js": "../../../../moment/locale/hr.js",
-	"./hu": "../../../../moment/locale/hu.js",
-	"./hu.js": "../../../../moment/locale/hu.js",
-	"./hy-am": "../../../../moment/locale/hy-am.js",
-	"./hy-am.js": "../../../../moment/locale/hy-am.js",
-	"./id": "../../../../moment/locale/id.js",
-	"./id.js": "../../../../moment/locale/id.js",
-	"./is": "../../../../moment/locale/is.js",
-	"./is.js": "../../../../moment/locale/is.js",
-	"./it": "../../../../moment/locale/it.js",
-	"./it.js": "../../../../moment/locale/it.js",
-	"./ja": "../../../../moment/locale/ja.js",
-	"./ja.js": "../../../../moment/locale/ja.js",
-	"./jv": "../../../../moment/locale/jv.js",
-	"./jv.js": "../../../../moment/locale/jv.js",
-	"./ka": "../../../../moment/locale/ka.js",
-	"./ka.js": "../../../../moment/locale/ka.js",
-	"./kk": "../../../../moment/locale/kk.js",
-	"./kk.js": "../../../../moment/locale/kk.js",
-	"./km": "../../../../moment/locale/km.js",
-	"./km.js": "../../../../moment/locale/km.js",
-	"./kn": "../../../../moment/locale/kn.js",
-	"./kn.js": "../../../../moment/locale/kn.js",
-	"./ko": "../../../../moment/locale/ko.js",
-	"./ko.js": "../../../../moment/locale/ko.js",
-	"./ky": "../../../../moment/locale/ky.js",
-	"./ky.js": "../../../../moment/locale/ky.js",
-	"./lb": "../../../../moment/locale/lb.js",
-	"./lb.js": "../../../../moment/locale/lb.js",
-	"./lo": "../../../../moment/locale/lo.js",
-	"./lo.js": "../../../../moment/locale/lo.js",
-	"./lt": "../../../../moment/locale/lt.js",
-	"./lt.js": "../../../../moment/locale/lt.js",
-	"./lv": "../../../../moment/locale/lv.js",
-	"./lv.js": "../../../../moment/locale/lv.js",
-	"./me": "../../../../moment/locale/me.js",
-	"./me.js": "../../../../moment/locale/me.js",
-	"./mi": "../../../../moment/locale/mi.js",
-	"./mi.js": "../../../../moment/locale/mi.js",
-	"./mk": "../../../../moment/locale/mk.js",
-	"./mk.js": "../../../../moment/locale/mk.js",
-	"./ml": "../../../../moment/locale/ml.js",
-	"./ml.js": "../../../../moment/locale/ml.js",
-	"./mr": "../../../../moment/locale/mr.js",
-	"./mr.js": "../../../../moment/locale/mr.js",
-	"./ms": "../../../../moment/locale/ms.js",
-	"./ms-my": "../../../../moment/locale/ms-my.js",
-	"./ms-my.js": "../../../../moment/locale/ms-my.js",
-	"./ms.js": "../../../../moment/locale/ms.js",
-	"./my": "../../../../moment/locale/my.js",
-	"./my.js": "../../../../moment/locale/my.js",
-	"./nb": "../../../../moment/locale/nb.js",
-	"./nb.js": "../../../../moment/locale/nb.js",
-	"./ne": "../../../../moment/locale/ne.js",
-	"./ne.js": "../../../../moment/locale/ne.js",
-	"./nl": "../../../../moment/locale/nl.js",
-	"./nl-be": "../../../../moment/locale/nl-be.js",
-	"./nl-be.js": "../../../../moment/locale/nl-be.js",
-	"./nl.js": "../../../../moment/locale/nl.js",
-	"./nn": "../../../../moment/locale/nn.js",
-	"./nn.js": "../../../../moment/locale/nn.js",
-	"./pa-in": "../../../../moment/locale/pa-in.js",
-	"./pa-in.js": "../../../../moment/locale/pa-in.js",
-	"./pl": "../../../../moment/locale/pl.js",
-	"./pl.js": "../../../../moment/locale/pl.js",
-	"./pt": "../../../../moment/locale/pt.js",
-	"./pt-br": "../../../../moment/locale/pt-br.js",
-	"./pt-br.js": "../../../../moment/locale/pt-br.js",
-	"./pt.js": "../../../../moment/locale/pt.js",
-	"./ro": "../../../../moment/locale/ro.js",
-	"./ro.js": "../../../../moment/locale/ro.js",
-	"./ru": "../../../../moment/locale/ru.js",
-	"./ru.js": "../../../../moment/locale/ru.js",
-	"./sd": "../../../../moment/locale/sd.js",
-	"./sd.js": "../../../../moment/locale/sd.js",
-	"./se": "../../../../moment/locale/se.js",
-	"./se.js": "../../../../moment/locale/se.js",
-	"./si": "../../../../moment/locale/si.js",
-	"./si.js": "../../../../moment/locale/si.js",
-	"./sk": "../../../../moment/locale/sk.js",
-	"./sk.js": "../../../../moment/locale/sk.js",
-	"./sl": "../../../../moment/locale/sl.js",
-	"./sl.js": "../../../../moment/locale/sl.js",
-	"./sq": "../../../../moment/locale/sq.js",
-	"./sq.js": "../../../../moment/locale/sq.js",
-	"./sr": "../../../../moment/locale/sr.js",
-	"./sr-cyrl": "../../../../moment/locale/sr-cyrl.js",
-	"./sr-cyrl.js": "../../../../moment/locale/sr-cyrl.js",
-	"./sr.js": "../../../../moment/locale/sr.js",
-	"./ss": "../../../../moment/locale/ss.js",
-	"./ss.js": "../../../../moment/locale/ss.js",
-	"./sv": "../../../../moment/locale/sv.js",
-	"./sv.js": "../../../../moment/locale/sv.js",
-	"./sw": "../../../../moment/locale/sw.js",
-	"./sw.js": "../../../../moment/locale/sw.js",
-	"./ta": "../../../../moment/locale/ta.js",
-	"./ta.js": "../../../../moment/locale/ta.js",
-	"./te": "../../../../moment/locale/te.js",
-	"./te.js": "../../../../moment/locale/te.js",
-	"./tet": "../../../../moment/locale/tet.js",
-	"./tet.js": "../../../../moment/locale/tet.js",
-	"./th": "../../../../moment/locale/th.js",
-	"./th.js": "../../../../moment/locale/th.js",
-	"./tl-ph": "../../../../moment/locale/tl-ph.js",
-	"./tl-ph.js": "../../../../moment/locale/tl-ph.js",
-	"./tlh": "../../../../moment/locale/tlh.js",
-	"./tlh.js": "../../../../moment/locale/tlh.js",
-	"./tr": "../../../../moment/locale/tr.js",
-	"./tr.js": "../../../../moment/locale/tr.js",
-	"./tzl": "../../../../moment/locale/tzl.js",
-	"./tzl.js": "../../../../moment/locale/tzl.js",
-	"./tzm": "../../../../moment/locale/tzm.js",
-	"./tzm-latn": "../../../../moment/locale/tzm-latn.js",
-	"./tzm-latn.js": "../../../../moment/locale/tzm-latn.js",
-	"./tzm.js": "../../../../moment/locale/tzm.js",
-	"./uk": "../../../../moment/locale/uk.js",
-	"./uk.js": "../../../../moment/locale/uk.js",
-	"./ur": "../../../../moment/locale/ur.js",
-	"./ur.js": "../../../../moment/locale/ur.js",
-	"./uz": "../../../../moment/locale/uz.js",
-	"./uz-latn": "../../../../moment/locale/uz-latn.js",
-	"./uz-latn.js": "../../../../moment/locale/uz-latn.js",
-	"./uz.js": "../../../../moment/locale/uz.js",
-	"./vi": "../../../../moment/locale/vi.js",
-	"./vi.js": "../../../../moment/locale/vi.js",
-	"./x-pseudo": "../../../../moment/locale/x-pseudo.js",
-	"./x-pseudo.js": "../../../../moment/locale/x-pseudo.js",
-	"./yo": "../../../../moment/locale/yo.js",
-	"./yo.js": "../../../../moment/locale/yo.js",
-	"./zh-cn": "../../../../moment/locale/zh-cn.js",
-	"./zh-cn.js": "../../../../moment/locale/zh-cn.js",
-	"./zh-hk": "../../../../moment/locale/zh-hk.js",
-	"./zh-hk.js": "../../../../moment/locale/zh-hk.js",
-	"./zh-tw": "../../../../moment/locale/zh-tw.js",
-	"./zh-tw.js": "../../../../moment/locale/zh-tw.js"
+	"./af": "../../../../chart.js/node_modules/moment/locale/af.js",
+	"./af.js": "../../../../chart.js/node_modules/moment/locale/af.js",
+	"./ar": "../../../../chart.js/node_modules/moment/locale/ar.js",
+	"./ar-dz": "../../../../chart.js/node_modules/moment/locale/ar-dz.js",
+	"./ar-dz.js": "../../../../chart.js/node_modules/moment/locale/ar-dz.js",
+	"./ar-kw": "../../../../chart.js/node_modules/moment/locale/ar-kw.js",
+	"./ar-kw.js": "../../../../chart.js/node_modules/moment/locale/ar-kw.js",
+	"./ar-ly": "../../../../chart.js/node_modules/moment/locale/ar-ly.js",
+	"./ar-ly.js": "../../../../chart.js/node_modules/moment/locale/ar-ly.js",
+	"./ar-ma": "../../../../chart.js/node_modules/moment/locale/ar-ma.js",
+	"./ar-ma.js": "../../../../chart.js/node_modules/moment/locale/ar-ma.js",
+	"./ar-sa": "../../../../chart.js/node_modules/moment/locale/ar-sa.js",
+	"./ar-sa.js": "../../../../chart.js/node_modules/moment/locale/ar-sa.js",
+	"./ar-tn": "../../../../chart.js/node_modules/moment/locale/ar-tn.js",
+	"./ar-tn.js": "../../../../chart.js/node_modules/moment/locale/ar-tn.js",
+	"./ar.js": "../../../../chart.js/node_modules/moment/locale/ar.js",
+	"./az": "../../../../chart.js/node_modules/moment/locale/az.js",
+	"./az.js": "../../../../chart.js/node_modules/moment/locale/az.js",
+	"./be": "../../../../chart.js/node_modules/moment/locale/be.js",
+	"./be.js": "../../../../chart.js/node_modules/moment/locale/be.js",
+	"./bg": "../../../../chart.js/node_modules/moment/locale/bg.js",
+	"./bg.js": "../../../../chart.js/node_modules/moment/locale/bg.js",
+	"./bn": "../../../../chart.js/node_modules/moment/locale/bn.js",
+	"./bn.js": "../../../../chart.js/node_modules/moment/locale/bn.js",
+	"./bo": "../../../../chart.js/node_modules/moment/locale/bo.js",
+	"./bo.js": "../../../../chart.js/node_modules/moment/locale/bo.js",
+	"./br": "../../../../chart.js/node_modules/moment/locale/br.js",
+	"./br.js": "../../../../chart.js/node_modules/moment/locale/br.js",
+	"./bs": "../../../../chart.js/node_modules/moment/locale/bs.js",
+	"./bs.js": "../../../../chart.js/node_modules/moment/locale/bs.js",
+	"./ca": "../../../../chart.js/node_modules/moment/locale/ca.js",
+	"./ca.js": "../../../../chart.js/node_modules/moment/locale/ca.js",
+	"./cs": "../../../../chart.js/node_modules/moment/locale/cs.js",
+	"./cs.js": "../../../../chart.js/node_modules/moment/locale/cs.js",
+	"./cv": "../../../../chart.js/node_modules/moment/locale/cv.js",
+	"./cv.js": "../../../../chart.js/node_modules/moment/locale/cv.js",
+	"./cy": "../../../../chart.js/node_modules/moment/locale/cy.js",
+	"./cy.js": "../../../../chart.js/node_modules/moment/locale/cy.js",
+	"./da": "../../../../chart.js/node_modules/moment/locale/da.js",
+	"./da.js": "../../../../chart.js/node_modules/moment/locale/da.js",
+	"./de": "../../../../chart.js/node_modules/moment/locale/de.js",
+	"./de-at": "../../../../chart.js/node_modules/moment/locale/de-at.js",
+	"./de-at.js": "../../../../chart.js/node_modules/moment/locale/de-at.js",
+	"./de-ch": "../../../../chart.js/node_modules/moment/locale/de-ch.js",
+	"./de-ch.js": "../../../../chart.js/node_modules/moment/locale/de-ch.js",
+	"./de.js": "../../../../chart.js/node_modules/moment/locale/de.js",
+	"./dv": "../../../../chart.js/node_modules/moment/locale/dv.js",
+	"./dv.js": "../../../../chart.js/node_modules/moment/locale/dv.js",
+	"./el": "../../../../chart.js/node_modules/moment/locale/el.js",
+	"./el.js": "../../../../chart.js/node_modules/moment/locale/el.js",
+	"./en-au": "../../../../chart.js/node_modules/moment/locale/en-au.js",
+	"./en-au.js": "../../../../chart.js/node_modules/moment/locale/en-au.js",
+	"./en-ca": "../../../../chart.js/node_modules/moment/locale/en-ca.js",
+	"./en-ca.js": "../../../../chart.js/node_modules/moment/locale/en-ca.js",
+	"./en-gb": "../../../../chart.js/node_modules/moment/locale/en-gb.js",
+	"./en-gb.js": "../../../../chart.js/node_modules/moment/locale/en-gb.js",
+	"./en-ie": "../../../../chart.js/node_modules/moment/locale/en-ie.js",
+	"./en-ie.js": "../../../../chart.js/node_modules/moment/locale/en-ie.js",
+	"./en-nz": "../../../../chart.js/node_modules/moment/locale/en-nz.js",
+	"./en-nz.js": "../../../../chart.js/node_modules/moment/locale/en-nz.js",
+	"./eo": "../../../../chart.js/node_modules/moment/locale/eo.js",
+	"./eo.js": "../../../../chart.js/node_modules/moment/locale/eo.js",
+	"./es": "../../../../chart.js/node_modules/moment/locale/es.js",
+	"./es-do": "../../../../chart.js/node_modules/moment/locale/es-do.js",
+	"./es-do.js": "../../../../chart.js/node_modules/moment/locale/es-do.js",
+	"./es.js": "../../../../chart.js/node_modules/moment/locale/es.js",
+	"./et": "../../../../chart.js/node_modules/moment/locale/et.js",
+	"./et.js": "../../../../chart.js/node_modules/moment/locale/et.js",
+	"./eu": "../../../../chart.js/node_modules/moment/locale/eu.js",
+	"./eu.js": "../../../../chart.js/node_modules/moment/locale/eu.js",
+	"./fa": "../../../../chart.js/node_modules/moment/locale/fa.js",
+	"./fa.js": "../../../../chart.js/node_modules/moment/locale/fa.js",
+	"./fi": "../../../../chart.js/node_modules/moment/locale/fi.js",
+	"./fi.js": "../../../../chart.js/node_modules/moment/locale/fi.js",
+	"./fo": "../../../../chart.js/node_modules/moment/locale/fo.js",
+	"./fo.js": "../../../../chart.js/node_modules/moment/locale/fo.js",
+	"./fr": "../../../../chart.js/node_modules/moment/locale/fr.js",
+	"./fr-ca": "../../../../chart.js/node_modules/moment/locale/fr-ca.js",
+	"./fr-ca.js": "../../../../chart.js/node_modules/moment/locale/fr-ca.js",
+	"./fr-ch": "../../../../chart.js/node_modules/moment/locale/fr-ch.js",
+	"./fr-ch.js": "../../../../chart.js/node_modules/moment/locale/fr-ch.js",
+	"./fr.js": "../../../../chart.js/node_modules/moment/locale/fr.js",
+	"./fy": "../../../../chart.js/node_modules/moment/locale/fy.js",
+	"./fy.js": "../../../../chart.js/node_modules/moment/locale/fy.js",
+	"./gd": "../../../../chart.js/node_modules/moment/locale/gd.js",
+	"./gd.js": "../../../../chart.js/node_modules/moment/locale/gd.js",
+	"./gl": "../../../../chart.js/node_modules/moment/locale/gl.js",
+	"./gl.js": "../../../../chart.js/node_modules/moment/locale/gl.js",
+	"./gom-latn": "../../../../chart.js/node_modules/moment/locale/gom-latn.js",
+	"./gom-latn.js": "../../../../chart.js/node_modules/moment/locale/gom-latn.js",
+	"./he": "../../../../chart.js/node_modules/moment/locale/he.js",
+	"./he.js": "../../../../chart.js/node_modules/moment/locale/he.js",
+	"./hi": "../../../../chart.js/node_modules/moment/locale/hi.js",
+	"./hi.js": "../../../../chart.js/node_modules/moment/locale/hi.js",
+	"./hr": "../../../../chart.js/node_modules/moment/locale/hr.js",
+	"./hr.js": "../../../../chart.js/node_modules/moment/locale/hr.js",
+	"./hu": "../../../../chart.js/node_modules/moment/locale/hu.js",
+	"./hu.js": "../../../../chart.js/node_modules/moment/locale/hu.js",
+	"./hy-am": "../../../../chart.js/node_modules/moment/locale/hy-am.js",
+	"./hy-am.js": "../../../../chart.js/node_modules/moment/locale/hy-am.js",
+	"./id": "../../../../chart.js/node_modules/moment/locale/id.js",
+	"./id.js": "../../../../chart.js/node_modules/moment/locale/id.js",
+	"./is": "../../../../chart.js/node_modules/moment/locale/is.js",
+	"./is.js": "../../../../chart.js/node_modules/moment/locale/is.js",
+	"./it": "../../../../chart.js/node_modules/moment/locale/it.js",
+	"./it.js": "../../../../chart.js/node_modules/moment/locale/it.js",
+	"./ja": "../../../../chart.js/node_modules/moment/locale/ja.js",
+	"./ja.js": "../../../../chart.js/node_modules/moment/locale/ja.js",
+	"./jv": "../../../../chart.js/node_modules/moment/locale/jv.js",
+	"./jv.js": "../../../../chart.js/node_modules/moment/locale/jv.js",
+	"./ka": "../../../../chart.js/node_modules/moment/locale/ka.js",
+	"./ka.js": "../../../../chart.js/node_modules/moment/locale/ka.js",
+	"./kk": "../../../../chart.js/node_modules/moment/locale/kk.js",
+	"./kk.js": "../../../../chart.js/node_modules/moment/locale/kk.js",
+	"./km": "../../../../chart.js/node_modules/moment/locale/km.js",
+	"./km.js": "../../../../chart.js/node_modules/moment/locale/km.js",
+	"./kn": "../../../../chart.js/node_modules/moment/locale/kn.js",
+	"./kn.js": "../../../../chart.js/node_modules/moment/locale/kn.js",
+	"./ko": "../../../../chart.js/node_modules/moment/locale/ko.js",
+	"./ko.js": "../../../../chart.js/node_modules/moment/locale/ko.js",
+	"./ky": "../../../../chart.js/node_modules/moment/locale/ky.js",
+	"./ky.js": "../../../../chart.js/node_modules/moment/locale/ky.js",
+	"./lb": "../../../../chart.js/node_modules/moment/locale/lb.js",
+	"./lb.js": "../../../../chart.js/node_modules/moment/locale/lb.js",
+	"./lo": "../../../../chart.js/node_modules/moment/locale/lo.js",
+	"./lo.js": "../../../../chart.js/node_modules/moment/locale/lo.js",
+	"./lt": "../../../../chart.js/node_modules/moment/locale/lt.js",
+	"./lt.js": "../../../../chart.js/node_modules/moment/locale/lt.js",
+	"./lv": "../../../../chart.js/node_modules/moment/locale/lv.js",
+	"./lv.js": "../../../../chart.js/node_modules/moment/locale/lv.js",
+	"./me": "../../../../chart.js/node_modules/moment/locale/me.js",
+	"./me.js": "../../../../chart.js/node_modules/moment/locale/me.js",
+	"./mi": "../../../../chart.js/node_modules/moment/locale/mi.js",
+	"./mi.js": "../../../../chart.js/node_modules/moment/locale/mi.js",
+	"./mk": "../../../../chart.js/node_modules/moment/locale/mk.js",
+	"./mk.js": "../../../../chart.js/node_modules/moment/locale/mk.js",
+	"./ml": "../../../../chart.js/node_modules/moment/locale/ml.js",
+	"./ml.js": "../../../../chart.js/node_modules/moment/locale/ml.js",
+	"./mr": "../../../../chart.js/node_modules/moment/locale/mr.js",
+	"./mr.js": "../../../../chart.js/node_modules/moment/locale/mr.js",
+	"./ms": "../../../../chart.js/node_modules/moment/locale/ms.js",
+	"./ms-my": "../../../../chart.js/node_modules/moment/locale/ms-my.js",
+	"./ms-my.js": "../../../../chart.js/node_modules/moment/locale/ms-my.js",
+	"./ms.js": "../../../../chart.js/node_modules/moment/locale/ms.js",
+	"./my": "../../../../chart.js/node_modules/moment/locale/my.js",
+	"./my.js": "../../../../chart.js/node_modules/moment/locale/my.js",
+	"./nb": "../../../../chart.js/node_modules/moment/locale/nb.js",
+	"./nb.js": "../../../../chart.js/node_modules/moment/locale/nb.js",
+	"./ne": "../../../../chart.js/node_modules/moment/locale/ne.js",
+	"./ne.js": "../../../../chart.js/node_modules/moment/locale/ne.js",
+	"./nl": "../../../../chart.js/node_modules/moment/locale/nl.js",
+	"./nl-be": "../../../../chart.js/node_modules/moment/locale/nl-be.js",
+	"./nl-be.js": "../../../../chart.js/node_modules/moment/locale/nl-be.js",
+	"./nl.js": "../../../../chart.js/node_modules/moment/locale/nl.js",
+	"./nn": "../../../../chart.js/node_modules/moment/locale/nn.js",
+	"./nn.js": "../../../../chart.js/node_modules/moment/locale/nn.js",
+	"./pa-in": "../../../../chart.js/node_modules/moment/locale/pa-in.js",
+	"./pa-in.js": "../../../../chart.js/node_modules/moment/locale/pa-in.js",
+	"./pl": "../../../../chart.js/node_modules/moment/locale/pl.js",
+	"./pl.js": "../../../../chart.js/node_modules/moment/locale/pl.js",
+	"./pt": "../../../../chart.js/node_modules/moment/locale/pt.js",
+	"./pt-br": "../../../../chart.js/node_modules/moment/locale/pt-br.js",
+	"./pt-br.js": "../../../../chart.js/node_modules/moment/locale/pt-br.js",
+	"./pt.js": "../../../../chart.js/node_modules/moment/locale/pt.js",
+	"./ro": "../../../../chart.js/node_modules/moment/locale/ro.js",
+	"./ro.js": "../../../../chart.js/node_modules/moment/locale/ro.js",
+	"./ru": "../../../../chart.js/node_modules/moment/locale/ru.js",
+	"./ru.js": "../../../../chart.js/node_modules/moment/locale/ru.js",
+	"./sd": "../../../../chart.js/node_modules/moment/locale/sd.js",
+	"./sd.js": "../../../../chart.js/node_modules/moment/locale/sd.js",
+	"./se": "../../../../chart.js/node_modules/moment/locale/se.js",
+	"./se.js": "../../../../chart.js/node_modules/moment/locale/se.js",
+	"./si": "../../../../chart.js/node_modules/moment/locale/si.js",
+	"./si.js": "../../../../chart.js/node_modules/moment/locale/si.js",
+	"./sk": "../../../../chart.js/node_modules/moment/locale/sk.js",
+	"./sk.js": "../../../../chart.js/node_modules/moment/locale/sk.js",
+	"./sl": "../../../../chart.js/node_modules/moment/locale/sl.js",
+	"./sl.js": "../../../../chart.js/node_modules/moment/locale/sl.js",
+	"./sq": "../../../../chart.js/node_modules/moment/locale/sq.js",
+	"./sq.js": "../../../../chart.js/node_modules/moment/locale/sq.js",
+	"./sr": "../../../../chart.js/node_modules/moment/locale/sr.js",
+	"./sr-cyrl": "../../../../chart.js/node_modules/moment/locale/sr-cyrl.js",
+	"./sr-cyrl.js": "../../../../chart.js/node_modules/moment/locale/sr-cyrl.js",
+	"./sr.js": "../../../../chart.js/node_modules/moment/locale/sr.js",
+	"./ss": "../../../../chart.js/node_modules/moment/locale/ss.js",
+	"./ss.js": "../../../../chart.js/node_modules/moment/locale/ss.js",
+	"./sv": "../../../../chart.js/node_modules/moment/locale/sv.js",
+	"./sv.js": "../../../../chart.js/node_modules/moment/locale/sv.js",
+	"./sw": "../../../../chart.js/node_modules/moment/locale/sw.js",
+	"./sw.js": "../../../../chart.js/node_modules/moment/locale/sw.js",
+	"./ta": "../../../../chart.js/node_modules/moment/locale/ta.js",
+	"./ta.js": "../../../../chart.js/node_modules/moment/locale/ta.js",
+	"./te": "../../../../chart.js/node_modules/moment/locale/te.js",
+	"./te.js": "../../../../chart.js/node_modules/moment/locale/te.js",
+	"./tet": "../../../../chart.js/node_modules/moment/locale/tet.js",
+	"./tet.js": "../../../../chart.js/node_modules/moment/locale/tet.js",
+	"./th": "../../../../chart.js/node_modules/moment/locale/th.js",
+	"./th.js": "../../../../chart.js/node_modules/moment/locale/th.js",
+	"./tl-ph": "../../../../chart.js/node_modules/moment/locale/tl-ph.js",
+	"./tl-ph.js": "../../../../chart.js/node_modules/moment/locale/tl-ph.js",
+	"./tlh": "../../../../chart.js/node_modules/moment/locale/tlh.js",
+	"./tlh.js": "../../../../chart.js/node_modules/moment/locale/tlh.js",
+	"./tr": "../../../../chart.js/node_modules/moment/locale/tr.js",
+	"./tr.js": "../../../../chart.js/node_modules/moment/locale/tr.js",
+	"./tzl": "../../../../chart.js/node_modules/moment/locale/tzl.js",
+	"./tzl.js": "../../../../chart.js/node_modules/moment/locale/tzl.js",
+	"./tzm": "../../../../chart.js/node_modules/moment/locale/tzm.js",
+	"./tzm-latn": "../../../../chart.js/node_modules/moment/locale/tzm-latn.js",
+	"./tzm-latn.js": "../../../../chart.js/node_modules/moment/locale/tzm-latn.js",
+	"./tzm.js": "../../../../chart.js/node_modules/moment/locale/tzm.js",
+	"./uk": "../../../../chart.js/node_modules/moment/locale/uk.js",
+	"./uk.js": "../../../../chart.js/node_modules/moment/locale/uk.js",
+	"./ur": "../../../../chart.js/node_modules/moment/locale/ur.js",
+	"./ur.js": "../../../../chart.js/node_modules/moment/locale/ur.js",
+	"./uz": "../../../../chart.js/node_modules/moment/locale/uz.js",
+	"./uz-latn": "../../../../chart.js/node_modules/moment/locale/uz-latn.js",
+	"./uz-latn.js": "../../../../chart.js/node_modules/moment/locale/uz-latn.js",
+	"./uz.js": "../../../../chart.js/node_modules/moment/locale/uz.js",
+	"./vi": "../../../../chart.js/node_modules/moment/locale/vi.js",
+	"./vi.js": "../../../../chart.js/node_modules/moment/locale/vi.js",
+	"./x-pseudo": "../../../../chart.js/node_modules/moment/locale/x-pseudo.js",
+	"./x-pseudo.js": "../../../../chart.js/node_modules/moment/locale/x-pseudo.js",
+	"./yo": "../../../../chart.js/node_modules/moment/locale/yo.js",
+	"./yo.js": "../../../../chart.js/node_modules/moment/locale/yo.js",
+	"./zh-cn": "../../../../chart.js/node_modules/moment/locale/zh-cn.js",
+	"./zh-cn.js": "../../../../chart.js/node_modules/moment/locale/zh-cn.js",
+	"./zh-hk": "../../../../chart.js/node_modules/moment/locale/zh-hk.js",
+	"./zh-hk.js": "../../../../chart.js/node_modules/moment/locale/zh-hk.js",
+	"./zh-tw": "../../../../chart.js/node_modules/moment/locale/zh-tw.js",
+	"./zh-tw.js": "../../../../chart.js/node_modules/moment/locale/zh-tw.js"
 };
 function webpackContext(req) {
 	return __webpack_require__(webpackContextResolve(req));
@@ -2128,7 +2295,7 @@ webpackContext.keys = function webpackContextKeys() {
 };
 webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
-webpackContext.id = "../../../../moment/locale recursive ^\\.\\/.*$";
+webpackContext.id = "../../../../chart.js/node_modules/moment/locale recursive ^\\.\\/.*$";
 
 /***/ }),
 

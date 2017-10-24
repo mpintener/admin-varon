@@ -40,9 +40,12 @@ export class HomeComponent{
 		this._wineService.getFavoriteWines(this.token).subscribe(
 			response => {
 				this.favoriteWines = response.data;
+				var cont;
+				this.favoriteWines.forEach((item, index)=> {
+
+				});
 				this.favoriteWine = response.data[0].wine;
 			}, error => {
-				console.log(<any>error);
 			}
 		);
 

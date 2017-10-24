@@ -13,13 +13,22 @@ export class ChartService {
 		this.url = GLOBAL.url;
 	}
 
-	getLineChartData(){
-		this.chartData = {
-			'labels': ['Enero', 'Feberero', 'Marzo', 'Abril', 'Mayo'],
-			'data': [23, 60, 45, 80, 91]
-		}
-		return this.chartData;
-	}
+	// getLineChartData(token){
+	// 	this.chartData = {
+	// 		'labels': ['Enero', 'Feberero', 'Marzo', 'Abril', 'Mayo'],
+	// 		'data': [23, 60, 45, 80, 91]
+	// 	}
+	// 	return this.chartData;
+
+	// 	let headers = new Headers({
+	// 		'Content-Type': 'application/json',
+	// 		'token': token
+	// 	});
+
+	// 	return this._http.get(this.url+'user', {headers: headers})
+	// 		.map(res => res.json());
+
+	// }
 
 	getDonutChartData(token){
 		let headers = new Headers({

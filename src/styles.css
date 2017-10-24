@@ -34,3 +34,8 @@ a.active {
 .delete-element{
 	cursor: pointer;
 }
+.number.count-to.widgets {
+	font-size: 16px;
+}
+a.active span, a.active i {color: #820234 !important;}
+a.a.active span {font-weight: 600;}
